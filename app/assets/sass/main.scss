@@ -8,4 +8,98 @@
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below...
 ///////////////////////////////////////////
+// index page styles
+
+.nhsuk-list.spaced > li {
+    margin-bottom: 1em;
+    background: #fff;
+    border: 1px solid #d8dde0;
+    position: relative;
+    border: none;
+    padding: 1em;
+  }
   
+  .nhsuk-list.spaced > li li {
+    padding: 0 0 0em 1em;
+  }
+  
+  
+  .nhsuk-list.spaced a {
+    word-break: break-all;
+  }
+  
+  .bulleted-summary-list,
+  .bulleted-summary-list h3 {
+    position: relative;
+  }
+  
+  @media (min-width: 40.0625em) {
+    .bulleted-summary-list {
+      padding-left: 4em;
+    }
+    .bulleted-summary-list:before {
+      height: 100%;
+      width: 2px;
+      content: "";
+      background-color: #005eb8;
+      position: absolute;
+      left: 0.75em;
+      bottom: 0;
+    }
+    .bulleted-summary-list h3:before {
+      height: 20px;
+      width: 20px;
+      content: "";
+      background-color: #005eb8;
+      border-radius: 50%;
+      position: absolute;
+      left: -2.55em;
+      bottom: 0.5rem;
+    }
+    .bulleted-summary-list:after {
+      height: 5px;
+      width: 20px;
+      content: "";
+      background-color: #005eb8;
+      position: absolute;
+      left: 0.2em;
+      bottom: 0;
+    }
+  }
+  // tabs
+  .informative-tab {
+    text-transform: uppercase;
+    font-size: 12px;
+    background: #009639;
+    color: white;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 !important;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+  
+  .informative-tab-green {
+    background: $color_nhsuk-green;
+  }
+  
+  .informative-tab-orange {
+    background: $color_nhsuk-orange;
+    color: black;
+  }
+  
+  .informative-tab-blue {
+    background: $color_nhsuk-blue;
+    color: white;
+  }
+  
+  .informative-tab-purple {
+    background: $color_nhsuk-purple;
+    color: white;
+  }
+  
+  .informative-tab-grey {
+    background: $color_nhsuk-grey-3;
+    color: white;
+  }
+    

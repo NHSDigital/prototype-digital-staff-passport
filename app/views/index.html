@@ -3,87 +3,134 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout.html' %}
-<!-- 
+{% extends 'layouts/layout.html' %}
+<!--
   In /views/layout.html you can:
-    - change the header and footer 
+    - change the header and footer
     - add custom CSS and JavaScript
 -->
 
 <!-- Set the page title -->
 {% block pageTitle %}
-  Digital Staff Passport prototype
+  NHS App prototype
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
+<section class="nhsuk-hero">
+    <div class="nhsuk-width-container nhsuk-hero--border app-width-container">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+          <div class="nhsuk-hero__wrapper app-hero__wrapper">
+            <h1 class="nhsuk-u-margin-bottom-4">Digital Staff Passport prototypes</h1>
+            <p class="nhsuk-body-l nhsuk-u-margin-bottom-1">This page allows you to view current and previous prototypes for the Digital Staff Passport</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 {% endblock %}
 
-<!-- For adding a back link -->
-<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
-{% block outerContent %}
-{% endblock %}
 
 <!-- For adding page content -->
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
+
   <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
-
-      <!-- Change the page title here -->
-      <h1>
-        Digital Staff Passport prototype
-        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Version {{version}}</span>
-      </h1>
-
-      <!-- Add your content here -->
-      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
-
-      <p class="nhsuk-lede-text">
-        This kit lets you rapidly create HTML prototypes of NHS services.
-      </p>
-
-      <hr>
-
-      <h2>
-        About this page
-      </h2>
-
-      <p>
-        Use this page as the index for your project.
-      </p>
-      
-      <p>
-        You'll find the code for this page at <strong>/app/views/index.html</strong>.
-      </p>
-
-      <p>
-        There is also an <a href="/page-example">example page</a>, which contains a selection of NHS.UK frontend styles and components.
-      </p>
-
-      <hr>
-
-      <h2>
-        Get started
-      </h2>
-
-      <p>Get started by using the:</p>
-
-      <ul>
-        <li>
-          <a href="/docs/how-tos">how to guides</a>
+    <div class="nhsuk-grid-column">
+<div class="nhsuk-width-container app-width-container">
+  <div class="nhsuk-heading-l">User-facing service</div>
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="/">In research</a></h2>
+              <p class="nhsuk-card__description">Prototypes for discovery and research rounds</p>
+            </div>
+          </div>
         </li>
-        <li>
-          <a href="/docs/page-templates">page templates</a>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="/">In design</a></h2>
+              <p class="nhsuk-card__description">Prototypes showing features that are in design</p>
+            </div>
+          </div>
         </li>
-        <li>
-          code snippets for styles and components from the <a href="https://service-manual.nhs.uk/design-system">NHS digital service manual</a>
-        </li>
-      </ul>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="/">In live</a></h2>
+              <p class="nhsuk-card__description">View a prototype that matches the live version of the service</p>
+            </div>
+          </div>
+        </li>  
+    </div>
+    <div class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible"></div>
+    <div class="nhsuk-width-container app-width-container">
+      <div class="nhsuk-heading-l">HR-facing service</div>
+          <ul class="nhsuk-grid-row nhsuk-card-group">
+            <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+              <div class="nhsuk-card nhsuk-card--clickable">
+                <div class="nhsuk-card__content">
+                  <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="/">In research</a></h2>
+                  <p class="nhsuk-card__description">Prototypes for discovery and research rounds</p>
+                </div>
+              </div>
+            </li>
+            <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+              <div class="nhsuk-card nhsuk-card--clickable">
+                <div class="nhsuk-card__content">
+                  <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="/">In design</a></h2>
+                  <p class="nhsuk-card__description">Prototypes showing features that are in design</p>
+                </div>
+              </div>
+            </li>
+            <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+              <div class="nhsuk-card nhsuk-card--clickable">
+                <div class="nhsuk-card__content">
+                  <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="/">In live</a></h2>
+                  <p class="nhsuk-card__description">View a prototype that matches the live version of the service</p>
+                </div>
+              </div>
+            </li>  
+        </div>
+ 
+ 
 
+          <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+          <h3 class="nhsuk-heading-m">Design Standards</h3>
+
+          <p class="nhsuk-body">
+            We use the NHS Design Handbook and GDS Service Standards to guide our work and ensure that the services we are delivering are equitable and inclusive.
+          </p>
+
+          <p class="nhsuk-body">
+            <a href="https://service-manual.nhs.uk/">NHS digital service manual</a><br>
+            <a href="https://github.com/nhsuk/nhs-app-prototype">NHS App prototype on Github</a><br>
+            <a href="https://service-manual.nhs.uk/design-system/prototyping">Getting started with prototyping</a>
+          </p>
       <!-- End of content -->
 
     </div>
   </div>
+
 {% endblock %}
+
+
+      <div class="nhsuk-footer" id="nhsuk-footer">
+      <div class="nhsuk-width-container">
+        <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+        <ul class="nhsuk-footer__list">
+          <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="#">Home</a></li>
+          <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" target="blank" href="https://service-manual.nhs.uk/accessibility">Accessibility</a></li>
+          <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" target="blank" href="https://www.nhs.uk/contact-us/nhs-app-contact-us/">Get in touch</a></li>
+          <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" target="blank" href="https://nhsuk-prototype-kit.azurewebsites.net/docs/about">About and support</a></li>
+        </ul>
+
+        <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+      </div>
+    </div>
