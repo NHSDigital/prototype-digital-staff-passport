@@ -21,12 +21,36 @@
 <!-- Header code examples can be found at https://service-manual.nhs.uk/design-system/components/header -->
 {% block header %}
 {{ header({
-  "transactionalService": {
-      "name": "Digital Staff Passport",
-      "href": "/"
+    "showNav": "true",
+    "showSearch": "true",
+    "searchAction": " ",
+    "organisation": {
+      "name": "Anytown Anyplace",
+      "split": "Anywhere",
+      "descriptor": "NHS Foundation Trust"
     },
-    "showNav": "false",
-    "showSearch": "false"
+    "primaryLinks": [
+      {
+        "url"  : "#",
+        "label" : "Your hospital visit"
+      },
+      {
+        'url' : '#',
+        'label' : 'Wards and departments'
+      },
+      {
+        'url'  : '#',
+        'label' : 'Conditions and treatments'
+      },
+      {
+        'url'  : '#',
+        'label' : 'Our people'
+      },
+      {
+        'url' : '#',
+        'label' : 'Our research'
+      }
+    ]
   })
 }}
 {% if feedbackType %}
