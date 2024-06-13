@@ -1,0 +1,214 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+{% block pageTitle %}
+  Search results
+{% endblock %}
+
+
+
+{% block content %}
+
+{{ backLink({
+  "text": "Home",
+  "element": "button"
+}) }}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+
+    <h2>Search results</h2>
+
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-padding-left-0">
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="example-with-hint-text">
+         <b> Search again</b>
+        </label>
+        <div class="nhsuk-hint" id="example-with-hint-text-hint">
+          Enter name or reference number
+        </div>
+        <input class="nhsuk-input nhsuk-input--width-20 nhsuk-u-padding-right-3" id="example-with-hint-text" name="example-with-hint-text" type="text" aria-describedby="example-with-hint-text-hint">
+        <button type="submit" class="nhsuk-search__submit" data-module="nhsuk-button">…</button>
+      </div>
+
+    <h3 class="nhsuk-heading-s  nhsuk-u-margin-top-3"> Showing 2 results for 'Emma Jones'</h3>
+
+    
+
+
+    <!--<div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        
+        <details class="nhsuk-details nhsuk-u-margin-top-5">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+              Show more information
+            </span>
+          </summary>
+          <div class="nhsuk-details__text">
+    
+            <fieldset class="nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+                <h4 class="nhsuk-fieldset__heading">
+                  Select what to include
+                </h4>
+              </legend>
+      
+              <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="date-updated" name="options" type="checkbox" value="last updated on">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="date-updated">
+                    Date last updated
+                  </label>
+                </div>
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="notes" name="options" type="checkbox" value="notes">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="notes">
+                    ID checker notes
+                  </label>
+                </div>
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="marked-done" name="options" type="checkbox" value="marked as done">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="marked-done">
+                    Marked as done
+                  </label>
+                </div>
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="rejection-reason" name="options" type="checkbox" value="rejection reason">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="rejection-reason">
+                    Rejection reasons
+                  </label>
+                </div>
+      
+              </div>
+            </fieldset>
+
+            <p ><a style="color:#f0f4f5;" href="/inviter/v10/search-results-info">View more info</a></p>
+
+        
+          </div>
+        </details>
+      </div>
+      <div class="nhsuk-grid-column-one-third" >
+        <div style="float:right;">
+          <div class="nhsuk-form-group" >
+            <label class="nhsuk-label" for="select-1">
+              Sort by
+            </label>
+            <select class="nhsuk-select" id="select-1" name="select-1">
+              <option value="1" >Full name</option>
+              <option value="2" >Email address</option>
+              <option value="3" selected>Newest (date raised)</option>
+              <option value="4" >Oldest (date raised)</option>
+              <option value="5" >Raised by</option>
+              <option value="6" >ODS Code</option>
+              <option value="9" >Application ID</option>
+              <option value="10" >Status</option>
+            </select>
+          </div>
+        </div>   
+      </div>
+    </div>-->
+
+    <div style="overflow-x:auto;">
+      <table role="table" class="nhsuk-table-responsive nhsuk-u-margin-top-1">
+        <caption class="nhsuk-table__caption">
+        </caption>
+        <thead role="rowgroup" class="nhsuk-table__head">
+          <tr role="row">
+            <th role="columnheader" class="" scope="col">Full name</th>
+            <th role="columnheader" class="" scope="col">Date of birth</th>
+            <th role="columnheader" class="" scope="col">Passport created on</th>
+            <th role="columnheader" class="" scope="col">Staff group</th>
+            <th role="columnheader" class="" scope="col">Employment type</th>
+            <th role="columnheader" class="" scope="col">Employment status</th>
+            <th role="columnheader" class="" scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Full name </span>
+              <a href="/inviter/v10/applications/in-progress">Emma Jones</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Date of birth </span>
+              21/04/1993
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Passport created on</span>
+              21/05/2024
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Staff group</span>
+              Medical and Dental
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Employment type</span>
+              Temporary Mover
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Employment status</span>	
+              Permanent or fixed term
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Status</span>
+              <strong class="nhsuk-tag nhsuk-tag--white">
+                Invitation sent
+                </strong>
+            </td>
+          </tr>
+
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Full name </span>
+              <a href="/inviter/v10/applications/in-progress">Emma Jones</a> 
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Date of birth </span>
+              20/07/1980
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Passport created on</span>
+              10/6/2024
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Staff group</span>
+              Additional Clinical Services
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Employment type</span>
+              Permanent or fixed term
+            </td>  
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Employment status</span>	
+             New starter
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Status</span>
+              <strong class="nhsuk-tag nhsuk-tag--green">
+                Active
+                </strong>
+            </td>
+          </tr>
+
+
+         
+        
+        </tbody>
+      </table> 
+    </div>
+
+
+
+
+  </div>
+</div>
+
+
+{% endblock %}

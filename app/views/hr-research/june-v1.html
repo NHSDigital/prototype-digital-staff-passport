@@ -1,0 +1,143 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+{% block pageTitle %}
+  Login screen
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="nhsuk-width-container">
+        <main class="nhsuk-main-wrapper nhsuk-u-padding-top-0 nhsuk-u-padding-left-0" id="maincontent" lang="en-GB">
+        
+  <div class="nhsuk-grid-row nhsuk-u-padding-left-0">
+    <div class="nhsuk-grid-column-two-thirds">
+  <h2>
+      Digital Staff Passport Portal
+  </h2>
+  </div>
+
+  <div class="nhsuk-grid-column-two-thirds">
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="example-with-hint-text">
+       <b> Search for an individual</b>
+      </label>
+      <div class="nhsuk-hint" id="example-with-hint-text-hint">
+        Enter name or reference number
+      </div>
+      <input class="nhsuk-input nhsuk-input--width-20 nhsuk-u-padding-right-3" id="example-with-hint-text" name="example-with-hint-text" type="text" aria-describedby="example-with-hint-text-hint">
+      <button type="submit" class="nhsuk-search__submit" data-module="nhsuk-button">…</button>
+      <a href="june-v1-search-results">results page</a>
+    </div>
+   
+</div>
+
+    <div class="nhsuk-width-container-fluid nhsuk-u-padding-left-0 nhsuk-u-margin-top-3">
+      <main class="nhsuk-main-wrapper nhsuk-u-padding-left-0" id="maincontent" role="main">
+        <div class="nhsuk-grid-row nhsuk-u-margin-bottom-0 ">
+          <div class="nhsuk-grid-column-one-third nhsuk-u-padding-left-0">
+            <ul class="nhsuk-grid-row nhsuk-card-group">
+              <li class="nhsuk-grid-column-full nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable">
+                  <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="/">Identity and access</a></h2>
+                    <p class="nhsuk-card__description">Invite staff to link their passports with your portal, verify identities and manage request for access</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="nhsuk-grid-column-two-thirds">
+            <div class="nhsuk-inset-text nhsuk-u-margin-top-0">
+              <span class="nhsuk-u-visually-hidden">Information:</span>
+              <div class="nhsuk-grid-column-three-quarters"><p>15 invitations pending</p></div>
+              <div class="nhsuk-u-text-align-right"><a href="/">View</a></div>
+            </div>
+            <div class="nhsuk-inset-text">
+              <span class="nhsuk-u-visually-hidden">Information: </span>
+              <div class="nhsuk-grid-column-three-quarters"><p>1 identity credentials to verify</p></div>
+              <div class="nhsuk-u-text-align-right"><a href="/">View</a></div>
+            </div>
+            <div class="nhsuk-inset-text nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-u-visually-hidden">Information: </span>
+              <div class="nhsuk-grid-column-three-quarters"><p>1 identity check appointments to complete</p></div>
+              <div class="nhsuk-u-text-align-right"><a href="/">View</a></div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-one-third nhsuk-u-padding-left-0">
+            <ul class="nhsuk-grid-row nhsuk-card-group">
+              <li class="nhsuk-grid-column-full nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable">
+                  <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="/">Staff passports (awaiting credentials/pending)</a></h2>
+                    <p class="nhsuk-card__description">Staff passports pending completion of credentials required templates</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="nhsuk-grid-column-two-thirds">
+            <div class="nhsuk-inset-text nhsuk-u-margin-top-0">
+              <span class="nhsuk-u-visually-hidden">Information: </span>
+              <div class="nhsuk-grid-column-three-quarters"><p>9 staff members to connect to ESR </p></div>
+              <div class="nhsuk-u-text-align-right"><a href="/">View</a></div>
+            </div>
+            <div class="nhsuk-inset-text">
+              <span class="nhsuk-u-visually-hidden">Information: </span>
+              <div class="nhsuk-grid-column-three-quarters"><p>2 staff members have shared credentials to review </p></div>
+              <div class="nhsuk-u-text-align-right"><a href="/">View</a></div>
+            </div>
+            <div class="nhsuk-inset-text">
+              <span class="nhsuk-u-visually-hidden">Information: </span>
+              <div class="nhsuk-grid-column-three-quarters"><p>3 staff members with a Temporary placement credential to provide </p></div>
+              <div class="nhsuk-u-text-align-right"><a href="/">View</a></div>
+            </div>
+            <div class="nhsuk-inset-text">
+              <span class="nhsuk-u-visually-hidden">Information: </span>
+              <div class="nhsuk-grid-column-three-quarters"><p>1 staff members have rejected credentials </p></div>
+              <div class="nhsuk-u-text-align-right"><a href="/">View</a></div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-one-third nhsuk-u-padding-left-0">
+            <ul class="nhsuk-grid-row nhsuk-card-group">
+              <li class="nhsuk-grid-column-full nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable">
+                  <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="/">Reviewed staff passports</a></h2>
+                    <p class="nhsuk-card__description">View passports, manage credentials and connect passports to ESR</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="nhsuk-grid-column-two-thirds">
+            <div class="nhsuk-inset-text nhsuk-u-margin-top-0">
+              <span class="nhsuk-u-visually-hidden">Information: </span>
+              <div class="nhsuk-grid-column-three-quarters"><p>9 staff members to connect to ESR </p></div>
+              <div class="nhsuk-u-text-align-right"><a href="/">View</a></div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+
+{% endblock %}

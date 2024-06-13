@@ -22,33 +22,41 @@
 {% block header %}
 {{ header({
     "showNav": "true",
-    "showSearch": "true",
+    "showSearch": "false",
     "searchAction": " ",
     "organisation": {
-      "name": "Anytown Anyplace",
-      "split": "Anywhere",
+      "name": "Sheffield Teaching Hospitals",
+      "split": "", 
       "descriptor": "NHS Foundation Trust"
     },
     "primaryLinks": [
       {
         "url"  : "#",
-        "label" : "Your hospital visit"
+        "label" : "Home"
       },
       {
         'url' : '#',
-        'label' : 'Wards and departments'
+        'label' : 'Identity and access'
       },
       {
         'url'  : '#',
-        'label' : 'Conditions and treatments'
+        'label' : 'Pending staff passports'
       },
       {
         'url'  : '#',
-        'label' : 'Our people'
+        'label' : 'Reviewed staff passports'
       },
       {
         'url' : '#',
-        'label' : 'Our research'
+        'label' : 'Reports'
+      },
+      {
+        'url' : '#',
+        'label' : 'User management'
+      },
+      {
+        'url' : '#',
+        'label' : 'System management'
       }
     ]
   })
@@ -66,18 +74,30 @@
 <!-- Edit the footer -->
 <!-- Footer code examples can be found at https://service-manual.nhs.uk/design-system/components/footer -->
 {% block footer %}
-  {{ footer({
-    "links": [
-      {
-        "URL": "/",
-        "label": "Home"
-      },
-      {
-        "URL": "/page-example",
-        "label": "Example page"
-      }
-    ]
-  })}}
+{{ footer({
+  "links": [
+    {
+      "URL": "#",
+      "label": "Accessibility statement"
+    },
+    {
+      "URL": "#",
+      "label": "Contact us"
+    },
+    {
+      "URL": "#",
+      "label": "Cookies"
+    },
+    {
+      "URL": "#",
+      "label": "Privacy policy"
+    },
+    {
+      "URL": "#",
+      "label": "Terms and conditions"
+    }
+  ]
+})}}
 {% endblock %}
 
 {% block bodyEnd %}
