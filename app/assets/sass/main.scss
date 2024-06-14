@@ -106,4 +106,58 @@
     background: $color_nhsuk-grey-3;
     color: white;
   }
-    
+  .nhsuk-header__container {
+    max-width: 1170px;
+    @include mq($from: tablet) {
+    }
+    @include mq($from: desktop) {
+    }
+   }
+   .nhsuk-width-container {
+    max-width: 1170px;
+    @include mq($from: tablet) {
+    }
+    @include mq($from: desktop) {
+    }
+   }
+   .nhsuk-header__navigation-list {
+    max-width: 1170px;
+    @include mq($from: tablet) {
+    }
+    @include mq($from: desktop) {
+    }
+   }
+   .nhsuk-phase-banner {
+    padding-top: nhsuk-spacing(3);
+    padding-bottom: nhsuk-spacing(3);
+    background-color: $color_nhsuk-white;
+  
+    //border-bottom: 1px solid $color_nhsuk-grey-3;
+  }
+  
+  .nhsuk-phase-banner__content {
+    @include nhsuk-font($size: 16);
+    @include nhsuk-text-color;
+  
+    display: table;
+    margin: 0;
+  }
+  
+  .nhsuk-phase-banner__content__tag {
+    display: inline-block;
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+  
+    margin-right: nhsuk-spacing(2);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  
+    color: $color_nhsuk-white;
+    background-color: $color_nhsuk-blue;
+  }
+  
+  .nhsuk-phase-banner__text {
+    display: table-cell;
+    vertical-align: middle;
+  }

@@ -17,6 +17,8 @@
   NHS.UK prototype kit
 {% endblock %}
 
+
+
 <!-- Edit the header -->
 <!-- Header code examples can be found at https://service-manual.nhs.uk/design-system/components/header -->
 {% block header %}
@@ -61,14 +63,12 @@
     ]
   })
 }}
-{% if feedbackType %}
+    
 
-  {% if servicePhase === 'beta' %}
-    {% include '/includes/feedback.html' %}
-  {% else %}
-     {% include '/includes/feedback.html' %}
-  {% endif %}
-{% endif %}
+{% endblock %}
+
+{% block beforeContent %}
+   {% include 'includes/feedback.html' %}
 {% endblock %}
 
 <!-- Edit the footer -->

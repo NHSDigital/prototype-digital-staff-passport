@@ -18,12 +18,17 @@
         
   <div class="nhsuk-grid-row nhsuk-u-padding-left-0">
     <div class="nhsuk-grid-column-two-thirds">
+      {{ hint({
+        "text": "Senior portal administrator",
+        "classes": "nhsuk-u-margin-bottom-2"
+      }) }}
   <h2>
       Digital Staff Passport Portal
   </h2>
   </div>
 
   <div class="nhsuk-grid-column-two-thirds">
+    <form action="june-v1-search-results" method="post">
     <div class="nhsuk-form-group">
       <label class="nhsuk-label" for="example-with-hint-text">
        <b> Search for an individual</b>
@@ -35,6 +40,7 @@
       <button type="submit" class="nhsuk-search__submit" data-module="nhsuk-button">…</button>
       <a href="june-v1-search-results">results page</a>
     </div>
+  </form>
    
 </div>
 
@@ -138,6 +144,6 @@
       </main>
     </div>
   </div>
-
+</div>
 
 {% endblock %}
