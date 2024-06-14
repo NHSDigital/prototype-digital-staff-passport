@@ -9,14 +9,16 @@
   Search results
 {% endblock %}
 
+{% block outerContent %}
+  {{ backLink({
+    "href": "/hr-research/june-v1",
+    "text": "Home",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
 
 
 {% block content %}
-
-{{ backLink({
-  "text": "Home",
-  "element": "button"
-}) }}
 
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
@@ -25,6 +27,7 @@
     <h2>Search results</h2>
 
     <div class="nhsuk-grid-column-full nhsuk-u-padding-left-0">
+      <div class="nhsuk-grid-column-full nhsuk-u-padding-left-0">
       <div class="nhsuk-form-group">
         <label class="nhsuk-label" for="example-with-hint-text">
          <b> Search again</b>
@@ -32,9 +35,12 @@
        <!-- <div class="nhsuk-hint" id="example-with-hint-text-hint">
           Enter name or reference number
         </div>-->
+      
         <input class="nhsuk-input nhsuk-input--width-20 nhsuk-u-padding-right-3" id="example-with-hint-text" name="example-with-hint-text" type="text" aria-describedby="example-with-hint-text-hint">
         <button type="submit" class="nhsuk-search__submit" data-module="nhsuk-button">…</button>
-      </div>
+        </div>
+  
+    </div>
 
     <h3 class="nhsuk-heading-s  nhsuk-u-margin-top-3"> Showing 2 results for 'Emma Jones'</h3>
 
@@ -115,6 +121,7 @@
       </div>
     </div>-->
 
+    
     <div style="overflow-x:auto;">
       <table role="table" class="nhsuk-table-responsive nhsuk-u-margin-top-1">
         <caption class="nhsuk-table__caption">
