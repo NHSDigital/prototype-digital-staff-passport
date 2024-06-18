@@ -6,42 +6,38 @@
     - add custom CSS and JavaScript
 -->
 {% block pageTitle %}
-  Login screen
+Login screen
 {% endblock %}
 
 {% block outerContent %}
-  {{ backLink({
-    "href": "/hr-research-home",
-    "text": "Back",
-    "classes": "nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0"
-  }) }}
+{{ backLink({
+"href": "/hr-research-home",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0"
+}) }}
 {% endblock %}
 
 
 {% block content %}
 
-<div class="nhsuk-width-container nhsuk-u-padding-top-0">
-  <main class="nhsuk-main-wrapper nhsuk-u-padding-top-0 nhsuk-u-padding-left-0" id="maincontent" lang="en-GB">
-
+<main class="nhsuk-main-wrapper nhsuk-u-padding-top-0 nhsuk-u-padding-left-0 nhsuk-u-padding-bottom-0" id="maincontent" lang="en-GB">
     <div class="nhsuk-grid-row nhsuk-u-padding-left-0">
       <div class="nhsuk-grid-column-two-thirds">
         {{ hint({
         "text": "Senior portal administrator",
-        "classes": "nhsuk-u-margin-bottom-2"
+        "classes": "nhsuk-u-margin-bottom-0"
         }) }}
         <h2>
           Digital Staff Passport Portal
         </h2>
       </div>
     </div>
-</div>
 
-<div class="nhsuk-width-container-fluid nhsuk-u-padding-left-0 nhsuk-u-margin-top-3">
-  <main class="nhsuk-main-wrapper nhsuk-u-padding-left-0" id="maincontent" role="main">
+  <div class="nhsuk-width-container-fluid nhsuk-u-padding-left-0 nhsuk-u-margin-top-0">
     <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-one-third nhsuk-u-padding-left-0">
-        <ul class="nhsuk-grid-row nhsuk-card-group">
-          <li class="nhsuk-grid-column-full nhsuk-card-group__item">
+        <ul class="nhsuk-grid-row nhsuk-card-group nhsuk-u-padding-right-3">
+          <li class="nhsuk-grid-column nhsuk-card-group__item">
             <div class="nhsuk-card nhsuk-card--clickable">
               <div class="nhsuk-card__content">
                 <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="/">Identity and access</a></h2>
@@ -58,21 +54,24 @@
           <div style="width: 75%; display:inline-block">
             <p class="nhsuk-u-margin-bottom-0">15 invitations pending</p>
           </div>
-          <div style="float: right; width: 25%; text-align: right;"><a href="/">View</a></div>
+          <div style="float: right; width: 25%; text-align: right;"><a href="/">View</a>
+          </div>
         </div>
         <div style="position: relative" class="nhsuk-inset-text nhsuk-u-margin-top-0">
           <span class="nhsuk-u-visually-hidden">Information:</span>
           <div style="width: 75%; display:inline-block">
             <p class="nhsuk-u-margin-bottom-0">1 identity credentials to verify</p>
           </div>
-          <div style="float: right; width: 25%; text-align: right;"><a href="/">View</a></div>
+          <div style="float: right; width: 25%; text-align: right;"><a href="/">View</a>
+          </div>
         </div>
         <div style="position: relative" class="nhsuk-inset-text nhsuk-u-margin-top-0">
           <span class="nhsuk-u-visually-hidden">Information:</span>
           <div style="width: 75%; display:inline-block">
             <p class="nhsuk-u-margin-bottom-0">2 identity check appointments to complete</p>
           </div>
-          <div style="float: right; width: 25%; text-align: right;"><a href="/">View</a></div>
+          <div style="float: right; width: 25%; text-align: right;"><a href="/">View</a>
+          </div>
         </div>
       </div>
     </div>
@@ -81,8 +80,8 @@
 
     <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-one-third nhsuk-u-padding-left-0">
-        <ul class="nhsuk-grid-row nhsuk-card-group">
-          <li class="nhsuk-grid-column-full nhsuk-card-group__item">
+        <ul class="nhsuk-grid-row nhsuk-card-group nhsuk-u-padding-right-3">
+          <li class="nhsuk-grid-column nhsuk-card-group__item">
             <div class="nhsuk-card nhsuk-card--clickable">
               <div class="nhsuk-card__content">
                 <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="/">Staff passports (awaiting
@@ -130,8 +129,8 @@
 
     <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-one-third nhsuk-u-padding-left-0">
-        <ul class="nhsuk-grid-row nhsuk-card-group">
-          <li class="nhsuk-grid-column-full nhsuk-card-group__item">
+        <ul class="nhsuk-grid-row nhsuk-card-group nhsuk-u-padding-right-3">
+          <li class="nhsuk-grid-column nhsuk-card-group__item">
             <div class="nhsuk-card nhsuk-card--clickable">
               <div class="nhsuk-card__content">
                 <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="/">Reviewed staff passports</a></h2>
@@ -152,35 +151,35 @@
       </div>
     </div>
 
-</div>
+  </div>
+
+    <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+  <div class="nhsuk-grid-column nhsuk-u-padding-left-0 nhsuk-u-margin-bottom-0">
+    <form action="june-v2-search-results" method="post">
+      <div class="nhsuk-form-group nhsuk-u-margin-bottom-2">
+        <label class="nhsuk-label nhsuk-u-margin-bottom-0" for="SearchInput">
+          <b>Search for an individual</b>
+        </label>
+        <div class="nhsuk-hint nhsuk-u-padding-bottom-2" id="SearchInput-hint">
+          Enter name or professional registration number
+        </div>
+        <div id="wrap-search" style="width: 500px;" class="nhsuk-header__search-wrap" _ngcontent-ng-c2693481188="">
+          <input _ngcontent-ng-c2693481188="" aria-describedby="SearchInput-hint" formcontrolname="SearchInput"
+            id="SearchInput" name="SearchInput" type="search" placeholder="Search" autocomplete="off"
+            class="nhsuk-search__input ng-pristine ng-valid ng-touched"><button _ngcontent-ng-c2693481188=""
+            type="submit" class="nhsuk-search__submit"><svg _ngcontent-ng-c2693481188=""
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27"
+              height="27" class="nhsuk-icon nhsuk-icon__search">
+              <path _ngcontent-ng-c2693481188=""
+                d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z">
+              </path>
+            </svg><span _ngcontent-ng-c2693481188="" class="nhsuk-u-visually-hidden">Search</span></button>
+        </div>
+      </div>
+    </form>
+  </div>
 </main>
-<div class="nhsuk-grid-column-full nhsuk-u-padding-left-0 nhsuk-u-padding-bottom-0 nhsuk-u-margin-bottom-0">
-  <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
-</div>
-<div class="nhsuk-grid-column-full nhsuk-u-padding-left-0 nhsuk-u-margin-bottom-0">
-  <form action="june-v2-search-results" method="post">
-    <div class="nhsuk-form-group nhsuk-u-margin-bottom-2">
-      <label class="nhsuk-label nhsuk-u-margin-bottom-0" for="SearchInput">
-        <h3>Search for an individual</h3>
-      </label>
-      <div class="nhsuk-hint" id="SearchInput-hint">
-        Enter name or professional registration number
-      </div>
-      <div id="wrap-search" style="width: 500px;" class="nhsuk-header__search-wrap" _ngcontent-ng-c2693481188="">
-        <input _ngcontent-ng-c2693481188="" aria-describedby="SearchInput-hint" formcontrolname="SearchInput"
-          id="SearchInput" name="SearchInput" type="search" placeholder="Search" autocomplete="off"
-          class="nhsuk-search__input ng-pristine ng-valid ng-touched"><button _ngcontent-ng-c2693481188="" type="submit"
-          class="nhsuk-search__submit"><svg _ngcontent-ng-c2693481188="" xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27" height="27"
-            class="nhsuk-icon nhsuk-icon__search">
-            <path _ngcontent-ng-c2693481188=""
-              d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z">
-            </path>
-          </svg><span _ngcontent-ng-c2693481188="" class="nhsuk-u-visually-hidden">Search</span></button>
-      </div>
-    </div>
-  </form>
-</div>
 
 
 {% endblock %}
