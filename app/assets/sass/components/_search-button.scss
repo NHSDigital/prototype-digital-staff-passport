@@ -1,0 +1,191 @@
+.nhsuk-search__input {
+    -webkit-appearance: listbox;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 0;
+    padding: 0 16px;
+}
+
+.nhsuk-search__input:focus {
+    border: 4px solid #212b32;
+    box-shadow: 0 0 0 4px #ffeb3b;
+    outline: 4px solid transparent;
+    outline-offset: 4px;
+    padding: 0 13px;
+}
+
+.nhsuk-search__input::placeholder {
+    color: #4c6272;
+    font-size: 16px;
+}
+
+.nhsuk-search__input:-ms-input-placeholder {
+    color: #4c6272;
+    font-size: 16px;
+}
+
+.nhsuk-search__input::-webkit-input-placeholder {
+    color: #4c6272;
+    font-size: 16px;
+}
+
+@media (max-width: 40.0525em) {
+    .nhsuk-search__input {
+        border: 1px solid #ffffff;
+        border-bottom-right-radius: 4px;
+        border-top-right-radius: 4px;
+        flex-grow: 2;
+        -ms-flex-positive: 2;
+        font-size: inherit;
+        height: 40px;
+        margin: 0;
+        outline: none;
+        width: 100%;
+        z-index: 1;
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .nhsuk-search__input {
+        border: 1px solid #ffffff;
+        font-size: 16px;
+        height: 40px;
+        width: 200px;
+    }
+}
+
+@media (min-width: 48.0625em) {
+    .nhsuk-search__input {
+        width: 235px;
+    }
+}
+
+.nhsuk-search__submit {
+    border: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 4px;
+    float: right;
+    font-size: inherit;
+    line-height: inherit;
+    outline: none;
+    padding: 0;
+}
+
+.nhsuk-search__submit::-moz-focus-inner {
+    border: 0;
+}
+
+.nhsuk-search__submit:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 40.0525em) {
+    .nhsuk-search__submit {
+        background-color: #f0f4f5;
+        border: 0;
+        height: 40px;
+        margin: 0;
+        padding: 8px 8px 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 9;
+    }
+
+    .nhsuk-search__submit .nhsuk-icon__search {
+        fill: #005eb8;
+        height: 27px;
+        width: 27px;
+    }
+
+    .nhsuk-search__submit:hover {
+        background-color: #003d78;
+        border: 1px solid #ffffff;
+    }
+
+    .nhsuk-search__submit:hover .nhsuk-icon {
+        fill: #ffffff;
+    }
+
+    .nhsuk-search__submit:focus {
+        background-color: #ffeb3b;
+        box-shadow: 0 -4px #ffeb3b, 0 4px #212b32;
+        outline: 4px solid transparent;
+        outline-offset: 4px;
+    }
+
+    .nhsuk-search__submit:focus:hover {
+        background-color: #ffeb3b;
+    }
+
+    .nhsuk-search__submit:focus:hover .nhsuk-icon {
+        fill: #212b32;
+    }
+
+    .nhsuk-search__submit:focus .nhsuk-icon {
+        fill: #212b32;
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .nhsuk-search__submit {
+        background-color: #f0f4f5;
+        display: block;
+        height: 40px;
+        line-height: 1;
+        width: 44px;
+    }
+
+    .nhsuk-search__submit .nhsuk-icon__search {
+        height: 27px;
+        width: 27px;
+    }
+
+    .nhsuk-search__submit:hover {
+        background-color: #003d78;
+        border: 1px solid #ffffff;
+    }
+
+    .nhsuk-search__submit:hover .nhsuk-icon__search {
+        fill: #ffffff;
+    }
+
+    .nhsuk-search__submit:focus {
+        background-color: #ffeb3b;
+        border: 0;
+        box-shadow: 0 4px 0 0 #212b32;
+        color: #212b32;
+        outline: 4px solid transparent;
+        /* 1 */
+        outline-offset: 4px;
+        box-shadow: 0 -2px #ffeb3b, 0 4px #212b32;
+    }
+
+    .nhsuk-search__submit:focus .nhsuk-icon {
+        fill: #212b32;
+    }
+
+    .nhsuk-search__submit:active {
+        background-color: #002f5c;
+        border: 0;
+    }
+
+    .nhsuk-search__submit:active .nhsuk-icon__search {
+        fill: #ffffff;
+    }
+}
+
+.nhsuk-header__search-wrap[_ngcontent-ng-c2693481188] button[_ngcontent-ng-c2693481188] {
+    background-color: #003d78;
+    color: #fff;
+}
+.nhsuk-header__search-wrap[_ngcontent-ng-c2693481188] button[_ngcontent-ng-c2693481188] .nhsuk-icon__search[_ngcontent-ng-c2693481188] {
+    fill: #fff;
+ }
+ .nhsuk-header__search-wrap[_ngcontent-ng-c2693481188] input[type=search][_ngcontent-ng-c2693481188] {
+    max-width: calc(100% - 44px);
+    width: 525px;
+}
