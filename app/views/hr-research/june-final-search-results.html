@@ -1,0 +1,143 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+{% block pageTitle %}
+Search results
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "/hr-research/june-final",
+"text": "Home",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+
+    <h2>Search results</h2>
+
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-padding-left-0">
+      <form action="june-final-search-results" method="post">
+        <div class="nhsuk-form-group nhsuk-u-margin-bottom-5">
+          <label class="nhsuk-label nhsuk-u-margin-bottom-0" for="SearchInput">
+            <h5>Search again</h5>
+          </label>
+          <div id="wrap-search" style="width: 500px;"
+            class="nhsuk-header__search-wrap nhsuk-u-padding-top-0 nhsuk-u-margin-top-0" _ngcontent-ng-c2693481188="">
+            <input _ngcontent-ng-c2693481188="" aria-describedby="SearchInput-hint" formcontrolname="SearchInput"
+              id="SearchInput" name="SearchInput" type="search" placeholder="Search" autocomplete="off"
+              class="nhsuk-search__input ng-pristine ng-valid ng-touched"><button _ngcontent-ng-c2693481188=""
+              type="submit" class="nhsuk-search__submit"><svg _ngcontent-ng-c2693481188=""
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27"
+                height="27" class="nhsuk-icon nhsuk-icon__search">
+                <path _ngcontent-ng-c2693481188=""
+                  d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z">
+                </path>
+              </svg><span _ngcontent-ng-c2693481188="" class="nhsuk-u-visually-hidden">Search</span></button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div>
+      <div class="nhsuk-grid-column-two-thirds nhsuk-u-padding-left-0">
+        <h2>Showing 2 results for '{{ data{'SearchInput'} or 'Nothing' }}' </h2>
+      </div>
+      <table role="table" class="nhsuk-table-responsive nhsuk-u-margin-top-1" style="table-layout: fixed">
+        <caption class="nhsuk-table__caption">
+        </caption>
+        <thead role="rowgroup" class="nhsuk-table__head">
+          <tr role="row">
+            <th style="width: 150px;" role="columnheader" class="table-label" scope="col">Full name</th>
+            <th style="width: 150px;" role="columnheader" class="table-label" scope="col">Date of birth</th>
+            <th style="width: 200px;" role="columnheader" class="table-label" scope="col">Professional registration
+              number</th>
+            <th style="width: 200px;" role="columnheader" class="table-label" scope="col">Staff group</th>
+            <th style="width: 200px;" role="columnheader" class="table-label" scope="col">Employment type</th>
+            <th style="width: 150px;" role="columnheader" class="table-label" scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Full name </span>
+              <a href="">Emma Jones</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Date of birth </span>
+              21/04/1993
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Professional registration number</span>
+              6375111
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Staff group</span>
+              Medical and Dental
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Employment type</span>
+              Temporary Mover
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Status</span>
+              <strong class="nhsuk-tag nhsuk-tag--white">
+                Invitation sent
+              </strong>
+            </td>
+          </tr>
+
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Full name </span>
+              <a href="">Emma Jones</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Date of birth </span>
+              20/07/1980
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Professional registration number</span>
+              16375111
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Staff group</span>
+              Additional Clinical Services
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Employment type</span>
+              Permanent or fixed term
+            </td>
+            <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+              <span class="nhsuk-table-responsive__heading">Status</span>
+              <strong class="nhsuk-tag nhsuk-tag--green">
+                Active
+              </strong>
+            </td>
+          </tr>
+
+
+
+
+        </tbody>
+      </table>
+    </div>
+
+
+
+
+  </div>
+</div>
+
+
+{% endblock %}
