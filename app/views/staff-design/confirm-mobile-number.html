@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout.html' %}
+{% extends 'layouts/layout_home.html' %}
 <!-- In /views/layout.html you can: - change the header and footer - add custom CSS and JavaScript -->
 
 <!-- Set the page title -->
@@ -43,7 +43,7 @@ Confirm your mobile number and collect your access key credential
     This code is valid for 5 minutes only.</p>
     <div class="nhsuk-form-group">
         <label class="nhsuk-label" for="digit-code">
-            6-digit security code
+            <p><b>6-digit security code</b></p>
         </label>
         <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
       </div>
