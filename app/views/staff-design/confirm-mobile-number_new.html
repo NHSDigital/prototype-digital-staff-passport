@@ -19,10 +19,10 @@ Confirm your mobile number and collect your access key credential
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/Go back-link -->
 {% block outerContent %}
 {{ backLink({
-    "href": "/staff-design-home",
-    "text": "Back",
-    "classes": "nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0"
-    }) }}
+"href": "/staff-design-home",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0"
+}) }}
 {% endblock %}
 
 
@@ -31,40 +31,43 @@ Confirm your mobile number and collect your access key credential
 
 {% block content %}
 
-      <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-two-thirds">
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
 
 
 
-          <form action="" method="post" autocomplete="off">
+    <form action="" method="post" autocomplete="off">
 
-<H2>Confirm your phone number to collect your access key credential</H2>
-<p>Enter the 6-digit security code sent as a text message to confirm your phone number. The code is only valid for 5 minutes.</p>
-    <div class="nhsuk-form-group">
+      <H2>Confirm your phone number to collect your access key credential</H2>
+      <p>Enter the 6-digit security code sent as a text message to confirm your phone number. The code is only valid for
+        5 minutes.</p>
+      <div class="nhsuk-form-group">
         <label class="nhsuk-label" for="digit-code">
-            <p><b>6-digit security code</b></p>
+          <p><b>6-digit security code</b></p>
         </label>
         <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
       </div>
 
-            {{ details({
-              "text": "Not received your security code by text message?",
-              "HTML": "We'll send a new security code to your phone number. Please check your phone's signal.<br><br><a>Resend the security code</a> "
-            }) }}
-            <p>You'll be sent your access key credential when you select continue.
-              Add this credential to your digital wallet to access your Digital Staff Passport with Chesterfield Royal Hospital NHS Foundation Trust.</p>
-            {{ button({
-              "text": "Continue"
-            }) }}
+      {{ details({
+      "text": "Not received your security code by text message?",
+      "HTML": "We'll send a new security code to your phone number. Please check your phone's signal.<br><br><a>Resend
+        the security code</a> "
+      }) }}
+      <p>You'll be sent your access key credential when you select continue.
+        Add this credential to your digital wallet to access your Digital Staff Passport with Chesterfield Royal
+        Hospital NHS Foundation Trust.</p>
+      {{ button({
+      "text": "Continue"
+      }) }}
 
-          </form>
-        </div>
-      </div>
+    </form>
+  </div>
+</div>
 <a href="confirm-mobile-number_old">View the old version of this page</a>
 
 
-    <!-- End of content -->
+<!-- End of content -->
 
-  </div>
+</div>
 </div>
 {% endblock %}
