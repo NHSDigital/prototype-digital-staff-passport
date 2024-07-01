@@ -38,7 +38,7 @@ Confirm your mobile number and collect your access key credential
 
     <form action="" method="post" autocomplete="off">
 
-      <H2>Confirm your phone number to collect your access key credential</H2>
+      <H2>Confirm your phone number</H2>
       <p>Enter the 6-digit security code sent as a text message to confirm your phone number. The code is only valid for
         5 minutes.</p>
       <div class="nhsuk-form-group">
@@ -50,12 +50,12 @@ Confirm your mobile number and collect your access key credential
 
       {{ details({
       "text": "Not received your security code by text message?",
-      "HTML": "We'll send a new security code to your phone number. Please check your phone's signal.<br><br><a>Resend
-        the security code</a> "
+      "HTML": "
+      <ul>
+        <li>we can <a><u>send a new security code</u></a> to your phone number. Please check your phone's signal.</li>
+        <li>read the <a>troubleshooting guide</a> if you get stuck when entering your security code.</li>
+      </ul> "
       }) }}
-      <p>You'll be sent your access key credential when you select continue.
-        Add this credential to your digital wallet to access your Digital Staff Passport with Chesterfield Royal
-        Hospital NHS Foundation Trust.</p>
       {{ button({
       "text": "Continue"
       }) }}
