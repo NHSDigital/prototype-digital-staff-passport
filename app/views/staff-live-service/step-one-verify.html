@@ -53,26 +53,46 @@ Confirm your mobile number and collect your access key credential
                 <p>If you have registered with one of the <a href="https://digital.nhs.uk/services/digital-staff-passport/guidance-and-support/support-for-staff/setting-up-your-digital-identity">certified digital identity providers</a>, select "I will share my verified digital identity" and follow the steps. You will be asked to add a passport if you haven't added one yet. The process will take few minutes.</p>
               </div>
             </details>
-          <h3>To use Microsoft Authenticator</h3>
-          <div class="nhsuk-inset-text">
-            <span class="nhsuk-u-visually-hidden">To use Microsoft Authenticator: </span>
-          
-            <p>We strongly recommend backing up your digital wallet to the cloud. By doing so, you'll be able to recover your credentials if your phone is lost or stolen.</p>
-          </div>
-          <p>Download the free Microsoft Authenticator app from:</p>
-           <p>the <a href="https://apps.apple.com/gb/app/microsoft-authenticator/id983156458">App Store</a> for iOS<br>
-           the <a href="https://play.google.com/store/apps/details?id=com.azure.authenticator&hl=en_GB">Google Play Store</a> for Android</p>
-          <p>Follow the onscreen instructions to complete your setup.
-          </p>
-          <br>
+        <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+              </h1>
+            </legend>
+        
+            <div class="nhsuk-radios">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+                 <p>I will share or create a verified digital identity from a certified provider e.g. Yoti or Post Office Easy ID</p>
+                 <div class="nhsuk-hint" id="example-with-hint-text-hint">
+                  A pop-up window will appear upon selection, providing you with further instructions. <br><br>
+
+If you have not created a digital identity before, you may need access to certain documents for example a passport or drivers licence, to complete your digital identity. If you cannot complete the creation of your digital identity you will need to return to this screen and select the 'attend an appointment with HR' option to confirm your identity.<br><br>
+
+If you have previously created a digital identity you may need to update some information if it is out of date or not verified. If you can not update your identity with verifiable information you will need to return to this screen and select the 'attend an appointment with HR' option to confirm your identity.
+                </div>
+                <p></p>
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+                  <p>I will attend an appointment with HR to verify my identity</p>
+                </label>
+              </div>
+        
+            </div>
+          </fieldset>
+        
         </div>
         <div>
           {{ button({
-          "text": "I have this digital wallet set up. Continue"
+          "text": "Continue"
           }) }}
-        </div>
-        <div><p>Please note: If you prefer not to use a digital wallet, you can continue to follow existing paper-based and any other online processes your organisation currently uses. Please contact your HR department for further guidance.</p></div>
-      </div>
 
 
     </form>
