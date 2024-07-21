@@ -1,0 +1,86 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout_staffliveservice.html' %}
+<!-- In /views/layout.html you can: - change the header and footer - add custom CSS and JavaScript -->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Confirm your mobile number and collect your access key credential
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+
+
+<!-- For adding a Go back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/Go back-link -->
+{% block outerContent %}
+{{ backLink({
+"href": "step-two-confirm-email",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0"
+}) }}
+{% endblock %}
+
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+
+
+    <form action="step-two-confirm-mobile-number" method="post" autocomplete="off">
+      <div class="nhsuk-form-group">
+        <div>
+          <span class="nhsuk-caption-m">Step 2 of 2: Create your passport profile</span>
+          <h2>Enter your mobile number</h2>
+          <p>Enter the mobile number that you want to use with Doncaseter and Bassetlaw Hospitals.</p>
+          <p>We'll send you another 6-digit security code, this time to your phone, to confirm your mobile number.</p>
+          <details class="nhsuk-details">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Which phone number should I use?
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <p>Your mobile number is required at registration stage to undertake verification and can be used to provide text messages about your activity and notify you of events within the portal that requires you to take action, for example, to collect or share credentials.<br><br>
+
+                The mobile number you provide must be the same mobile phone linked to your digital wallet.<br><br>
+                
+                You will be using the Digital Staff Passport when you move permanently or temporarily between NHS organisations, so you will need your mobile is accessible throughout and after your move.</p>
+            </div>
+          </details>
+          {{ input({
+            label: {
+              text: "Moblile number"
+            },
+            hint: {
+              text: "Enter your UK or international mobile number including the country code, for example: +44 1234 567890"
+            },
+            classes: "nhsuk-u-width-one-half",
+            id: "email-address",
+            name: "email-address"
+          }) }}
+        </div>
+
+        </div>
+        {{ button({
+          "text": "Continue"
+          }) }}
+    </form>
+  </div>
+</div>
+
+
+<!-- End of content -->
+
+</div>
+</div>
+{% endblock %}

@@ -19,7 +19,7 @@ Confirm your mobile number and collect your access key credential
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/Go back-link -->
 {% block outerContent %}
 {{ backLink({
-"href": "/",
+"href": "create-your-profile",
 "text": "Back",
 "classes": "nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0"
 }) }}
@@ -62,30 +62,43 @@ Confirm your mobile number and collect your access key credential
             </legend>
         
             <div class="nhsuk-radios">
-        
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-1">
-                 <p>I will share or create a verified digital identity from a certified provider e.g. Yoti or Post Office Easy ID</p>
-                 <div class="nhsuk-hint" id="example-with-hint-text-hint">
-                  A pop-up window will appear upon selection, providing you with further instructions. <br><br>
 
-If you have not created a digital identity before, you may need access to certain documents for example a passport or drivers licence, to complete your digital identity. If you cannot complete the creation of your digital identity you will need to return to this screen and select the 'attend an appointment with HR' option to confirm your identity.<br><br>
+            {% set hintHtml -%}
+            <p>A pop-up window will appear upon selection, providing you with further instructions.</p>
 
-If you have previously created a digital identity you may need to update some information if it is out of date or not verified. If you can not update your identity with verifiable information you will need to return to this screen and select the 'attend an appointment with HR' option to confirm your identity.
-                </div>
-                <p></p>
-                </label>
-              </div>
-        
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-2">
-                  <p>I will attend an appointment with HR to verify my identity</p>
-                </label>
-              </div>
-        
-            </div>
+              If you have not created a digital identity before, you may need access to certain documents for example a passport or drivers licence, to complete your digital identity. If you cannot complete the creation of your digital identity you will need to return to this screen and select the 'attend an appointment with HR' option to confirm your identity.<br><br>
+
+            If you have previously created a digital identity you may need to update some information if it is out of date or not verified. If you can not update your identity with verifiable information you will need to return to this screen and select the 'attend an appointment with HR' option to confirm your identity.
+            {%- endset %}
+            {{ radios({
+            "idPrefix": "method to verify",
+            "name": "verifymethod",
+            "fieldset": {
+            "legend": {
+            "text": "",
+            "classes": "nhsuk-fieldset__legend--l",
+            "isPageHeading": "false"
+            }
+            
+            },
+            "items": [
+            {
+            "value": "sharecredential~yoti-image",
+            "text": "I will share or create a verified digital identity from a certified provider e.g. Yoti or Post Office Easy ID",
+            "hint": { "html": hintHtml
+            },
+            "conditional": {
+            }
+            },
+            {
+            "value": "attendappointment~step-one-youve-chosen-face",
+            "text": "I will attend an appointment with HR to verify my identity",
+            "conditional": {
+            }
+            }
+            
+            ]
+            }) }}
           </fieldset>
         
         </div>

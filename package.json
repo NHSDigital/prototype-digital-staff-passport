@@ -35,6 +35,7 @@
     "nhsuk-frontend": "^8.1.0",
     "nunjucks": "^3.2.4",
     "path": "^0.12.7",
+    "radio-button-redirect": "^1.2.0",
     "sass": "^1.69.5"
   },
   "devDependencies": {
