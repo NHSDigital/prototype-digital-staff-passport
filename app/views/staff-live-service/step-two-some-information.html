@@ -1,0 +1,87 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout_staffliveservice.html' %}
+<!-- In /views/layout.html you can: - change the header and footer - add custom CSS and JavaScript -->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Confirm your mobile number and collect your access key credential
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+
+
+<!-- For adding a Go back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/Go back-link -->
+{% block outerContent %}
+{{ backLink({
+"href": "step-two-confirm-your-details",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0"
+}) }}
+{% endblock %}
+
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <form action="step-two-enter-esr" method="post" autocomplete="off">
+      <div class="nhsuk-form-group">
+        <div>
+          <span class="nhsuk-caption-m">Step 2 of 2: Create your passport profile</span>
+          <h2>Some information about your role</h2>
+          <p>This page relates to your role at Sheffield Teaching Hospitals.</p>
+          <p>If you are responding to an invite to join the portal for this organisation, your information will have already been added to your record. If you are happy the information is correct, please click continue. If the information is incorrect, please proceed with the onboarding process and contact the organisation separately to amend your details.</p>
+          <p>If you have not received an invite and are requesting access to the passport for this organisation, please select your employment type and status.</p>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="select-1">
+             Staff group
+            </label>
+            <select class="nhsuk-select" id="select-1" name="select-1">
+              <option value="1" selected>Select an option</option>
+              <option value="2" >Additional Clinical Services</option>
+              <option value="3" >Additional Professional Scientific and Technical</option>
+              <option value="4" >Administrative and Clerical</option>
+              <option value="5" >Allied Health Professionals</option>
+              <option value="6" >Estates and Ancillary</option>
+              <option value="7" >Healthcare Scientists</option>
+              <option value="8" >Medical and Dental</option>
+              <option value="9" >Nursing and Midwifery Registered</option>
+              <option value="10" >Students – non-medical</option>
+              <option value="11" >Students (medical undergraduate)</option>
+            </select>
+          </div>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="select-2">
+             Staff group
+            </label>
+            <select class="nhsuk-select" id="select-2" name="select-2">
+              <option value="1" selected>Select an option</option>
+              <option value="2" >Current employee or leaver</option>
+              <option value="3" >New starter</option>
+            </select>
+          </div>
+        </div>
+
+        </div>
+        {{ button({
+          "text": "Continue"
+          }) }}
+    </form>
+  </div>
+</div>
+
+
+<!-- End of content -->
+
+</div>
+</div>
+{% endblock %}
