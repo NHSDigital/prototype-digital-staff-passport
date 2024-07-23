@@ -11,7 +11,7 @@
 ///////////////////////////////////////////
 // index page styles
 
-.nhsuk-list.spaced>li {
+.nhsuk-list.spaced > li {
   margin-bottom: 1em;
   background: #fff;
   border: 1px solid #d8dde0;
@@ -20,7 +20,7 @@
   padding: 1em;
 }
 
-.nhsuk-list.spaced>li li {
+.nhsuk-list.spaced > li li {
   padding: 0 0 0em 1em;
 }
 
@@ -115,25 +115,35 @@
 .nhsuk-header__container {
   max-width: 1170px;
 
-  @include mq($from: tablet) {}
+  @include mq($from: tablet) {
+  }
 
-  @include mq($from: desktop) {}
+  @include mq($from: desktop) {
+  }
 }
 
 .nhsuk-width-container {
   max-width: 1170px;
 
-  @include mq($from: tablet) {}
+  @include mq($from: tablet) {
+  }
 
-  @include mq($from: desktop) {}
+  @include mq($from: desktop) {
+  }
 }
 
 .nhsuk-header__navigation-list {
   max-width: 1170px;
 
-  @include mq($from: tablet) {}
+  @include mq($from: tablet) {
+  }
 
-  @include mq($from: desktop) {}
+  @include mq($from: desktop) {
+  }
+}
+
+.nhsuk-phase-banner__container {
+  background-color: #fff;
 }
 
 .nhsuk-phase-banner {
@@ -262,10 +272,12 @@
 .disposition-unit .collapse-title :first-child {
   margin-top: 0
 }
+
 .nhsuk-grid-column-two-thirds-coloured {
   background-color: #fff;
   border-width: 1px;
   border-color: #D3D3D3;
   border-style: solid;
-  
+
+
 }
