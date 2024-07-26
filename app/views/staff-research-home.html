@@ -1,0 +1,106 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout_home.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  NHS Digital Staff Passport - Staff service research
+{% endblock %}
+
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+      <div class="nhsuk-width-container">
+        <ol class="nhsuk-breadcrumb__list">
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/index">Home</a></li>
+<!-- 
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Level 1</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Level 2</a></li>
+ -->
+        </ol>
+      </div>
+    </nav>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+              <h2 class="nhsuk-heading-l">Staff service - in research</h2>
+
+
+    
+    <div class="nhsuk-width-container ">
+        <main class="nhsuk-main-wrapper " id="maincontent" role="main">
+
+          <p class="nhsuk-body"></p>
+
+          <div class="bulleted-summary-list">
+            <div class="relative">
+
+              
+              
+             <div class="inline-heading-link">
+                <h3 class="nhsuk-heading-m">
+                  July 2024
+                </h3>
+              </div>
+              <ul class="nhsuk-list spaced">
+                <li>
+                  <strong>Staff-service - tweaks to the journey </strong>
+                  <p>Clickable prototype with no validation or error messages</p>
+                  <ul class="nhsuk-list nhsuk-list--bullet">
+                    <li><b><a href="/staff-research/July2024/invite-email">Link to prototype</a></b>
+                      </li>
+                </ul>
+                </li>
+                 </ul>
+
+
+             <p class="govuk-body"><a class="nhsuk-link" href="#">Top</a></p>
+            </div>
+
+          
+        </form>
+      </main>
+      
+      <a class="nhsuk-link" href="https://github.com/NHSDigital/prototype-digital-staff-passport">See all changes on github</a>
+
+
+    </div>
+       </div>
+  </div>
+
+{% endblock %}
+
+
+      <div class="nhsuk-footer" id="nhsuk-footer">
+      <div class="nhsuk-width-container">
+        <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+        <ul class="nhsuk-footer__list">
+          <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="#">Home</a></li>
+          <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" target="blank" href="https://service-manual.nhs.uk/accessibility">Accessibility</a></li>
+          <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" target="blank" href="https://www.nhs.uk/contact-us/nhs-app-contact-us/">Get in touch</a></li>
+          <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" target="blank" href="https://nhsuk-prototype-kit.azurewebsites.net/docs/about">About and support</a></li>
+        </ul>
+
+        <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+      </div>
+    </div>
