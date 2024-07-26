@@ -39,8 +39,8 @@ Confirm your mobile number and collect your access key credential
     <form action="" method="post" autocomplete="off">
 
       <H2>Confirm your phone number</H2>
-      <p>Enter the 6-digit security code sent as a text message to confirm your phone number. The code is only valid for
-        5 minutes.</p>
+      <p>Enter the 6-digit security code sent as a text message to confirm your number. The code is only valid for 5
+        minutes. </p>
       <div class="nhsuk-form-group">
         <label class="nhsuk-label" for="digit-code">
           <p><b>6-digit security code</b></p>
@@ -49,22 +49,31 @@ Confirm your mobile number and collect your access key credential
       </div>
 
       {{ details({
-      "text": "Not received your security code by text message?",
+      "text": "Having trouble with this step?",
       "HTML": "You can:
       <ul>
-        <li>ask us to  <a><u>send you a new security code</u></a> to your phone number</li>
+        <li>ask us to <a><u>send you a new security code</u></a></li>
         <li>check your phone's signal</li>
-        <li>read the <a><u>troubleshooting guide</a></u> if you get stuck when entering your security code</li>
-      </ul> "
+      </ul>
+      "
       }) }}
+      <p>There is a known issue with some web browsers blocking pop-ups. <a
+          href="https://digital.nhs.uk/services/digital-staff-passport/guidance-and-support/support-for-staff/troubleshooting/getting-stuck-during-registration-when-you-enter-your-security-code">Read
+          our troubleshooting guidance</a> if you get stuck when entering your security code. </p>
+      <br>
       {{ button({
       "text": "Continue"
       }) }}
 
     </form>
+
+
   </div>
+
 </div>
-<a href="confirm-mobile-number_old">View the old version of this page</a>
+<br>
+<br>
+<a href="confirm-mobile-number_old">View the old version of this page [ignore for development]</a>
 
 
 <!-- End of content -->
