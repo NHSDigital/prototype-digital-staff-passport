@@ -19,7 +19,7 @@ Confirm your mobile number and collect your access key credential
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/Go back-link -->
 {% block outerContent %}
 {{ backLink({
-"href": "invite-email",
+"href": "do-you-already-have",
 "text": "Back",
 "classes": "nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0"
 }) }}
@@ -36,37 +36,34 @@ Confirm your mobile number and collect your access key credential
 
 
 
-    <form action="is-this-your-first-registration" method="post" autocomplete="off">
+    <form action="step-one-verify-first-time" method="post" autocomplete="off">
       <div class="nhsuk-form-group">
         <div>
-          <h2>Digital Staff Passport</h2>
-          <p>Digital Staff Passport makes onboarding easier, faster and less repetitive for NHS employees moving between trusts. </p>
-          <p>You can use this service: 
+          <h1>Digital Staff Passport</h1>
+          <p>Sign up to Digital Staff Passport to make onboarding easier, faster and less repetitive for NHS employees moving between trusts.  </p>
+          <p>You can use this service to request, share and review essential employment information. 
           </p>
-          <ul class="nhsuk-list nhsuk-list--bullet">
-            <li>if you are a postgraduate doctor in training or a temporary mover</li>
-            <li>to share essential employment information including pre-employment checks, core skills and occupational health </li>
-            <li>to request, share, review credentials </li>
-          </ul>
+
           <h3>Before you start</h3>
-          <p>We'll ask you to: </a>
+          <p>We'll ask you to:
           </p>
           <ul class="nhsuk-list nhsuk-list--bullet">
             <li>have your smartphone ready and check it has signal</li>
-            <li>set up your digital identity using either Yoti <b>or</b> EasyID, the government-approved smartphone apps for verifying identities  </li>
-            <li>have your passport ready to scan when prompted by Yoti or EasyID</li>
-            <li>download Microsoft Authenticator to store your credentials and access key </li>
-            <li>check that the details about your employment type and status are correct </li>
+            <li>set up your digital identity using either Yoti or EasyID on your smartphone  </li>
+            <li>have your passport ready to scan</li>
+            <li>download Microsoft Authenticator </li>
+            <li>check that your employment details are correct </li>
           </ul>
-          <p>This application can take up to [insert time here]. You will not be able to save and come back to your application. </p>
-          <br>
+          <p>This application can take up to 30 minutes to complete. You will not be able to save and come back to your application.   </p>
+          <p>By continuing, you confirm that you agree to our <a href="https://digital.nhs.uk/services/digital-staff-passport/privacy-notice-for-the-nhs-digital-staff-passport">privacy notice</a>, <a href="https://digital.nhs.uk/services/digital-staff-passport/terms-and-conditions">terms and conditions</a> and <a href="https://digital.nhs.uk/services/digital-staff-passport/terms-of-use">terms of use.</a>  </p>
+
         </div>
         <div>
           {{ button({
           "text": "Start now"
           }) }}
         </div>
-        <p>By continuing, you confirm that you agree to our <a href="https://digital.nhs.uk/services/digital-staff-passport/privacy-notice-for-the-nhs-digital-staff-passport">privacy notice</a>, <a href="https://digital.nhs.uk/services/digital-staff-passport/terms-and-conditions">terms and conditions</a> and <a href="https://digital.nhs.uk/services/digital-staff-passport/terms-of-use">terms of use.</a>  </p>
+
       </div>
 
     </form>

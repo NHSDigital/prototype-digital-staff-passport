@@ -19,7 +19,7 @@ Confirm your mobile number and collect your access key credential
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/Go back-link -->
 {% block outerContent %}
 {{ backLink({
-"href": "start-page",
+"href": "invite-email",
 "text": "Back",
 "classes": "nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0"
 }) }}
@@ -44,39 +44,30 @@ Confirm your mobile number and collect your access key credential
         {% endset -%}
         
         {% set firsttimeHtml %}
-        <p>If you already work for an NHS Trust that uses the Digital Staff Passport, but not the one shown at the top of the
-          page, select 'Choose a different organisation' and register with your current employer first.
-        
-          <br><br> If your current NHS Trust does not use Digital Staff Passport, or this is your first employment in the NHS,
-          select 'Continue'.
-          <br><br><a href="https://digital.nhs.uk/services/digital-staff-passport/registered-trusts_train?state=eyJlbnJvbE9yUmVnaXN0ZXIiOiJSZWdpc3RlciIsImxvZ2luT3JSZWdpc3RlciI6IlVua25vd24ifQ==&route=/register">Choose
-            a different organisation</a>
-        </p>
         {% endset -%}
         
         
         {{ radios({
-        "idPrefix": "first registration",
-        "name": "firstreg",
+        "idPrefix": "already have",
+        "name": "alreayhave",
         "fieldset": {
         "legend": {
-        "text": "Is this your first registration with the Digital Staff Passport service with any organisation?",
+        "text": "Do you already have a Digital Staff Passport?",
         "classes": "nhsuk-fieldset__legend--l",
         "isPageHeading": "true"
         }
         },
         "items": [
         {
-        "value": "registeredbefore~start-your-onboarding",
-        "text": "I have registered before with this or another organsation",
+        "value": "yes~start-your-onboarding",
+        "text": "Yes",
         "conditional": {
         }
         },
         {
-        "value": "firsttime~create-your-profile",
-        "text": "This is my first time registering with any organisation",
+        "value": "no~start-page",
+        "text": "No",
         "conditional": {
-        "html": firsttimeHtml
         }
         }
         

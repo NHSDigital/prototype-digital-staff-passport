@@ -19,7 +19,7 @@ Confirm your mobile number and collect your access key credential
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/Go back-link -->
 {% block outerContent %}
 {{ backLink({
-"href": "start-page",
+"href": "start-your-onboarding",
 "text": "Back",
 "classes": "nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0"
 }) }}
@@ -68,14 +68,14 @@ Confirm your mobile number and collect your access key credential
             },
             "items": [
             {
-            "value": "yes~yoti-image-first-time",
+            "value": "yes~yoti-image-already",
             "text": "Yes, and I want to share it with my organisation",
  
             "conditional": {
             }
             },
             {
-            "value": "no~yoti-image-first-time",
+            "value": "no-want-to-create~yoti-image-already",
             "text": "No, but I would like to create one",
             "hint": { "html": hintHtml
           },
