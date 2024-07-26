@@ -1,0 +1,63 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout_staffliveservice.html' %}
+<!-- In /views/layout.html you can: - change the header and footer - add custom CSS and JavaScript -->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Confirm your mobile number and collect your access key credential
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+
+
+<!-- For adding a Go back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/Go back-link -->
+{% block outerContent %}
+{{ backLink({
+"href": "step-one-verify",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0"
+}) }}
+{% endblock %}
+
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+
+
+    <form action="step-two" method="post" autocomplete="off">
+      <div class="nhsuk-form-group">
+        <div>
+          <span class="nhsuk-caption-m">Step 1 of 2: Verify your identity with Sheffield Teaching Hospitals</span>
+          <h2>You've chosen a face-to-face identity check</h2>
+          <p>The HR Team at Sheffield Teaching Hospitals will book an appointment to verify your identity.</p>
+          <p>When your identity has been verified you'll receive an NHS identity credential. You'll be able to use this credential to confirm your identity if you move to a different organisation in future.</p>
+          <h3>Next, start creating your profile</h3>
+          <p>Select Continue to begin creating your Digital Staff Passport profile.</p>
+          <div>
+          {{ button({
+          "text": "Continue"
+          }) }}
+
+
+    </form>
+  </div>
+</div>
+
+
+<!-- End of content -->
+
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,81 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout_staffliveservice.html' %}
+<!-- In /views/layout.html you can: - change the header and footer - add custom CSS and JavaScript -->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Confirm your mobile number and collect your access key credential
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+
+
+<!-- For adding a Go back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/Go back-link -->
+{% block outerContent %}
+{{ backLink({
+"href": "is-this-your-first-registration",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0"
+}) }}
+{% endblock %}
+
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+
+
+    <form action="step-one-verify-first-time" method="post" autocomplete="off">
+      <div class="nhsuk-form-group">
+        <div>
+          <h2>Create your Profile with Doncaster and Bassetlaw Teaching Hospitals</h2>
+          <p>Complete the steps below to start creating your staff passport.</p>
+          <div class="disposition-set">
+          <div class="disposition-unit">
+            <div class="disposition-unit-content measure" data-test-id="disposition-unit-1" open="">
+                  <h4>Verify your identity</h4>
+                  <p>Verify your identity either via a certified digital identity provider, or by booking an appointment with the HR team. To book an appointment, you will need to contact the HR team separately.</p>
+                  <p><a href="https://digital.nhs.uk/services/digital-staff-passport/guidance-and-support/support-for-staff/setting-up-your-digital-identity">Read more about digital wallets and how to use them</a></p>
+                </div>
+          </div>
+          <div class="disposition-unit">
+            <div class="disposition-unit-content measure" data-test-id="disposition-unit-2" open="">
+                  <h4>Create your profile</h4>
+                  <p>Your passport profile contains some initial information about you. We'll need a passport-style digital photo of you (not needed if you share your digital identity), your email address and your mobile number.
+                    <br><br>
+                    Add information about your role such as your ESR assignment number or Oriel PIN, if relevant.</p>
+                </div>
+          </div>
+        </div>
+          <p>You'll receive an access key which you will need to add to your passport. Use this to login to this organisation and collect your NHS digital identity credential.
+          </p>
+          <p><b>Your registration will then be complete. You'll be able to use your Digital Staff Passport to receive and share credentials with Sheffield Teaching Hospitals NHS Foundation Trust.</b>
+          </p>
+          <br>
+        </div>
+        <div>
+          {{ button({
+          "text": "Start"
+          }) }}
+        </div>
+    </form>
+  </div>
+</div>
+
+
+<!-- End of content -->
+
+</div>
+</div>
+{% endblock %}
