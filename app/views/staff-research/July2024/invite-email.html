@@ -19,6 +19,11 @@ Email message
 {% endblock %}
 
 {% block outerContent %}
+{{ backLink({
+"href": "invite-email",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0"
+}) }}
 {% endblock %}
 
 {% block content %}
@@ -53,16 +58,16 @@ Email message
       <h3 class="nhsuk-email-header">Doncaster and Bassetlaw Teaching Hospitals</h3>
       <p class="app-text-message__text nhsuk-u-margin-top-2">
 
-      Dear Jonathan<br><br>
+      Dear Jonathan,<br><br>
       You have been invited to sign up for NHS Digital Staff Passport (DSP) with Doncaster and Bassetlaw Teaching Hospitals.<br><br>
-       <a href="start-page">Start</a><br><br>
+       <b><a href="start-page">Start</a></b><br><br>
        DSP makes onboarding faster, easier and less repetitive for NHS employees moving between trusts that have registered with this service. <br><br>
        Kind regards,<br><br>
        NHS Digital Staff Passport<br><br>
        Replies to this inbox are not monitored. You can:
        <ul class="nhsuk-list nhsuk-list--bullet nhsuk-u-margin-left-4" >
-        <li><b><a href="/hr-research/june-v1">find out more about DSP</a></b><br></b></li>
-        <li><b><a href="/hr-research/june-v2">use DSP guidance  </a></b>for any issues when signing up</li>
+        <li><a href="/hr-research/june-v1">find out more about DSP</a><br></li>
+        <li><a href="/hr-research/june-v2">use DSP guidance  </a><for any issues when signing up</li>
     </ul>
       </p>
       
