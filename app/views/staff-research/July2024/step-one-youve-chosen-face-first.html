@@ -8,7 +8,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-Confirm your mobile number and collect your access key credential
+You've chosen a face-to-face identity check
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -19,7 +19,7 @@ Confirm your mobile number and collect your access key credential
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/Go back-link -->
 {% block outerContent %}
 {{ backLink({
-"href": "step-one-verify",
+"href": "step-one-verify-first-time",
 "text": "Back",
 "classes": "nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0"
 }) }}
@@ -39,12 +39,13 @@ Confirm your mobile number and collect your access key credential
     <form action="/" method="post" autocomplete="off">
       <div class="nhsuk-form-group">
         <div>
-          <span class="nhsuk-caption-m">Step 1 of 2: Verify your identity with Sheffield Teaching Hospitals</span>
-          <h2>You've chosen a face-to-face identity check</h2>
-          <p>The HR Team at Sheffield Teaching Hospitals will book an appointment to verify your identity.</p>
-          <p>When your identity has been verified you'll receive an NHS identity credential. You'll be able to use this credential to confirm your identity if you move to a different organisation in future.</p>
-          <h3>Next, start creating your profile</h3>
-          <p>Select Continue to begin creating your Digital Staff Passport profile.</p>
+          <h2>Face-to-face identity check</h2>
+          <p>The HR team at Doncaster and Bassetlaw Teaching Hospitals will book an appointment to verify your identify in person.  </p>
+          <p>When your identity has been verified, you'll receive an NHS identity credential. You'll be able to use this credential if or when you move to a different organisation. </p>
+          <p>Your identity credential will be stored in the Verified ID tab of the Microsoft Authenticator app. </p>
+          <h3>Create your profile </h3>
+          <p>Your DSP profile will store your personal details, pre-employment checks and other important information. </p>
+          <p>Select 'continue' to being creating your profile. </p>
           <div>
           {{ button({
           "text": "Continue"

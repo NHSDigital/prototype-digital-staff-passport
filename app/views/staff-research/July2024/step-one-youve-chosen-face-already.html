@@ -8,7 +8,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-Continue to prove your identity with YOTI
+You've chosen a face-to-face identity check
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -34,9 +34,26 @@ Continue to prove your identity with YOTI
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
 
-<img src="/images/YOTI_graphic.png" alt="YOTI graphic" width="750" height="550">
 
-   
+
+    <form action="/" method="post" autocomplete="off">
+      <div class="nhsuk-form-group">
+        <div>
+          <h2>Face-to-face identity check</h2>
+          <p>The HR team at Doncaster and Bassetlaw Teaching Hospitals will book an appointment to verify your identify in person.  </p>
+          <p>When your identity has been verified, you'll receive an NHS identity credential. You'll be able to use this credential if or when you move to a different organisation. </p>
+          <p>Your identity credential will be stored in the Verified ID tab of the Microsoft Authenticator app. </p>
+          <h3>Create your profile </h3>
+          <p>Your DSP profile will store your personal details, pre-employment checks and other important information. </p>
+          <p>Select 'continue' to being creating your profile. </p>
+
+          <div>
+          {{ button({
+          "text": "Continue"
+          }) }}
+
+
+    </form>
   </div>
 </div>
 
