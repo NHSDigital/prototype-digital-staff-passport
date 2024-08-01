@@ -19,7 +19,7 @@ Verify your digital identity
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/Go back-link -->
 {% block outerContent %}
 {{ backLink({
-"href": "start-your-onboarding",
+"href": "start-page",
 "text": "Back",
 "classes": "nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0"
 }) }}
@@ -68,14 +68,14 @@ Verify your digital identity
             },
             "items": [
             {
-            "value": "yes~yoti-image-already",
+            "value": "yes~yoti-image-first-time",
             "text": "Yes, and I want to share it with my organisation",
  
             "conditional": {
             }
             },
             {
-            "value": "no-want-to-create~yoti-image-already",
+            "value": "no~how-to-create-verified-identity-first-time",
             "text": "No, but I would like to create one",
             "hint": { "html": hintHtml
           },
@@ -83,8 +83,8 @@ Verify your digital identity
             }
             },
             {
-              "value": "no~step-one-youve-chosen-face-already",
-              "text": " No, I don't want to create one",
+              "value": "no~step-one-youve-chosen-face-first",
+              "text": "No, I don't want to create one",
               "hint": { "html": hintHtml2
             },
               "conditional": {

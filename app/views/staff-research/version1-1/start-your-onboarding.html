@@ -1,0 +1,84 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout_staffliveservice.html' %}
+<!-- In /views/layout.html you can: - change the header and footer - add custom CSS and JavaScript -->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Start your onboarding
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+
+
+<!-- For adding a Go back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/Go back-link -->
+{% block outerContent %}
+{{ backLink({
+"href": "do-you-already-have",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0"
+}) }}
+{% endblock %}
+
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+
+
+    <form action="step-one-verify-already-have" method="post" autocomplete="off">
+      <div class="nhsuk-form-group">
+        <div>
+          <h2>Start your onboarding</h2>
+          <p>Complete the following steps to start onboarding with your new organisation. </p>
+          <div class="disposition-set">
+          <div class="disposition-unit">
+            <div class="disposition-unit-content measure" data-test-id="disposition-unit-1" open="">
+                  <h3>Verify your identity with Doncaster and Bassetlaw Teaching Hospitals </h3>
+                  <p>You can do this by: </p>
+                  <ul class="nhsuk-list nhsuk-list--bullet">
+                    <li>sharing your digital identity credential which is in your Microsoft Authenticator app </li>
+                    <li>attending a face-to-face identity check with the HR team at your new organisation </li>
+                  </ul>
+                </div>
+          </div>
+          <div class="disposition-unit">
+            <div class="disposition-unit-content measure" data-test-id="disposition-unit-2" open="">
+                  <h3>Check your profile </h3>
+                  <p>Your existing DSP already stores your personal details, pre-employment checks and other important information.  
+                    <br><br>
+                    Log into your profile to check and share essential employment information with your new organisation. </p>
+                </div>
+          </div>
+        </div>
+          <p>Once your identity is confirmed by your new trust, you'll receive an access key. Add this access key to your Microsoft Authenticator app. Use your access key to login to your new organisation and collect your digital identity credential. 
+          </p>
+          <p>Your registration with your new organisation will then be complete. You'll be able to use your Digital Staff Passport to receive and share credentials with Sheffield Teaching Hospitals NHS Foundation Trust. 
+          </p>
+          <br>
+        </div>
+        <div>
+          {{ button({
+          "text": "Start"
+          }) }}
+        </div>
+    </form>
+  </div>
+</div>
+
+
+<!-- End of content -->
+
+</div>
+</div>
+{% endblock %}

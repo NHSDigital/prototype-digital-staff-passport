@@ -1,0 +1,48 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout_staffliveservice.html' %}
+<!-- In /views/layout.html you can: - change the header and footer - add custom CSS and JavaScript -->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Continue to prove your identity with YOTI
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+
+
+<!-- For adding a Go back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/Go back-link -->
+{% block outerContent %}
+{{ backLink({
+"href": "step-one-verify-first-time",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0"
+}) }}
+{% endblock %}
+
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+<img src="/images/Yoti_graphic_doncaster.png" alt="YOTI graphic" width="600" height="780">
+
+   
+  </div>
+</div>
+
+
+<!-- End of content -->
+
+</div>
+</div>
+{% endblock %}
