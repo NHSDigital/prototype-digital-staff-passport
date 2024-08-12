@@ -1,0 +1,124 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout_staffliveservice.html' %}
+<!-- In /views/layout.html you can: - change the header and footer - add custom CSS and JavaScript -->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Verify your digital identity
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+
+
+<!-- For adding a Go back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/Go back-link -->
+{% block outerContent %}
+{{ backLink({
+"href": "start-page",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0"
+}) }}
+{% endblock %}
+
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <form action="" method="post" autocomplete="off">
+      <div class="nhsuk-form-group">
+        <div>
+          <h2>Verify your digital identity with Doncaster and Bassetlaw Teaching Hospitals</h2>
+          <h3>Setting up a digital identity as part of your Digital Staff Passport </h3>
+          <p>A digital identity is an online representation of your identity information, like your name or age. </p>
+          <p>You can set up and keep your digital identity on your smartphone with a government-approved app like Yoti <b>or</b> Post Office Easy ID. You can use your verified digital identity to prove who you are when signing up for Digital Staff Passport. </p>
+        <p>A digital identity check can replace an in-person ID check with a member of your organisation's HR team. </p>
+        <h3>Signing up for Digital Staff Passport without setting up a digital identity </h3>
+        <p>You can still verify your identity by attending an in-person ID check. Choose the face-to-face check if you would prefer to do this.  </p>
+          <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+              </h1>
+            </legend>
+        
+            <div class="nhsuk-radios">
+
+            {% set hintHtml1 -%}
+            <p>You'll be asked to scan a QR code with either Yoti or Post Office EasyID
+            {%- endset %}
+            {% set hintHtml2 -%}
+            <p>You'll be shown how to create a digital identity, then share it with Doncaster and Bassetlaw Teaching Hospitals
+            {%- endset %}
+            {% set hintHtml3 -%}
+            <p>This might be because you're not able to create a digital identity, or you can't scan your passport
+            {%- endset %}
+            {{ radios({
+            "idPrefix": "method to verify",
+            "name": "verifymethod",
+            "fieldset": {
+            "legend": {
+            "text": "Have you verified your identity with Yoti or Post Office EasyID? ",
+            "classes": "nhsuk-fieldset__legend--s",
+            "isPageHeading": "false"
+            }
+            
+            },
+            "items": [
+            {
+            "value": "yes~yoti-image-first-time",
+            "text": "Yes and I want to share it with my Doncaster and Bassetlaw Teaching Hospitals",
+            "hint": { "html": hintHtml1
+            },
+            "conditional": {
+            }
+            },
+            {
+            "value": "no~how-to-create-verified-identity-first-time",
+            "text": "No, but I would like to create one",
+            "hint": { "html": hintHtml2
+            
+          },
+            "conditional": {
+            }
+            },
+            {
+              "value": "no~step-one-youve-chosen-face-first",
+              "text": "No, I'd prefer to do a face-to-face identity check",
+              "hint": { "html": hintHtml3
+            },
+              "conditional": {
+              }
+              }
+            
+            ]
+            }) }}
+          </fieldset>
+        
+        </div>
+        <div>
+          {{ button({
+          "text": "Continue"
+          }) }}
+
+
+    </form>
+  </div>
+</div>
+
+
+<!-- End of content -->
+
+</div>
+</div>
+{% endblock %}
