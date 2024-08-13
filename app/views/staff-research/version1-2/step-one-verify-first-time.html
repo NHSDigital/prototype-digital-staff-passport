@@ -61,7 +61,7 @@ Verify your digital identity
             <p>You'll be shown how to create a digital identity, then share it with Doncaster and Bassetlaw Teaching Hospitals
             {%- endset %}
             {% set hintHtml3 -%}
-            <p>This might be because you cannot able to create a digital identity, or you cannot scan your passport
+            <p>This might be because you cannot create a digital identity, or you cannot scan your passport
             {%- endset %}
             {{ radios({
             "idPrefix": "method to verify",
@@ -76,7 +76,7 @@ Verify your digital identity
             },
             "items": [
             {
-            "value": "yes~yoti-image-first-time",
+            "value": "yes~yoti-image-already",
             "text": "Yes and I want to share it with my Doncaster and Bassetlaw Teaching Hospitals",
             "hint": { "html": hintHtml1
             },
