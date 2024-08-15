@@ -1,0 +1,109 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout_staffliveservice.html' %}
+<!-- In /views/layout.html you can: - change the header and footer - add custom CSS and JavaScript -->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Confirm your mobile number and collect your access key credential
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+
+
+<!-- For adding a Go back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/Go back-link -->
+{% block outerContent %}
+{{ backLink({
+"href": "step-two-confirm-mobile-number",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0"
+}) }}
+{% endblock %}
+
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <form action="step-two-add-your-photo" method="post" autocomplete="off">
+      <div class="nhsuk-form-group">
+        <div>
+          <span class="nhsuk-caption-m">Step 2 of 2: Create your passport profile</span>
+          <h2>Enter your details</h2>
+          <p>This should match the information on your identity documents and the details stored on ESR (Electronic Staff Register) that you provided to your HR department.</p>
+          <p>If there are any discrepancies it may take longer to register with Digital Staff Passport.</p>
+          <p><b>Some information has been entered by the HR department of this organisation. If there are any issues, please raise this with the HR department.</b></p>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="first-name">
+              First name
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-one-half" id="first-name" name="first-name" type="text" value="John" disabled>
+          </div>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="last-name">
+              Last name
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-one-half" id="first-name" name="first-name" type="text" value="Smith" disabled>
+          </div>
+          <div class="nhsuk-form-group">
+            <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+              <legend class="nhsuk-fieldset__legend nhsuk-label--s">
+                <h1 class="nhsuk-fieldset__heading">
+                  Date of birth
+                </h1>
+              </legend>
+              <div class="nhsuk-hint" id="example-hint">
+                For example, 15 3 1984
+              </div>
+          
+              <div class="nhsuk-date-input" id="example">
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                      Day
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" name="example-day" type="text" pattern="[0-9]*" inputmode="numeric" value="10" disabled>
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                      Month
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example-month" type="text" pattern="[0-9]*" inputmode="numeric" value="08" disabled>
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                      Year
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example-year" type="text" pattern="[0-9]*" inputmode="numeric" value="1991">
+                  </div>
+                </div>
+              </div>
+              <br>
+            </fieldset>
+          
+          </div>
+        </div>
+        </div>
+        {{ button({
+          "text": "Continue"
+          }) }}
+    </form>
+  </div>
+</div>
+
+
+<!-- End of content -->
+
+{% endblock %}

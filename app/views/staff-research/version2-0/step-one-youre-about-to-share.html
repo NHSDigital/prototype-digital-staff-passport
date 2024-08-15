@@ -1,0 +1,122 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout_staffliveservice.html' %}
+<!-- In /views/layout.html you can: - change the header and footer - add custom CSS and JavaScript -->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Confirm your mobile number and collect your access key credential
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+
+
+<!-- For adding a Go back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/Go back-link -->
+{% block outerContent %}
+{{ backLink({
+"href": "yoti-image-first-time",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0"
+}) }}
+{% endblock %}
+
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <form action="step-two" method="post" autocomplete="off">
+      <div class="nhsuk-form-group">
+        <div class="nhsuk-grid-column-two-thirds-coloured nhsuk-u-padding-left-5 nhsuk-u-padding-top-3 nhsuk-u-padding-right-3">
+          <h2>You're about to share the following details from your verified digital identity</h2>
+          <table class="nhsuk-table-responsive">
+            <p>The information you're sharing includes:</p>
+            <tbody class="nhsuk-table__body">
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Label </span><b>Photo</b>
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Data </span><img src="/images/profile_image.jpg" alt="Profile image" width="150" height="150">
+                </td>
+
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Label </span><b>First name</b>
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Data </span>Stephen
+                </td>
+
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Label </span><b>Last name</b>
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Data </span>Smith
+                </td>
+
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Label </span><b>Date of birth</b>
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Data </span>10 June 1997
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Label </span><b>Gender</b>
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Data </span>Male
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Label </span><b>Nationality</b>
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Data </span>British
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Label </span><b>Address</b>
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Data </span>29 Acacia Road<br>Norwich<br>NO1 4FG
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <p>If you think that some of the information above is not correct, choose to verify your identity attending an appointment with HR or by sharing an amended digital identity credential.</p>
+          <p><a href="/">I will attend an appointment with HR to verify my identity.</a></p>
+          <p>If your details are correct and you wish to continue, your identity will be verified and you'll receive an NHS identity credential.</p>
+          <p>You'll be able to use this credential to confirm your identity if you move to a different organisation in tuture.</p>
+
+        </div>
+        <br>
+        {{ button({
+          "text": "Continue"
+          }) }}
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<!-- End of content -->
+
+{% endblock %}
