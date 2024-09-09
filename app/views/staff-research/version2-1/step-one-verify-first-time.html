@@ -8,7 +8,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-Verify your digital identity
+Verify your identity
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -37,15 +37,11 @@ Verify your digital identity
     <form action="" method="post" autocomplete="off">
       <div class="nhsuk-form-group">
         <div>
-          <h2>Verify your digital identity with Doncaster and Bassetlaw Teaching Hospitals</h2>
-          <h3>Setting up a digital identity as part of your Digital Staff Passport </h3>
-          <p>A digital identity is an online representation of your identity information, like your name or age. </p>
-          <p>You can set up and keep your digital identity on your smartphone with a government-approved app like Yoti <b>or</b> Post Office Easy ID. You can use your verified digital identity to prove who you are when signing up for Digital Staff Passport. </p>
-        <p>A digital identity check can replace an in-person ID check with a member of your organisation's HR team. </p>
-        <h3>Signing up for Digital Staff Passport without setting up a digital identity </h3>
-        <p>You can still verify your identity by attending an in-person ID check. Choose the face-to-face check if you would prefer to do this.  </p>
-          <div class="nhsuk-form-group">
-
+          <h2>Verify your identity with Doncaster and Bassetlaw Teaching Hospitals</h2>
+          <p>You can set up and keep your digital identity on your smartphone with a government-approved app like Yoti <b>or</b> Post Office Easy ID. A digital identity is an online representation of your identity information, like your name or age.</p>
+          <p>You can use your verified digital identity to prove who you are when signing up for Digital Staff Passport.</p>
+        <p>A digital identity check can replace an in-person ID check with a member of your organisation's HR team</p>
+        <p>You can still choose the in-person ID check if you can't verify your digital identity.</p>
           <fieldset class="nhsuk-fieldset">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
               <h1 class="nhsuk-fieldset__heading">
@@ -68,7 +64,7 @@ Verify your digital identity
             "name": "verifymethod",
             "fieldset": {
             "legend": {
-            "text": "Have you verified your identity with Yoti or Post Office EasyID? ",
+            "text": "Have you verified your identity with Yoti or Post Office EasyID?",
             "classes": "nhsuk-fieldset__legend--s",
             "isPageHeading": "false"
             }
@@ -76,7 +72,7 @@ Verify your digital identity
             },
             "items": [
             {
-            "value": "yes~yoti-image-already",
+            "value": "yes~yoti-image-first-time",
             "text": "Yes and I want to share it with my Doncaster and Bassetlaw Teaching Hospitals",
             "hint": { "html": hintHtml1
             },
@@ -93,8 +89,11 @@ Verify your digital identity
             }
             },
             {
+              divider: "or"
+            },
+            {
               "value": "no~step-one-youve-chosen-face-first",
-              "text": "No, I'd prefer to do a face-to-face identity check",
+              "text": "I'd prefer to do a face-to-face identity check",
               "hint": { "html": hintHtml3
             },
               "conditional": {

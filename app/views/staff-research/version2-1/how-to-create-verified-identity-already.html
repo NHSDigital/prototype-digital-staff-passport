@@ -8,7 +8,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-Start your onboarding
+Create a digital identity
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -39,26 +39,33 @@ Start your onboarding
     <form action="yoti-image-already" method="post" autocomplete="off">
       <div class="nhsuk-form-group">
         <div>
-          <h2>How to create a verified digital identity </h2>
+          <h2>Create a verified digital identity</h2>
           <h3>Download Yoti or Post Office EasyID </h3>
-          <p>You can create your digital identity with either Yoti or Post Office EasyID. These are government-approved smartphone apps for verifying identities.  </p>
-          <p>Your verified digital identity can replace the need for an in-person ID check. You can still attend an in-person check with your organisation if you would prefer to do this instead.</p>
-            <p>Get <b>Yoti</b> from: </p>
-            <ul class="nhsuk-list nhsuk-list--bullet">
-              <li>the <a href="https://apps.apple.com/gb/app/yoti-your-digital-identity/id983980808" target="_blank">App Store</a> </li>
-              <li>the <a href="https://play.google.com/store/apps/details?id=com.yoti.mobile.android.live&hl=en_GB&gl=US" target="_blank">Google Play Store </a></li>
-            </ul> 
-            <p>Get <b>Post Office EasyID</b> from: </p>
-            <ul class="nhsuk-list nhsuk-list--bullet">
-              <li>the <a href="https://apps.apple.com/gb/app/post-office-easyid/id1552010191" target="_blank">App Store</a> </li>
-              <li>the <a href="https://play.google.com/store/apps/details?id=com.postofficeid.mobile.android.live&hl=en_GB&gl=US&pli=1" target="_blank">Google Play Store </a></li>
-            </ul> 
-
-          <p>Most people can finish applying for a digital identity in about 15 minutes. Please complete it in one go.  </p>
-          <h3>Share your digital identity with your organisation  </h3>
-          <p>You'll need to use your smartphone camera to scan your face and your passport on Yoti or Post Office EasyID.   </p>
+          <p>Get Yoti <b>or</b> Post Office EasyID from your smartphone app provider. Both apps are free to download and use.</p>
+          <p>It can take around 15 minutes to set up a digital identity. Please complete it in one go.</p>
+          <p>You'll need to use your smartphone camera to scan your face and your passport on Yoti or Post Office EasyID.</p>
+          <h3>Share your digital identity with your organisation</h3>
+          <p>Select 'continue' once you have created your digital identity on Yoti or Post Office EasyID.</p>
+          <p>You'll be asked to share your identity by scanning a QR code on the next page.</p>
           <br>
         </div>
+        <details class="nhsuk-details">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+              What to do if you cannot create a digital identity
+            </span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <p>You can still register even if: </p>
+            <ul class="nhsuk-list nhsuk-list--bullet">
+              <li>the digital identity check does not work for your passport or biometric card</li>
+              <li>you change your mind about creating a digital identity</li>
+            </ul>
+            <p>Your <a href="/staff-research/version2-1/step-one-youve-chosen-face-first">identity can be verified through a face-to-face identity check</a> with a member of the organisation's HR team instead.</p>
+        
+          </div>
+        </details>
+        <div>
           {{ button({
           "text": "Continue"
           }) }}
