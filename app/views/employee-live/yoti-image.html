@@ -3,12 +3,12 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layouts/layout_staffliveservice.html' %}
+{% extends 'layouts/layout_employee_research.html' %}
 <!-- In /views/layout.html you can: - change the header and footer - add custom CSS and JavaScript -->
 
 <!-- Set the page title -->
 {% block pageTitle %}
-Confirm your mobile number and collect your access key credential
+Scan the QR code
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -19,7 +19,7 @@ Confirm your mobile number and collect your access key credential
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/Go back-link -->
 {% block outerContent %}
 {{ backLink({
-"href": "step-one-verify",
+"href": "ES3-verify-your-identity_alreadyhave",
 "text": "Back",
 "classes": "nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0"
 }) }}
@@ -33,10 +33,28 @@ Confirm your mobile number and collect your access key credential
 
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
+    <form action="youre-about-to-share" method="post" autocomplete="off">
+      <div>
+      <h2>Scan the QR code to share your digital identity with your organisation</h2>
+      <p>Once you have Yoti <b>or</b> Post Office EasyID set up, you can scan the QR code below.</p>
+    </div>
 
-<img src="/images/YOTI_graphic.png" alt="YOTI graphic" width="750" height="550">
-
-   
+    <img src="/images/Yoti_graphic_doncaster.png" alt="YOTI graphic" width="600" height="780">
+    <br><br>
+    <details class="nhsuk-details">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          What to do if the QR code does not scan
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p>Check our <a href="https://digital.nhs.uk/services/digital-staff-passport/guidance-and-support/support-for-staff/troubleshooting/share-identity-with-trust---invalid-activation-barcode">troubleshooting guidance</a> if you get stuck when scanning the QR code.</p>
+      </div>
+    </details>
+    <button class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
+      Continue
+    </button>
+  </form>
   </div>
 </div>
 
