@@ -40,8 +40,8 @@ Verify your identity
           <h2>Verify your identity with Doncaster and Bassetlaw Teaching Hospitals</h2>
           <p>You can set up and keep your digital identity on your smartphone with a government-approved app like Yoti <b>or</b> Post Office Easy ID. A digital identity is an online representation of your identity information, like your name or age.</p>
           <p>You can use your verified digital identity to prove who you are when signing up for Digital Staff Passport.</p>
-        <p>A digital identity check can replace an in-person ID check with a member of your organisation's HR team</p>
-        <p>You can still choose the in-person ID check if you can't verify your digital identity.</p>
+        <p>A digital identity check can replace an in-person identity check with a member of your organisation's HR team.</p>
+        <p>You can still choose the in-person identity check if you can't verify your digital identity.</p>
           <fieldset class="nhsuk-fieldset">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
               <h1 class="nhsuk-fieldset__heading">
@@ -51,10 +51,10 @@ Verify your identity
             <div class="nhsuk-radios">
 
             {% set hintHtml1 -%}
-            <p>You'll be asked to scan a QR code with either Yoti or Post Office EasyID
+            <p>You'll be shown how to create and share a digital identity in the next step
             {%- endset %}
             {% set hintHtml2 -%}
-            <p>You'll be shown how to create a digital identity, then share it with Doncaster and Bassetlaw Teaching Hospitals
+            <p>You'll be asked to scan a QR code in the next step
             {%- endset %}
             {% set hintHtml3 -%}
             <p>This might be because you cannot create a digital identity, or you cannot scan your passport
@@ -64,24 +64,24 @@ Verify your identity
             "name": "verifymethod",
             "fieldset": {
             "legend": {
-            "text": "Have you verified your identity with Yoti or Post Office EasyID?",
+            "text": "How will you verify your identity with Doncaster and Bassetlaw Teaching Hospitals?",
             "classes": "nhsuk-fieldset__legend--s",
             "isPageHeading": "false"
             }
             
             },
             "items": [
-            {
-            "value": "yes~ES4-yoti-image_firsttime",
-            "text": "Yes and I want to share it with Doncaster and Bassetlaw Teaching Hospitals",
+            { 
+            "value": "no~ES5-how-to-create-verified-identity_firsttime",
+            "text": "I need to create a verified identity digital identity with Yoti or Post Office Easy ID, then share it with this organisation",
             "hint": { "html": hintHtml1
             },
             "conditional": {
             }
             },
             {
-            "value": "no~ES5-how-to-create-verified-identity_firsttime",
-            "text": "No, but I want to create and share my digital identity",
+            "value": "yes~ES4-yoti-image_alreadyhave",
+            "text": "I already have a verified digital identity with Yoti or Post Office EasyID, and I will now share it with this organisation",
             "hint": { "html": hintHtml2
             
           },
@@ -89,11 +89,8 @@ Verify your identity
             }
             },
             {
-              divider: "or"
-            },
-            {
               "value": "no~ES6-youve-chosen-face_firsttime",
-              "text": "I'd prefer to do a face-to-face identity check",
+              "text": "I'd prefer to do an in-person check with the HR team at this organisation",
               "hint": { "html": hintHtml3
             },
               "conditional": {
