@@ -8,7 +8,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-In-person identity check
+Create your DSP profile
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -19,7 +19,7 @@ In-person identity check
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/Go back-link -->
 {% block outerContent %}
 {{ backLink({
-"href": "ES3-verify-your-identity_alreadyhave",
+"href": "ES6-youve-chosen-face_alreadyhave",
 "text": "Back",
 "classes": "nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0"
 }) }}
@@ -36,15 +36,17 @@ In-person identity check
 
 
 
-    <form action="ES8-create-your-profile_alreadyhave" method="post" autocomplete="off">
+    <form action="ES13-details-about-your-role" method="post" autocomplete="off">
       <div class="nhsuk-form-group">
         <div>
-          <h2>In-person identity check</h2>
-          <p>The HR team at Doncaster and Bassetlaw Teaching Hospitals will book an appointment to verify your identity in person. Please take a valid ID and proof of address.</p>
-          <p>When your identity has been verified, you'll receive an NHS identity credential.</p>
-          <h3>Create your profile</h3>
-          <p>Your Digital Staff Passport profile will store your personal details, pre-employment checks and other important information.</p>
-          <p>Select 'continue' to begin creating your profile.</p>
+          <h2>Create your DSP profile</h2>
+          <p>We need some more information from you to set up your profile.</p>
+          <p>We'll ask you to:</p>
+          <ul class="nhsuk-list nhsuk-list--bullet">
+            <li>check details about your role</li>
+            <li>enter an email address that you must have regular access to</li>
+            <li>enter a mobile number that you must have regular access to</li>
+          </ul>
           <div>
           {{ button({
           "text": "Continue"
