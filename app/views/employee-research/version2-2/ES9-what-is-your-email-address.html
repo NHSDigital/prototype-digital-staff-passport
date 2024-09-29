@@ -8,7 +8,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-Confirm your email address
+What is your email address?
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -19,7 +19,7 @@ Confirm your email address
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/Go back-link -->
 {% block outerContent %}
 {{ backLink({
-"href": "ES9-enter-email",
+"href": "ES8-create-your-profile",
 "text": "Back",
 "classes": "nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0"
 }) }}
@@ -33,37 +33,27 @@ Confirm your email address
 
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <form action="ES11-enter-mobile-number" method="post" autocomplete="off">
+
+
+
+    <form action="ES10-confirm-email-address" method="post" autocomplete="off">
       <div class="nhsuk-form-group">
         <div>
-          <h2>Confirm your email address</h2>
-          <p>Enter the 6-digit security code sent to <b>ashley.smith19@nhs.net</b> to confirm your email address.</p>
-          <p>This code is only valid for 5 minutes.</p>
+          <h2>What is your email address?</h2>
+          <p>Enter your email address. You'll need to be able to access it from all the organisations you work for.</p>
+          <p>Select 'continue' to get a 6-digit security code sent to your email address.</p>
+        
           {{ input({
             label: {
-              text: "Your 6-digit code"
+              text: "Email address"
             },
             classes: "nhsuk-u-width-one-half",
             id: "email-address",
             name: "email-address"
           }) }}
         </div>
+
         </div>
-        <details class="nhsuk-details">
-          <summary class="nhsuk-details__summary">
-            <span class="nhsuk-details__summary-text">
-              Not received your security code?
-            </span>
-          </summary>
-          <div class="nhsuk-details__text">
-            <p>If you did not get a security code: </p>
-            <ul class="nhsuk-list nhsuk-list--bullet">
-              <li>check your spam or junk email folder</li>
-              <li>ask us to <a href="">resend your security code</a></li>
-              <li>go back a step and enter your email address again</li>
-            </ul>
-          </div>
-        </details>
         {{ button({
           "text": "Continue"
           }) }}
@@ -74,4 +64,6 @@ Confirm your email address
 
 <!-- End of content -->
 
+</div>
+</div>
 {% endblock %}
