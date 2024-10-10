@@ -19,7 +19,7 @@ Scan the QR code
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/Go back-link -->
 {% block outerContent %}
 {{ backLink({
-"href": "ES3-verify-your-identity_alreadyhave",
+"href": "/employee-design-home",
 "text": "Back",
 "classes": "nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0"
 }) }}
@@ -33,7 +33,7 @@ Scan the QR code
 
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <form action="ES7-review-details-from-identity" method="post" autocomplete="off">
+    <form action="NSI-added-to-wallet_shared" method="post" autocomplete="off">
       <div>
       <h2>Scan the QR code to share your New Starter Information with your organisation</h2>
       <p>Use <b>Microsoft Authenticator</b> to scan scan the QR code below.</p>
@@ -51,6 +51,9 @@ Scan the QR code
         <p>Check our <a href="https://digital.nhs.uk/services/digital-staff-passport/guidance-and-support/support-for-staff/troubleshooting/share-identity-with-trust---invalid-activation-barcode">troubleshooting guidance</a> if you get stuck when scanning the QR code.</p>
       </div>
     </details>
+    <button class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
+      Skip the scan (prototype)
+    </button>
   </form>
   </div>
 </div>
