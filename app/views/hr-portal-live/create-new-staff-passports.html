@@ -1,0 +1,84 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+{% block pageTitle %}
+Search results
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "/hr-portal-live/SPA-home",
+"text": "Home",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+
+    <span class="nhsuk-caption-xl">Create one or more staff passports</span>
+    <h1 class="nhsuk-heading-xl">Create new staff passports</h1>
+
+    <div class="nhsuk-grid-column-full nhsuk-u-padding-left-0">
+      <form action="create-single-passport" method="post">
+
+        <div class="nhsuk-form-group nhsuk-u-margin-bottom-5">
+          <label class="nhsuk-label nhsuk-u-margin-bottom-0" for="SearchInput">
+            <p class="nhsuk-body">You can start creating new staff passports in two ways. You can complete a form to begin a single passport or upload a CSV (comma-separated values) to start creating any number of passports. </p>
+            
+    
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-three-quarters">
+
+      <form action="/docs/examples/branching/answer" method="post">
+
+        {% call fieldset({
+          legend: {
+            text: "I want to create:",
+            classes: "nhsuk-fieldset__legend--l",
+            isPageHeading: true
+          }
+        }) %}
+
+        {{ radios({
+          "idPrefix": "no of pasports",
+          "name": "no-of-passports",
+          "items": [
+            {
+              "value": "Yes",
+              "text": "A single passport using a form"
+            },
+            {
+              "value": "No",
+              "text": "One or more passports using a CSV file"
+            }
+          ]
+        }) }}
+
+        {% endcall %}
+<p></p>
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+      </form>
+  
+
+    </div>
+
+
+
+
+  </div>
+</div>
+
+
+{% endblock %}

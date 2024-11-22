@@ -1,0 +1,170 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+{% block pageTitle %}
+Search results
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "/hr-portal-live/SPA-home",
+"text": "Home",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+
+    <span class="nhsuk-caption-l">Create one or more staff passports</span>
+    <h1 class="nhsuk-heading-l">Create single staff passport</h1>
+
+    <div class="nhsuk-grid-column-full nhsuk-u-padding-left-0">
+      <form action="create-new-staff-passports" method="post">
+
+        <div class="nhsuk-form-group nhsuk-u-margin-bottom-5">
+          <label class="nhsuk-label nhsuk-u-margin-bottom-0" for="SearchInput">
+            <p class="nhsuk-body">Complete all fields below too begin creating a single staff passport.</p>
+            <p>When you creare a new record, the staff member is automatically sent an onboarding invitation. </p>
+            
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="one-half">
+                First name
+              </label>
+              <input class="nhsuk-input nhsuk-u-width-one-half" id="one-half" name="one-half" type="text">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="one-half">
+                Last name
+              </label>
+              <input class="nhsuk-input nhsuk-u-width-one-half" id="one-half" name="one-half" type="text">
+            </div>
+
+            <div class="nhsuk-form-group">
+
+              <label class="nhsuk-label" for="example-with-hint-text">
+                Date of birth (optional)
+              </label>
+              <div class="nhsuk-hint" id="example-with-hint-text-hint">
+                For example, 15 3 1984
+              </div>
+        
+                <div class="nhsuk-date-input" id="example">
+                  <div class="nhsuk-date-input__item">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                        Day
+                      </label>
+                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" name="example[day]" type="text" inputmode="numeric">
+                    </div>
+                  </div>
+                  <div class="nhsuk-date-input__item">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                        Month
+                      </label>
+                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example[month]" type="text" inputmode="numeric">
+                    </div>
+                  </div>
+                  <div class="nhsuk-date-input__item">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                        Year
+                      </label>
+                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example[year]" type="text" inputmode="numeric">
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            
+            </div>
+</div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="one-half">
+                Email address
+              </label>
+              <input class="nhsuk-input nhsuk-u-width-one-half" id="one-half" name="one-half" type="text">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="one-half">
+                Telephone number
+              </label>
+              <input class="nhsuk-input nhsuk-u-width-one-half" id="one-half" name="one-half" type="text">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="select-1">
+                Staff group
+              </label>
+              <select class="nhsuk-select" id="select-1" name="select-1">
+                <option value="1" selected disabled>Choose an option</option>
+                <option value="2" >Additional Clinical Services</option>
+                <option value="3" >Additional Professional Scientific and Technical</option>
+                <option value="3" >Administrative and Clerical</option>
+                <option value="3" >Allied Health Professionals</option>
+                <option value="3" >Estates and Ancillary</option>
+                <option value="3" >Healthcare Scientists</option>
+                <option value="3" >Medical and Dental</option>
+                <option value="3" >Nursing and Midwifery Registered</option>
+                <option value="3" >Students - non-medical</option>
+                <option value="3" >Students - medical undergraduate</option>
+                
+              </select>
+            </div>
+            
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="select-1">
+                Job role (optional)
+              </label>
+              <select class="nhsuk-select" id="select-1" name="select-1">
+                <option value="1" selected disabled>Choose an option</option>
+                <option value="2">Job role 1                                        </option>
+                <option value="3">Job role 2                                        </option>
+              </select>
+            </div>
+         
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="example-with-hint-text">
+                Employment type
+              </label>
+              <div class="nhsuk-hint" id="example-with-hint-text-hint">
+                Select the type of employment so that an appropriate invitation can be sent
+              </div>
+              <select class="nhsuk-select" id="select-1" name="select-1">
+                <option value="1" selected disabled>Choose an option</option>
+                <option value="2" >Permanent or fixed term</option>
+                <option value="3" >Additional Professional Scientific and Technical</option>
+              </select>
+            </div>
+        
+
+          </div>
+          <div>
+            {{ button({
+            "text": "Continue"
+            }) }}
+  
+  
+      </form>
+
+    </div>
+
+
+
+
+  </div>
+</div>
+
+
+{% endblock %}
