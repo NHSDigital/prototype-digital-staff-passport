@@ -1,17 +1,15 @@
+
 // Import NHS.UK frontend library
 @import 'node_modules/nhsuk-frontend/packages/nhsuk';
-
 // Components that are not in the NHS.UK frontend library
 @import 'components/list-border';
 @import 'components/related-nav';
 @import 'components/search-button';
 @import 'components/spinner';
-
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below...
 ///////////////////////////////////////////
 // index page styles
-
 .nhsuk-list.spaced > li {
   margin-bottom: 1em;
   background: #fff;
@@ -20,30 +18,23 @@
   border: none;
   padding: 1em;
 }
-
 .nhsuk-list.spaced > li li {
   padding: 0 0 0em 1em;
 }
-
 .nhsuk-inset-text {
   background-color: #fff
 }
-
-
 .nhsuk-list.spaced a {
   word-break: break-all;
 }
-
 .bulleted-summary-list,
 .bulleted-summary-list h3 {
   position: relative;
 }
-
 @media (min-width: 40.0625em) {
   .bulleted-summary-list {
     padding-left: 4em;
   }
-
   .bulleted-summary-list:before {
     height: 100%;
     width: 2px;
@@ -53,7 +44,6 @@
     left: 0.75em;
     bottom: 0;
   }
-
   .bulleted-summary-list h3:before {
     height: 20px;
     width: 20px;
@@ -64,7 +54,6 @@
     left: -2.55em;
     bottom: 0.5rem;
   }
-
   .bulleted-summary-list:after {
     height: 5px;
     width: 20px;
@@ -75,7 +64,6 @@
     bottom: 0;
   }
 }
-
 // tabs
 .informative-tab {
   text-transform: uppercase;
@@ -88,124 +76,94 @@
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 }
-
 .informative-tab-green {
   background: $color_nhsuk-green;
 }
-
 .informative-tab-orange {
   background: $color_nhsuk-orange;
   color: black;
 }
-
 .informative-tab-blue {
   background: $color_nhsuk-blue;
   color: white;
 }
-
 .informative-tab-purple {
   background: $color_nhsuk-purple;
   color: white;
 }
-
 .informative-tab-grey {
   background: $color_nhsuk-grey-3;
   color: white;
 }
-
 .nhsuk-header__container {
   max-width: 1170px;
-
   @include mq($from: tablet) {
   }
-
   @include mq($from: desktop) {
   }
 }
-
 .nhsuk-width-container {
   max-width: 1170px;
-
   @include mq($from: tablet) {
   }
-
   @include mq($from: desktop) {
   }
 }
-
 .nhsuk-header__navigation-list {
   max-width: 1170px;
-
   @include mq($from: tablet) {
   }
-
   @include mq($from: desktop) {
   }
 }
-
 .nhsuk-phase-banner__container {
   background-color: #fff;
 }
-
 .nhsuk-phase-banner {
   padding-top: nhsuk-spacing(3);
   padding-bottom: nhsuk-spacing(3);
   background-color: $color_nhsuk-white;
-
   //border-bottom: 1px solid $color_nhsuk-grey-3;
 }
-
 .nhsuk-phase-banner__content {
   @include nhsuk-font($size: 16);
   @include nhsuk-text-color;
-
   display: table;
   margin: 0;
 }
-
 .nhsuk-phase-banner__content__tag {
   display: inline-block;
   outline: 2px solid transparent;
   outline-offset: -2px;
-
   margin-right: nhsuk-spacing(2);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
-
   color: $color_nhsuk-white;
   background-color: $color_nhsuk-blue;
 }
-
 .nhsuk-phase-banner__text {
   display: table-cell;
   vertical-align: middle;
 }
-
 .nhsuk-footer {
   max-width: 1170px;
 }
-
 .nhsuk-label {
   font-size: large;
 }
-
 .table-label {
   overflow-wrap: break-word;
   white-space: normal;
 }
-
-
 .disposition-set {
   counter-reset: set
 }
-
 .disposition-unit {
   margin: 16px 0 32px;
   padding: 0 32px 0 40px;
   position: relative
 }
-
 @media (min-width: 500px) {
   .disposition-unit {
     border-top: 0;
@@ -213,12 +171,10 @@
     padding: 0 0 0 56px
   }
 }
-
 .disposition-unit:first-child {
   border-top: 0;
   padding-top: 0
 }
-
 .disposition-unit:before {
   background-color: #fff;
   border: 1px solid #aeb7bd;
@@ -234,7 +190,6 @@
   width: 24px;
   z-index: 2
 }
-
 @media (min-width: 500px) {
   .disposition-unit:before {
     background-color: #fff;
@@ -247,7 +202,6 @@
     width: 32px
   }
 }
-
 .disposition-unit:after {
   border-left: 2px solid #aeb7bd;
   content: "";
@@ -257,7 +211,6 @@
   top: 24px;
   z-index: 1
 }
-
 @media (min-width: 500px) {
   .disposition-unit:after {
     border-left-width: 4px;
@@ -265,15 +218,12 @@
     top: 32px
   }
 }
-
 .disposition-unit:last-child:after {
   border: 0
 }
-
 .disposition-unit .collapse-title :first-child {
   margin-top: 0
 }
-
 .nhsuk-grid-column-two-thirds-coloured {
   background-color: #fff;
   border-width: 1px;

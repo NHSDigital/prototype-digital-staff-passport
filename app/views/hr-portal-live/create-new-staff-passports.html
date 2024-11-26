@@ -34,50 +34,68 @@ Search results
           <label class="nhsuk-label nhsuk-u-margin-bottom-0" for="SearchInput">
             <p class="nhsuk-body">You can start creating new staff passports in two ways. You can complete a form to begin a single passport or upload a CSV (comma-separated values) to start creating any number of passports. </p>
             
-    
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-three-quarters">
+            <div class="nhsuk-form-group">
 
-      <form action="/docs/examples/branching/answer" method="post">
+              <fieldset class="nhsuk-fieldset">
+                <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                  <h1 class="nhsuk-fieldset__heading">
+                    I want to create:
+                  </h1>
+                </legend>
+            
+                <div class="nhsuk-radios">
+            
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="single" name="single" type="radio" value="yes/create-single-passport">
+                    <label class="nhsuk-label nhsuk-radios__label" for="single">
+                      A single passport using a form
+                    </label>
+                  </div>
+            
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no/create-multiple-passports">
+                    <label class="nhsuk-label nhsuk-radios__label" for="multiple">
+                      One or more passports using a CSV file
+                    </label>
+                  </div>
+            
+                </div>
+              </fieldset>
+            
+            </div>
+            
+                {{ nhsuk-radios({
+                  classes: "nhsuk-radios--inline",
+                  idPrefix: "create passports",
+                  name: "create passports",
+                  fieldset: {
+                    legend: {
+                      text: "I want to create:?",
+                      isPageHeading: true,
+                      classes: "nhsuk-fieldset__legend--m"
+                    }
+                  },
+                  items: [
+                    {
+                      value: "yes~/create-single-passport",
+                      text: "A single passport using a form"
+                    },
+                    {
+                      value: "no~/create-multiple-passports",
+                      text: "One or more passports using a CSV file"
+                    }
+                  ]
+                }) }}
+            
+                  
+                </div>
+              </fieldset>
+            
+            </div>
 
-        {% call fieldset({
-          legend: {
-            text: "I want to create:",
-            classes: "nhsuk-fieldset__legend--l",
-            isPageHeading: true
-          }
-        }) %}
-
-        {{ radios({
-          "idPrefix": "no of pasports",
-          "name": "no-of-passports",
-          "items": [
-            {
-              "value": "Yes",
-              "text": "A single passport using a form"
-            },
-            {
-              "value": "No",
-              "text": "One or more passports using a CSV file"
-            }
-          ]
-        }) }}
-
-        {% endcall %}
-<p></p>
-        {{ button({
-          "text": "Continue"
-        }) }}
-
-      </form>
-  
-
-    </div>
-
-
-
-
-  </div>
+            <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+              Continue
+            </button>
 </div>
 
 

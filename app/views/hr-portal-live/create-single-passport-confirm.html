@@ -1,0 +1,190 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+{% block pageTitle %}
+Search results
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "/hr-portal-live/SPA-home",
+"text": "Home",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+}) }}
+{% endblock %}
+
+
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+
+   
+
+    {% block content %}
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-three-quarters">
+  
+        <span class="nhsuk-caption-l">Create one or more staff passports</span>
+    <h1 class="nhsuk-heading-l">Create single staff passport</h1>
+        <dl class="nhsuk-summary-list">
+          
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              First name
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              {{ data['first-name'] }}
+            </dd>
+            <dd class="nhsuk-summary-list__actions">
+              
+            </dd>
+          </div>
+        
+         <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Last name
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              {{ data['last-name'] }}
+            </dd>
+            <dd class="nhsuk-summary-list__actions">
+             
+            </dd>        
+          </div> 
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Date of birth
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              {{ data['day-birth'] }} {{ data['day-birth'] }} {{ data['year-birth'] }}
+            </dd>
+            <dd class="nhsuk-summary-list__actions">
+              
+            </dd>        
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+             Email address
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              {{ data['email-address'] }}
+            </dd>
+            <dd class="nhsuk-summary-list__actions">
+             
+            </dd>        
+          </div> 
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+             Telephone number
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              {{ data['telephone'] }}
+            </dd>
+            <dd class="nhsuk-summary-list__actions">
+             
+            </dd>        
+          </div> 
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+             Staff group
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              {{ data['staff-group'] }}
+            </dd>
+            <dd class="nhsuk-summary-list__actions">
+             
+            </dd>        
+          </div> 
+          
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+             Job role
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              {{ data['job-role'] }}
+            </dd>
+            <dd class="nhsuk-summary-list__actions">
+             
+            </dd>        
+          </div> 
+        
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+             Employment type
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              {{ data['employment-type'] }}
+            </dd>
+            <dd class="nhsuk-summary-list__actions">
+             
+            </dd>        
+          </div> 
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+             Employment status
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              {{ data['employment-status'] }}
+            </dd>
+            <dd class="nhsuk-summary-list__actions">
+             
+            </dd>        
+          </div> 
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+             Oriel PIN (optional)
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              {{ data['oriel-pin'] }}
+            </dd>
+            <dd class="nhsuk-summary-list__actions">
+              
+            </dd>        
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+             ESR assignment number (optional)
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              {{ data['ESR-number'] }}
+            </dd>
+            <dd class="nhsuk-summary-list__actions">
+              
+            </dd>        
+          </div>
+
+        </dl>
+      
+              {{ button({
+                "text": "Continue"
+              }) }}
+      
+            </form>
+
+       
+        
+        </div>
+
+
+
+
+    </form>
+      </div>
+    </div>
+    {% endblock %}
+  </div> <!-- End of nhsuk-grid-column-full -->
+</div> <!-- End of nhsuk-grid-row -->
+
