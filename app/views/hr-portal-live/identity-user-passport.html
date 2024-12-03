@@ -1,0 +1,153 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+{% block pageTitle %}
+Search results
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "/hr-portal-live/SPA-home",
+"text": "Home",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <h2>Identity and access: Taylor Johnson</h2>
+
+    <div class="nhsuk-card">
+      <div class="nhsuk-card__content">
+        <h3 class="nhsuk-card__heading nhsuk-heading-s">
+          Status
+          <span class="nhsuk-tag nhsuk-tag--yellow nhsuk-u-margin-left-l">
+            Identity shared
+          </span>
+        </h2>
+      </div>
+    </div>
+
+    <div class="nhsuk-card">
+      <div class="nhsuk-card__content">
+        <h3 class="nhsuk-card__heading nhsuk-heading-s">
+          Profile
+        
+        </h3>
+        <dl class="nhsuk-summary-list">
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              First name
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              Taylor
+            </dd>
+        
+            <dd class="nhsuk-summary-list__actions">
+        
+              <a href="#">
+              </a>
+        
+            </dd>
+        
+          </div>
+        
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+            Last name
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              Johnson
+            </dd>
+        
+            <dd class="nhsuk-summary-list__actions">
+        
+              <a href="#">
+              </a>
+        
+            </dd>
+        
+          </div>
+        
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Preferred name
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              -
+            </dd>
+        
+            <dd class="nhsuk-summary-list__actions">
+        
+              <a href="#">
+              </a>
+        
+            </dd>
+        
+          </div>
+        
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Date of birth
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              16 February 1999	
+            </dd>
+
+        
+            <dd class="nhsuk-summary-list__actions">
+        
+              <a href="#">
+              </a>
+        
+            </dd>
+        
+          
+          
+             
+         
+         
+            
+              </div>
+          </details>
+        </dl>
+
+
+        <details class="nhsuk-details">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+              Show all details
+            </span>
+          </summary>
+          <dl class="nhsuk-summary-list">
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+               Telephone number
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                Taylor
+              </dd>
+          
+              <dd class="nhsuk-summary-list__actions">
+          
+                <a href="#">
+                </a>
+          
+              </dd>
+      
+
+      </div>
+    </div>
+    
+    </div>
+  </div>
+  {% endblock %}

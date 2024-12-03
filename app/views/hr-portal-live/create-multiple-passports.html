@@ -13,7 +13,7 @@ Search results
 {{ backLink({
 "href": "/hr-portal-live/SPA-home",
 "text": "Home",
-"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
 }) }}
 {% endblock %}
 
@@ -23,151 +23,74 @@ Search results
     <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-two-thirds">
 
-        <form action="create-single-passport-confirm" method="post">
+        <form action="upload-file-multiple-passports" method="post">
           <fieldset class="nhsuk-fieldset">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
               <span class="nhsuk-caption-l">Create one or more staff passports</span>
-              <h1 class="nhsuk-heading-l">Create single staff passport</h1>
+              <h1 class="nhsuk-heading-l">Are you creating passports for new or current employees?</h1>
             </legend>
 
-            <!-- First Name -->
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="first-name">
-                First name
-              </label>
-              <input class="nhsuk-input nhsuk-u-width-three-quarters" id="first-name" name="first-name" value="{{ data['first-name'] }}" type="text">
-            </div>
+            <div class="nhsuk-form-group nhsuk-u-margin-bottom-5">
+              <label class="nhsuk-label nhsuk-u-margin-bottom-0" for="SearchInput">
+                <p class="nhsuk-body">Select an employee type so that we can send an appropriate invitation.</p>
+                
 
-            <!-- Last Name -->
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="last-name">
-                Last name
-              </label>
-              <input class="nhsuk-input nhsuk-u-width-three-quarters" id="last-name" name="last-name" value="{{ data['last-name'] }}" type="text">
-            </div>
+           <!-- Staff group -->
+           <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="staff-group">
+              Staff group
+            </label>
+            <select class="nhsuk-select" id="staff-group" name="staff-group" value="{{ data['staff-group'] }}">
+              <option value="Choose an option" selected disabled>Choose an option</option>
+              <option value="Additional Clinical Services" >Additional Clinical Services</option>
+              <option value="Additional Professional Scientific and Technical" >Additional Professional Scientific and Technical</option>
+              <option value="Administrative and Clerica" >Administrative and Clerical</option>
+              <option value="Allied Health Professionals" >Allied Health Professionals</option>
+              <option value="Estates and Ancillary" >Estates and Ancillary</option>
+              <option value="Healthcare Scientists" >Healthcare Scientists</option>
+              <option value="Medical and Dental" >Medical and Dental</option>
+              <option value="Nursing and Midwifery Registered" >Nursing and Midwifery Registered</option>
+              <option value="Students - non-medical" >Students - non-medical</option>
+              <option value="Students - medical undergraduate" >Students - medical undergraduate</option>
+            </select>
+          </div>
 
-            <!-- Date of Birth -->
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="example-with-hint-text">
-                Date of birth (optional)
-              </label>
-              <div class="nhsuk-hint" id="example-with-hint-text-hint">
-                For example, 15 3 1984
-              </div>
-              <div class="nhsuk-date-input" id="example">
-                <div class="nhsuk-date-input__item">
-                  <div class="nhsuk-form-group">
-                    <label class="nhsuk-label nhsuk-date-input__label" for="day-birth">
-                      Day
-                    </label>
-                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="date-of-birth-day" name="example[day]" type="text" inputmode="numeric" value="{{ data['day-birth'] }}">
-                  </div>
-                </div>
-                <div class="nhsuk-date-input__item">
-                  <div class="nhsuk-form-group">
-                    <label class="nhsuk-label nhsuk-date-input__label" for="month-birth">
-                      Month
-                    </label>
-                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example[month]" type="text" inputmode="numeric"  value="{{ data['month-birth'] }}">>
-                  </div>
-                </div>
-                <div class="nhsuk-date-input__item">
-                  <div class="nhsuk-form-group">
-                    <label class="nhsuk-label nhsuk-date-input__label" for="year-birth">
-                      Year
-                    </label>
-                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example[year]" type="text" inputmode="numeric" value="{{ data['year-birth'] }}">">
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="job-role">
+              Job role (optional)
+            </label>
+            <select class="nhsuk-select" id="job-role" name="job-role" value="{{ data['job role'] }}">
+              <option value="Choose an option" selected disabled>Choose an option</option>
+              <option value="Job role 1">Job role 1</option>
+              <option value="Job role 2">Job role 2</option>
+            </select>
+          </div>
+         
 
-            <!-- Email Address -->
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="email-address">
-                Email address
-              </label>
-              <input class="nhsuk-input nhsuk-u-width-three-quarters" id="email-address" name="email-address" value="{{ data['email-address'] }}" type="text">
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="example-with-hint-text">
+              Employment type
+            </label>
+            <div class="nhsuk-hint" id="example-with-hint-text-hint">
+              Select the type of employment so that an appropriate invitation can be sent
             </div>
-
-            <!-- Telephone Number -->
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="telephone-number">
-                Telephone number
-              </label>
-              <input class="nhsuk-input nhsuk-u-width-three-quarters" id="telephone-number" name="telephone" value="{{ data['telephone'] }}" type="text">
-            </div>
-
-             <!-- Staff group -->
-             <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="staff-group">
-                Staff group
-              </label>
-              <select class="nhsuk-select" id="staff-group" name="staff-group" value="{{ data['staff-group'] }}">
-                <option value="Choose an option" selected disabled>Choose an option</option>
-                <option value="Additional Clinical Services" >Additional Clinical Services</option>
-                <option value="Additional Professional Scientific and Technical" >Additional Professional Scientific and Technical</option>
-                <option value="Administrative and Clerica" >Administrative and Clerical</option>
-                <option value="Allied Health Professionals" >Allied Health Professionals</option>
-                <option value="Estates and Ancillary" >Estates and Ancillary</option>
-                <option value="Healthcare Scientists" >Healthcare Scientists</option>
-                <option value="Medical and Dental" >Medical and Dental</option>
-                <option value="Nursing and Midwifery Registered" >Nursing and Midwifery Registered</option>
-                <option value="Students - non-medical" >Students - non-medical</option>
-                <option value="Students - medical undergraduate" >Students - medical undergraduate</option>
-              </select>
-            </div>
-
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="job-role">
-                Job role (optional)
-              </label>
-              <select class="nhsuk-select" id="job-role" name="job-role" value="{{ data['job role'] }}">
-                <option value="Choose an option" selected disabled>Choose an option</option>
-                <option value="Job role 1">Job role 1</option>
-                <option value="Job role 2">Job role 2</option>
-              </select>
-            </div>
-           
-
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="example-with-hint-text">
-                Employment type
-              </label>
-              <div class="nhsuk-hint" id="example-with-hint-text-hint">
-                Select the type of employment so that an appropriate invitation can be sent
-              </div>
-              <select class="nhsuk-select" id="employment-type" name="employment-type" value="{{ data['employment-type'] }}">
-                <option value="Choose an option" selected disabled>Choose an option</option>
-                <option value="Permanent or fixed term" >Permanent or fixed term</option>
-                <option value="Temporary mover" >Temporary mover</option>
-              </select>
-            </div>
-        
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="employment-status">
-                Employment status
-              </label>
-              <select class="nhsuk-select" id="employment-status" name="employment-status">
-                <option value="Choose an option" selected disabled>Choose an option</option>
-                <option value="Current employee or leaver">Current employee or leaver</option>
-                <option value="New starter">New starter</option>
-              </select>
-            </div>
-
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="email-address">
-                Oriel PIN (optional) 
-              </label>
-              <input class="nhsuk-input nhsuk-u-width-three-quarters" id="oriel-pin" name="oriel-pin" value="{{ data['oriel-pin'] }}" type="text">
-            </div>
-
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="email-address">
-                ESR assignment number (optional) 
-              </label>
-              <input class="nhsuk-input nhsuk-u-width-three-quarters" id="ESR-number" name="ESR-number" value="{{ data['ESR-number'] }}" type="text">
-            </div>
+            <select class="nhsuk-select" id="employment-type" name="employment-type" value="{{ data['employment-type'] }}">
+              <option value="Choose an option" selected disabled>Choose an option</option>
+              <option value="Permanent or fixed term" >Permanent or fixed term</option>
+              <option value="Temporary mover" >Temporary mover</option>
+            </select>
+          </div>
+      
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="employment-status">
+              Employment status
+            </label>
+            <select class="nhsuk-select" id="employment-status" name="employment-status">
+              <option value="Choose an option" selected disabled>Choose an option</option>
+              <option value="Current employee or leaver">Current employee or leaver</option>
+              <option value="New starter">New starter</option>
+            </select>
+          </div>
 
           </fieldset>
           <button class="nhsuk-button" data-module="nhsuk-button" type="submit">

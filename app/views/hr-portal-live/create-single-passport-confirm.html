@@ -13,7 +13,7 @@ Search results
 {{ backLink({
 "href": "/hr-portal-live/SPA-home",
 "text": "Home",
-"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
 }) }}
 {% endblock %}
 
@@ -62,7 +62,7 @@ Search results
               Date of birth
             </dt>
             <dd class="nhsuk-summary-list__value">
-              {{ data['day-birth'] }} {{ data['day-birth'] }} {{ data['year-birth'] }}
+              {{ data['day-birth']['month-birth']['year-birth'] }}
             </dd>
             <dd class="nhsuk-summary-list__actions">
               
@@ -165,25 +165,47 @@ Search results
               
             </dd>        
           </div>
-
-        </dl>
-      
-              {{ button({
-                "text": "Continue"
-              }) }}
-      
-            </form>
-
-       
-        
+        </form>
         </div>
-
-
-
-
-    </form>
       </div>
-    </div>
+
+        <form action="/createSinglePassport" method="get" class="form">
+          <fieldset class="nhsuk-fieldset" aria-describedby="example-hints-hint">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+              <h1 class="nhsuk-fieldset__heading">
+                Create passport?
+              </h1>
+            </legend>
+        
+            <div class="nhsuk-hint" id="example-hints-hint">
+        
+              <p class="nhsuk-u-margin-bottom-2">Select 'Yes, create this passport' to send an automatic inviattion to this staff member.</p>
+            </div>
+        
+      
+            <div class="nhsuk-radios">
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-1" type="radio" name="createSinglePassportRadio" value="Yes" required>
+                <label class="nhsuk-label nhsuk-radios__label" for="radio-inline-q1-yes">
+                  Yes, create this passport
+                </label>
+              </div>
+      
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-2" type="radio" name="createSinglePassportRadio" value="No" required>
+                <label class="nhsuk-label nhsuk-radios__label" for="radio-inline-q1-no">
+                  No, go back and change information
+                </label>
+              </div>
+            </div>
+          </fieldset>
+      
+          <button class="nhsuk-button nhsuk-u-margin-top-3" type="submit">Continue</button>
+        </form>
+
+    
+      
+    
     {% endblock %}
   </div> <!-- End of nhsuk-grid-column-full -->
 </div> <!-- End of nhsuk-grid-row -->
