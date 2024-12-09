@@ -1,0 +1,81 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+{% block pageTitle %}
+Search results
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "/hr-portal-live/SPA-home",
+"text": "Home",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
+}) }}
+{% endblock %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    {% block content %}
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+
+        
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <span class="nhsuk-caption-l">Create one or more staff passports</span>
+              <h1 class="nhsuk-heading-l">Confirm the uploads and send invitations</h1>
+            </legend>
+
+            <div class="nhsuk-form-group nhsuk-u-margin-bottom-5">
+              <label class="nhsuk-label nhsuk-u-margin-bottom-0" for="SearchInput">
+                <p class="nhsuk-body">2 records will be uploaded</p>
+                <p class="nhsuk-body">When you upload new records, the staff members are automatically send onboarding invitations</p>
+            
+                <div class="nhsuk-form-group">
+
+                  <form action="/confirmMultiplePassports" method="get" class="form">
+                    <fieldset class="nhsuk-fieldset">
+                      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                        <h1 class="nhsuk-fieldset__heading">
+                          Upload records?
+                        </h1>
+                      </legend>
+
+                    <div class="nhsuk-radios">
+                      <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="example-1" type="radio" name="confirmMultiplePassportsRadio" value="Yes" required>
+                        <label class="nhsuk-label nhsuk-radios__label" for="radio-inline-q1-yes">
+                          Yes, upload records and send invitation
+                        </label>
+                      </div>
+              
+                      <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="example-2" type="radio" name="confirmMultiplePassportsRadio" value="No" required>
+                        <label class="nhsuk-label nhsuk-radios__label" for="radio-inline-q1-no">
+                          No, go back to file upload
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+              
+                  <button class="nhsuk-button nhsuk-u-margin-top-3" type="submit">Continue</button>
+                </form>
+        
+                
+                    
+                
+                </div>
+                
+                
+                </div>
+
+
+
+     
+      </div>
+    </div>
+    {% endblock %}
