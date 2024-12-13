@@ -19,7 +19,7 @@ Scan the QR code
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/Go back-link -->
 {% block outerContent %}
 {{ backLink({
-"href": "/Add-credentials-success-and-review",
+"href": "/employee-design-home",
 "text": "Back",
 "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
 }) }}
@@ -33,30 +33,40 @@ Scan the QR code
 
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <form action="Add-credentials-QR-code-spinner" method="post" autocomplete="off">
+    <form action="Add-access-key-QR-code-scan" method="post" autocomplete="off">
       <div>
-      <h2>Scan the QR code to store your credential</h2>
-      <p>Use <b>Microsoft Authenticator</b> to scan the QR code.
-      <p>Your credentials will be added to the Verified IDs tab in Microsoft Authenticator.
-      </ul>
+      <h2>Confirm your mobile number and collect your access key credential</h2>
+      <p>Enter the 6-digit code to confirm your mobile number.
+      <p>This code is valid for 5 minutes only.
       </p>
     </div>
 
-    <img src="/images/MS_QRcode.png" alt="YOTI graphic" width="250" height="250">
-    <br><br>
-    <!--<details class="nhsuk-details">
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="input-width-20">
+        6 digit security code
+      </label>
+      <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+    </div>
+
+    <details class="nhsuk-details">
       <summary class="nhsuk-details__summary">
         <span class="nhsuk-details__summary-text">
-          What to do if the QR code does not scan
+          Not recieved your security code
         </span>
       </summary>
       <div class="nhsuk-details__text">
-        <p>Check our <a href="https://digital.nhs.uk/services/digital-staff-passport/guidance-and-support/support-for-staff/troubleshooting/share-identity-with-trust---invalid-activation-barcode">troubleshooting guidance</a> if you get stuck when scanning the QR code.</p>
+        <p>An NHS number is a 10 digit number, like 485 777 3456.</p>
+        <p>Xxx</p>
       </div>
-    </details>-->
-    <button class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
-      Simulate the scan (prototype)
+    </details>
+
+    <p>When you click Continue, you'll be sent your access key credential, which you can add to your digital wallet.</p>
+    <p>You'll be able to use your access key credential to access your Digital Staff Passport with [name of trust].</p>
+
+    <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+      Continue
     </button>
+
   </form>
   </div>
 </div>
