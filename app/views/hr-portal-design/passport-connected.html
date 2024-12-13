@@ -7,40 +7,25 @@ Passport connected to CLS Totara
 {% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <form action="provide-credentials" method="post" autocomplete="off"></form>
-      <h2>Passport connected to CLS Totara</h2>
+    <form action="provide-credentials" method="post" autocomplete="off">
+      <h1>Passport connected to CLS Totara</h1>
+      <p>You have successfully connected the Digital Staff Passport with a matching CLS Totara record.</p>
+      <p>Credentials data received from CLS Totara:</p>
+      <ul>
+        <li>
+          Moving and handling (Level 1)
+        </li>
+        <li>
+          Preventing radicalisation prevent awareness
+        </li>
+      </ul>
+      <p>You can now provide credentials to Taylor Johnson.</p>
+      {{ button({
+        "text": "Provide credentials"
+        }) }}  
 
-      <div class="nhsuk-card">
-        <div class="nhsuk-card__content">
-          <div class="nhsuk-grid-row">
-              <p>You have successfully connected the Digital Staff Passport with a matching CLS Totara record.</p>
+      <p><a href="staff-passport">Go back to Taylor Johnson's passport</a></p>
 
-              <p>
-                <b>Credentials data received from CLS Totara to provide to Taylor Johnson.</b>
-
-                <ul>
-                    <li>
-                      Moving and handling (Level 1)
-                    </li>
-                    <li>
-                      Preventing radicalisation prevent awareness
-                    </li>
-                </ul>
-             </p>
-          </div>
-          <div class="nhsuk-grid-row">
-              <p>You can now provide credentials to Taylor Johnson.</p>
-          </div>
-          <div class="nhsuk-grid-row">
-              {{ button({
-                "text": "Provide credentials"
-                }) }}             
-          </div>
-          <div class="nhsuk-grid-row">
-            <p><a href="staff-passport">Go back to manage Taylor Johnson's connections</a></p>
-          </div>
-        </div>
-      </div>
     </form>
   </div>
 </div>
