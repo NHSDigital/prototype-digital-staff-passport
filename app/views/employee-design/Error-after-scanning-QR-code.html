@@ -8,7 +8,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-Scan the QR code
+Error after scanning QR code
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -33,24 +33,18 @@ Scan the QR code
 
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <form action="NSI-QR-spinner-justadd" method="post" autocomplete="off">
-      <div>
-      <h2>There was a problem generating a QR code</h2>
-      <p>We could not generate a QR code for you to scan.</p>
-      <p>You can:</p>
+    <h2>There was a problem with the service</h2>
+    <p>Your QR code was successfully scanned, but something is wrong with the service.
+<p></p>
+<p>You can:</p>
 <ul class="nhsuk-list nhsuk-list--bullet">
   <li>try again later, or</li>
-  <li>contact us via <a href="https://digital.nhs.uk/services/digital-staff-passport/guidance-and-support/support-for-staff/troubleshooting/report-an-issue-share-identity-with-trust---invalid-activation-barcode" class="nhsuk-link">this staff enquiry web form</a> and a member of the Digital Staff Passport team will be in touch </li>
+  <li>report the issue with the <a href="https://digital.nhs.uk/services/digital-staff-passport/guidance-and-support/support-for-staff/staff-enquiry-form-for-digital-staff-passport" class="nhsuk-link">staff enquiry form</a> and a member of the Digital Staff Passport team will be in touch </li>
   
   
-    </div>
-
-   
-
-      </div>
-    </div>
-
-  </form>
+</ul>
+      </p>
+    <p><a href="NSI-QR-spinner-just-add">Try again</a></p>
   </div>
 </div>
 
