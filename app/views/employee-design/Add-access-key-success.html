@@ -8,7 +8,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-Scan the QR code
+Credential added to Microsoft Authenticator
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -17,13 +17,15 @@ Scan the QR code
 
 <!-- For adding a Go back link -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/Go back-link -->
+
 {% block outerContent %}
 {{ backLink({
-"href": "/Add-credentials-success",
+"href": "/employee-design/Add-access-key-QR-code-scan",
 "text": "Back",
 "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
 }) }}
 {% endblock %}
+
 
 
 <!-- For adding page content -->
@@ -33,11 +35,11 @@ Scan the QR code
 
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <form action="Add-credentials-QR-code-spinner" method="post" autocomplete="off">
+    <form action="Add-access-key-QR-code-spinner" method="post" autocomplete="off">
       <div>
-      <h2>Scan the QR code to store your credential</h2>
-      <p>Use <b>Microsoft Authenticator</b> to scan the QR code.
-      <p>Your credentials will be added to the Verified IDs tab in Microsoft Authenticator.
+      <h2>Review and add credential(s) to your wallet</h2>
+      <p>You have been provided with new credentials. Before they can be shsared, you must review each one and add it to your wallet.
+      <p>Your access key will be added to the Verified IDs tab in Microsoft Authenticator.
       </ul>
       </p>
     </div>
@@ -59,8 +61,6 @@ Scan the QR code
     </button>
   </form>
   </div>
-</div>
-
 
 <!-- End of content -->
 
