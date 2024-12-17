@@ -1,0 +1,67 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout_employee_research.html' %}
+<!-- In /views/layout.html you can: - change the header and footer - add custom CSS and JavaScript -->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+QR code scanned
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+
+
+<!-- For adding a Go back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/Go back-link -->
+
+
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Add your content here -->
+      <h2>Your QR code has been scanned</h2>
+
+      <form action="auth" method="post">
+      <section class="loading-container" id="gp-connect-0" style="display:block; min-height: 16em;">
+        <div>
+          <p>Follow the instructions on your Microsoft Authenticator app to complete this step.</p>
+        </div>
+        <div class="bar_container">
+          <div id="main_container">
+            <div id="pbar" class="progress-spinner" data-percent="0">
+              <img src="/images/loader-spinner.svg" width="200px" height="200px" id="spinner" class="" />
+              <div class="ppc-loading">
+                <div class="pcc-percents-wrapper">
+                  <span id="spinner-status" class="nhsuk-body">Waiting</span><span aria-hidden="true"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </form>
+
+    </div>
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-padding-top-5">
+      <p><a href="Use-access-key-QR-code-scan">Cancel and return to QR code</a></p>
+    </div>
+  </div>
+
+  <script>
+    setTimeout(function () {
+      window.location.href = '';
+    }, 4500);
+  </script>
+{% endblock %}

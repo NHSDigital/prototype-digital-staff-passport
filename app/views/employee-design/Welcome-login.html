@@ -1,0 +1,64 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout_staffliveservice.html' %}
+<!-- In /views/layout.html you can: - change the header and footer - add custom CSS and JavaScript -->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Login
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+
+
+<!-- For adding a Go back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/Go back-link -->
+{% block outerContent %}
+{{ backLink({
+"href": "",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
+}) }}
+{% endblock %}
+
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+
+
+    <form action="Use-access-key-QR-code-scan" method="post" autocomplete="off">
+      <div class="nhsuk-form-group">
+        <div>
+          <h2>Welcome to Doncaster and Bassetlaw Teaching Hospital NHS Foundation Trust</h2>
+          <p>Login to Sheffield Teaching Hospitals NHS Foundation Trust to use your NHS Digital Staff Passport with this organisation.</p>
+          <h2>Login</h2>
+          <p>Use your passport access key credential with Sheffield Teaching Hospitals NHS Foundation Trust to login to this organisation.
+          </p>
+          <br>
+        </div>
+        <div>
+          <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+            Login
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<!-- End of content -->
+
+</div>
+</div>
+{% endblock %}
