@@ -40,6 +40,15 @@ router.get('/confirmMultiplePassports', function (req, res) {
     }
 });
 
-    
+router.get('/identityConfirmationRadio', function (req, res) {
+    if (req.query.identityConfirmationRadio === 'Yes') {
+        res.redirect('/hr-portal-live/identity-confirmed-success');
+    } else if (req.query.identityConfirmationRadio === 'No') {
+        res.redirect('/hr-portal-live/identity-decline-access');
+    } else {
+        res.redirect('/hr-portal-live/identity-staff-passport');
+    }
+});
+
 
 module.exports = router;

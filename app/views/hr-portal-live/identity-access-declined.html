@@ -1,0 +1,50 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+{% block pageTitle %}
+Search results
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "/hr-portal-live/SPA-home",
+"text": "Home",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
+}) }}
+{% endblock %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    {% block content %}
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+
+        
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-heading-l">Access declined</h1>
+            </legend>
+          
+            <div class="nhsuk-card">
+              <div class="nhsuk-card__content">
+                
+                <p class="nhsuk-card__description">The access has been declined.
+                <p class="nhsuk-card__description">Taylor Johnson will be informed of your decision and the reason you gave.</p>
+            
+                
+                 <p><a href="identity-and-access" class="nhsuk-link">
+                  Go back to Identity and Access
+                </a>
+                </p>
+                
+              </div>
+            </div>
+
+            
+      </div>
+    </div>
+    {% endblock %}

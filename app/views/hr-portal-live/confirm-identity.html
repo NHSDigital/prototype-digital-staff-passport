@@ -1,0 +1,143 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+Staff passport
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "/hr-portal-design/SPA-home",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <h2>Confirm identity: Taylor Johnson</h2>
+    <p>Staff member identity must be confirmed before a passport can be created and access granted. Identity can be confirmed via an approved digital identity, an NHS identity credential, or a face-to-face appointment.</p>
+    <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+    <div class="nhsuk-inset-text">
+      <span class="nhsuk-u-visually-hidden">Status:</span>
+      <p>An approved digital identity has been shared by the staff member.</p>
+    </div>
+
+    <table class="nhsuk-table">
+      <caption class="nhsuk-table__caption">Shared approved digital identity</caption>
+      <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+          <th role="columnheader" class="" scope="col">Issued by</th>
+          <th role="columnheader" class="nhsuk-table__cell" scope="col">Yoti Ltd</th>
+        </tr>
+      </thead>
+    </table>
+
+    <h3>Details</h3>
+    <table class="nhsuk-table">
+      <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">Photo</td>
+          <td class="nhsuk-table__cell">Xxx</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">First name</td>
+          <td class="nhsuk-table__cell">Taylor</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">Last name</td>
+          <td class="nhsuk-table__cell">Johnson</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">Date of birth</td>
+          <td class="nhsuk-table__cell">16 February 1999</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">Gender</td>
+          <td class="nhsuk-table__cell">Male</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">Nationality</td>
+          <td class="nhsuk-table__cell">British</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">Address</td>
+          <td class="nhsuk-table__cell">
+            8 Bristo Place<br>
+            Edinburgh<br>
+            EH1 1EY<br>
+            United Kingdom
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>DBS check information</h3>
+    <div class="nhsuk-inset-text">
+      <span class="nhsuk-u-visually-hidden">DBS information</span>
+      <p>We collect the following information for the DBS application process.<br><br>
+      It will not be stored in the NHS identity credential. It will only be visible in the staff profile for the Sheffield Teaching Hospital.</p>
+    </div>
+
+    <table class="nhsuk-table">
+      <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">Passport number</td>
+          <td class="nhsuk-table__cell">579877549</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">Passport expiry date</td>
+          <td class="nhsuk-table__cell">2030-08-12</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <form action="/identityConfirmationRadio" method="get" class="form">
+      <fieldset class="nhsuk-fieldset">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+          <h1 class="nhsuk-fieldset__heading">
+            Can you confirm Taylor Johnson's identity?
+          </h1>
+        </legend>
+
+        <div class="nhsuk-hint" id="example-hints-hint">
+
+          <p class="nhsuk-u-margin-bottom-2">If you're satisfied with the identity check, select 'Yes, I confirm this identity' and continue. The staff member's identity will be confirmed, an identity credential will be provided to them and their passport created.</p>
+          <p>By confirming someone's identity, you are stating that the information in the identity credential you have checked is correct.</p>
+          <p>By agreeing to issue this credential, you are confirming that you have used reasonable care and attention to issue accurate information.</p>
+        </div>
+
+        <div class="nhsuk-radios">
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-1" type="radio" name="identityConfirmationRadio" value="Yes" required>
+            <label class="nhsuk-label nhsuk-radios__label" for="radio-inline-q3-yes">
+              Yes, I want to confirm this identity.
+            </label>
+          </div>
+  
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-2" type="radio" name="identityConfirmationRadio" value="No" required>
+            <label class="nhsuk-label nhsuk-radios__label" for="radio-inline-q3-no">
+              No, I want to reject this identity credential (an appointment is needed and a new identity credential should be created)
+            </label>
+          </div>
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-2" type="radio" name="identityConfirmationRadio" value="NotNow" required>
+            <label class="nhsuk-label nhsuk-radios__label" for="radio-inline-q3-notnow">
+              Not now, go back to the staff passport.
+            </label>
+          </div>
+          
+        </div>
+      </fieldset>
+  <br>
+    </div> 
+      <button class="nhsuk-button" type="submit">Continue</button>
+    </form>
+
+    
+  </div>
+</div>
+{% endblock %}
