@@ -11,8 +11,8 @@ Search results
 
 {% block outerContent %}
 {{ backLink({
-"href": "/hr-portal-live/SPA-home",
-"text": "Home",
+"href": "/hr-portal-live/confirm-identity",
+"text": "Back",
 "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
 }) }}
 {% endblock %}
@@ -34,58 +34,51 @@ Search results
 
             <div class="nhsuk-form-group">
 
-              <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+    
+            <form action="/declineAccess" method="get" class="form">
+              <fieldset class="nhsuk-fieldset">
                 <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
-                  <h2 class="nhsuk-fieldset__heading">
+                  <h1 class="nhsuk-fieldset__heading">
                     Decline access for this staff member?
-                  </h2>
+                  </h1>
                 </legend>
-            
-                <div class="nhsuk-hint" id="contact-hint">
-                 If you decline access, the staff member will not be registered or granted access at this time. You will not be able to see any credentials they share.
-                </div>
-            
+
                 <div class="nhsuk-radios nhsuk-radios--conditional">
-            
                   <div class="nhsuk-radios__item">
-                    <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="email" aria-controls="conditional-contact-1" aria-expanded="false">
-                    <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
-                      Yes, decline access
-                    </label>
+                  <input class="nhsuk-radios__input" id="decline-access-yes" name="declineAccessRadio" type="radio" value="Yes" aria-controls="conditional-contact-1" aria-expanded="false" required>
+                  <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+                    Yes, decline access
+                  </label>
                   </div>
-            
+          
                   <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
-            
-                    <div class="nhsuk-form-group">
-                      <label class="nhsuk-label" for="select-1">
-                        Select a reason for declining access
-                      </label>
-                      <select class="nhsuk-select" id="select-1" name="select-1">
-                        <option value="1" selected disabled>Select an option</option>
-                        <option value="2">Not able to identify individual as a new starter at this organisation (no rotation information or recruitment confirmation)</option>
-                        <option value="3">Unable to confirm identity of the individual</option>
-                        <option value="3">Other</option>
-                      </select>
-                    </div>
-            
-                  </div>
-            
-                  <div class="nhsuk-radios__item">
-                    <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" aria-controls="conditional-contact-2" aria-expanded="false">
-                    <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
-                      No, go back
+          
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="select-1">
+                      Select a reason for declining access
                     </label>
+                    <select class="nhsuk-select" id="select-1" name="select-1">
+                      <option value="1" selected disabled>Select an option</option>
+                      <option value="2">Not able to identify individual as a new starter at this organisation (no rotation information or recruitment confirmation)</option>
+                      <option value="3">Unable to confirm identity of the individual</option>
+                      <option value="3">Other</option>
+                    </select>
                   </div>
-            
+          
                 </div>
+          
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="decline-access-yes" name="declineAccessRadio" type="radio" value="No" aria-controls="conditional-contact-2" aria-expanded="false" required>
+                  <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
+                    No, go back
+                  </label>
+                </div>
+              
               </fieldset>
-            
-            </div>
-        
-            <a href="identity-access-declined" role="button" draggable="false" class="nhsuk-button">
-              Continue
-            </a>
-            
+          
+            </div> 
+              <button class="nhsuk-button" type="submit">Continue</button>
+            </form>
                     
                 
 

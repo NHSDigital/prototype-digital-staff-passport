@@ -1,0 +1,82 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+{% block pageTitle %}
+Search results
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "/hr-portal-live/invitation-pending-staff-passport",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+
+    <h1 class="nhsuk-heading-l">Delete passport from the records</h1>
+    <p>If you no longer need this record to be listed in the identity and access table, you can remove it. </p>
+    <p>If you don't delete the record and you attempt to invite the individual or they attempt to register in the future with the same email address or mobile number, this will be identified as a duplicate and you will need to delete the record to allow the process to continue.    </p>
+
+    <div class="nhsuk-warning-callout">
+      <h3 class="nhsuk-warning-callout__label">
+        <span role="text">
+          <span class="nhsuk-u-visually-hidden">Important: </span>
+          Delete passport
+        </span>
+      </h3>
+      <p>By deleting this record, it will no longer be listed in the Identity and Access table. </p>
+      <p>This action is irreversible and will permanently remove the passport information from our system. </p>
+      <p>You are advised to run regular reports to capture details of passports you have declined for audit purposes, before you delete the records. Once the records have been deleted you will no longer be able to report on the information.  </p>
+    </div>
+            
+            <form action="/deletePassportRadio" method="get" class="form">
+              <fieldset class="nhsuk-fieldset">
+                <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                  <h1 class="nhsuk-fieldset__heading">
+                    Do you want to delete this staff passport from records?
+                  </h1>
+                </legend>
+
+      
+          
+                <div class="nhsuk-radios">
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="example-1" type="radio" name="deletePassportRadio" value="Yes" required>
+                    <label class="nhsuk-label nhsuk-radios__label" for="radio-inline-q6-yes">
+                      Yes, delete staff passport from records
+                    </label>
+                  </div>
+          
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="example-2" type="radio" name="deletePassportRadio" value="No" required>
+                    <label class="nhsuk-label nhsuk-radios__label" for="radio-inline-q6-no">
+                      No, go back and keep this record
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+          <br>
+            </div> 
+              <button class="nhsuk-button" type="submit">Continue</button>
+            </form>
+          
+         
+            <!-- Include NHS UK JS (Optional) -->
+            <script src="https://cdn.nhs.uk/nhsuk-1.0.0-alpha.9/nhsuk.min.js"></script>
+          
+          </body>
+          </html>
+
+
+{% endblock %}

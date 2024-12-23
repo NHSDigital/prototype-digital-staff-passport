@@ -1,0 +1,84 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+Staff passport
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "/hr-portal-live/staff-details",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <h2>Confirm identity: Jaime Chang</h2>
+    <p>Staff member identity must be confirmed before a passport can be created and access granted. Identity can be confirmed via an approved digital identity, an NHS identity credential, or a face-to-face appointment.</p>
+    <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+    <div class="nhsuk-inset-text grey-inset-text">
+      <span class="nhsuk-u-visually-hidden">Status:</span>
+      <p>An appointment has been requested by the staff member to confirm their identity.</p>
+    </div>
+
+    <div class="nhsuk-do-dont-list">
+      <h3 class="nhsuk-do-dont-list__label">Jaime Chang must attend a face-to-face meeting so you can confirm their identity</h3>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+        <li>Ask the person to provide a scanned copy or photo of their original identity documents and send them to you in an email.</li>
+        <li>During the in-person meeting, ask them to show the original documents and check them against the digital copies sent by email. </li>
+        <li>Confirm below that the identity check has been done.</li>
+      </ul>
+    </div>
+
+   
+    <form action="/identityAppointmentRadio" method="get" class="form">
+      <fieldset class="nhsuk-fieldset">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+          <h1 class="nhsuk-fieldset__heading">
+            Can you confirm Jaime Chang's identity?
+          </h1>
+        </legend>
+
+        <div class="nhsuk-hint" id="example-hints-hint">
+
+          <p class="nhsuk-u-margin-bottom-2">If you're satisfied with the identity check, select 'Yes, I confirm this identity' and continue. The staff member's identity will be confirmed, an identity credential will be provided to them and their passport created.</p>
+          <p>By confirming someone's identity, you are stating that the information in the identity credential you have checked is correct.</p>
+          <p>By agreeing to issue this credential, you are confirming that you have used reasonable care and attention to issue accurate information.</p>
+        </div>
+
+        <div class="nhsuk-radios">
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-1" type="radio" name="identityAppointmentRadio" value="Yes" required>
+            <label class="nhsuk-label nhsuk-radios__label" for="radio-inline-q3-yes">
+              Yes, I want to confirm this identity.
+            </label>
+          </div>
+  
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-2" type="radio" name="identityAppointmentRadio" value="No" required>
+            <label class="nhsuk-label nhsuk-radios__label" for="radio-inline-q3-no">
+              No, I can't confirm their identity and want to decline access. 
+            </label>
+          </div>
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-2" type="radio" name="identityAppointmentRadio" value="NotNow" required>
+            <label class="nhsuk-label nhsuk-radios__label" for="radio-inline-q3-notnow">
+              Not now, go back to the staff passport.
+            </label>
+          </div>
+          
+        </div>
+      </fieldset>
+  <br>
+    </div> 
+      <button class="nhsuk-button" type="submit">Continue</button>
+    </form>
+
+    
+  </div>
+</div>
+{% endblock %}

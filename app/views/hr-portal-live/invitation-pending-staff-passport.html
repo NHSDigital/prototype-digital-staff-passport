@@ -6,7 +6,7 @@ Staff passport
 
 {% block outerContent %}
 {{ backLink({
-"href": "/hr-portal-design/identity-appointment-needed",
+"href": "/hr-portal-live/SPA-home",
 "text": "Back",
 "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
 }) }}
@@ -15,7 +15,7 @@ Staff passport
 {% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
-    <h2>Identity and access: Jaime Chang</h2>
+    <h2>Identity and access: Emma Jones</h2>
 
     <div class="nhsuk-card">
       <div class="nhsuk-card__content">
@@ -23,19 +23,19 @@ Staff passport
           <div class="nhsuk-grid-column-one-half">
             <h3 class="nhsuk-card__heading nhsuk-heading-s nhsuk-u-margin-bottom-0">
               Passport Status:
-              <span class="nhsuk-tag nhsuk-tag--yellow nhsuk-u-text-align-right">
-                Appointment needed
+              <span class="nhsuk-tag nhsuk-tag--yellow nhsuk-u-margin-left-l nhsuk-u-margin-bottom-0">
+                Invitation sent
               </span>
             </h3>
           </div>
-         
+          
         
         </div>
         
       </div>
     </div>
 
-   <!-- Profile Card (with DBS Information included) -->
+   <!-- Profile Card -->
    <div class="nhsuk-card">
     <div class="nhsuk-card__content">
       <div class="nhsuk-grid-row">
@@ -43,26 +43,26 @@ Staff passport
           <h3 class="nhsuk-card__heading">Profile</h3>
         </div>
         <div class="nhsuk-grid-column-one-half nhsuk-u-text-align-right">
-          <p><a href="#">Edit profile</a></p>
+          <p><a href="edit-profile">Edit profile</a></p>
         </div>
       </div>
       
       
       <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-one-third">
-          <img class="nhsuk-card__img" src="/images/profile_image_notblurred.jpg" alt="">
+          <img class="nhsuk-card__img" src="" alt="">
         </div>
 
         <div class="nhsuk-grid-column-two-thirds">
           <div class="nhsuk-summary-list nhsuk-u-margin-bottom-4">
             <div class="nhsuk-summary-list__row">
               <dt class="nhsuk-summary-list__key">First name</dt>
-              <dd class="nhsuk-summary-list__value">Jaime</dd>
+              <dd class="nhsuk-summary-list__value">Emma</dd>
             </div>
 
             <div class="nhsuk-summary-list__row">
               <dt class="nhsuk-summary-list__key">Last name</dt>
-              <dd class="nhsuk-summary-list__value">Chang</dd>
+              <dd class="nhsuk-summary-list__value">Jones</dd>
             </div>
 
             <div class="nhsuk-summary-list__row">
@@ -72,7 +72,7 @@ Staff passport
 
             <div class="nhsuk-summary-list__row">
               <dt class="nhsuk-summary-list__key">Date of birth</dt>
-              <dd class="nhsuk-summary-list__value">29 April 1994</dd>
+              <dd class="nhsuk-summary-list__value">21 April 1993</dd>
             </div>
           </div>
 
@@ -93,40 +93,52 @@ Staff passport
             </li>
           </ul>
 
-          <!-- DBS Information within the Profile Card -->
-          <ul class="nhsuk-list">
-            <li><a href="#">View DBS check information</a></li>
-          </ul>
+         
         </div>
       </div>
     </div>
   </div>
 
     
-     <!-- Review Identity Details Card -->
+     <!-- Re-send invitation Card -->
      <div class="nhsuk-card">
       <div class="nhsuk-card__content">
         
-        <p class="nhsuk-card__description">An appointment has been requested by the staff member to confirm their identity.</p>
-        <p class="nhsuk-card__description">Confirm their identity and grant access to their Digital Staff Passport with this organisation.</p>
+        <p class="nhsuk-card__description">An invitation to onboard has been sent to the staff member and you are waiting for a response. You can re-send an invitation if needed.
+        </p>
         <div class="nhsuk-action-link">
-          <a class="nhsuk-action-link__link" href="staff-details-appointment">
+          <a class="nhsuk-action-link__link" href="resend-invitation">
             <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
               <path d="M0 0h24v24H0z" fill="none"></path>
               <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
             </svg>
-            <span class="nhsuk-action-link__text">Review identity details </span>
+            <span class="nhsuk-action-link__text">Re-send an invitation </span>
           </a>
         </div>
       </div>
     </div>
 
-     <!-- Decline access Card -->
+     <!-- Delete passport Card -->
      <div class="nhsuk-card">
       <div class="nhsuk-card__content">
         
-        <p class="nhsuk-card__description">If this record has been created in error, you can't confirm their identity, or the staff member is no longer joining the organisation, you have to decline the access adding a reason.</p>
-        <p class="nhsuk-text--alert"><a href="" title="Decline access">Decline access</a></p>
+        <p class="nhsuk-card__description">If you want to remove this passport from the Identity and access table, go to <a href="delete-passport" class="nhsuk-link">Delete passport from records</a></p>
+       
+        <details class="nhsuk-details">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+              Why might I want to delete this passport?
+            </span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <ul>
+              <li>The individual is no longer due to join your organisation and no longer needs a passport with you.</li>
+              <li>You have already declined access for the individual as you were either unable to verify their identity or they are no longer due to commence working at your organisation, but you want to be able to invite them in the future.
+              </li>
+            </ul>
+        
+          </div>
+        </details>
       
       </div>
     </div>
@@ -146,8 +158,16 @@ Staff passport
       </thead>
       <tbody class="nhsuk-table__body">
         <tr role="row" class="nhsuk-table__row">
-          <td class="nhsuk-table__cell">Jaime Chang requested an appointment.</td>
-          <td class="nhsuk-table__cell ">30 November 2024 16:49</td>
+          <td class="nhsuk-table__cell">The Digital Staff Passport sent an automatic reminder to join the Digital Staff Passport.	</td>
+          <td class="nhsuk-table__cell ">2 December 2024 10:45</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">The Digital Staff Passport sent an automatic reminder to join the Digital Staff Passport.	</td>
+          <td class="nhsuk-table__cell ">1 December 2024 10:45</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">The Digital Staff Passport sent an automatic reminder to join the Digital Staff Passport.	</td>
+          <td class="nhsuk-table__cell ">30 November 2024 10:45</td>
         </tr>
         <tr role="row" class="nhsuk-table__row">
           <td class="nhsuk-table__cell">HR manager at Sheffieled Teaching Hospitals NHS Trust sent an invitation to Digital Staff Passport</td>

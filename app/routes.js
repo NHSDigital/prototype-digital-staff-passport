@@ -18,7 +18,7 @@ router.get('/createPassports', function (req, res) {
     }
 });
 
-router.get('/createSinglePassport', function (req, res) {
+router.get('/createSinglePassportRadio', function (req, res) {
     // Ensure you check for the exact value from the radio buttons in the form
     if (req.query.createSinglePassportRadio === 'Yes') {
         // Redirect to the single passport creation page
@@ -49,6 +49,63 @@ router.get('/identityConfirmationRadio', function (req, res) {
         res.redirect('/hr-portal-live/identity-staff-passport');
     }
 });
+
+router.get('/declineAccess', function (req, res) {
+    // Ensure you check for the exact value from the radio buttons in the form
+    if (req.query.declineAccessRadio === 'Yes') {
+        // Redirect to the single passport creation page
+        res.redirect('/hr-portal-live/identity-access-declined');
+    } else {
+        // Redirect to the multiple passports creation page
+        res.redirect('/hr-portal-live/confirm-identity');
+    }
+});
+
+router.get('/identityAppointmentRadio', function (req, res) {
+    if (req.query.identityAppointmentRadio === 'Yes') {
+        res.redirect('/hr-portal-live/create-identity-credential');
+    } else if (req.query.identityAppointmentRadio === 'No') {
+        res.redirect('/hr-portal-live/identity-decline-access');
+    } else {
+        res.redirect('/hr-portal-live/identity-appointment-staff-passport');
+    }
+});
+
+router.get('/identityCredentialRadio', function (req, res) {
+    // Ensure you check for the exact value from the radio buttons in the form
+    if (req.query.identityCredentialRadio === 'Yes') {
+        // Redirect to the single passport creation page
+        res.redirect('/hr-portal-live/identity-credential-success');
+    } else {
+        // Redirect to the multiple passports creation page
+        res.redirect('/hr-portal-live/create-identity-credential');
+    }
+});
+
+router.get('/resendInvitationRadio', function (req, res) {
+    // Ensure you check for the exact value from the radio buttons in the form
+    if (req.query.resendInvitationRadio === 'Yes') {
+        // Redirect to the single passport creation page
+        res.redirect('/hr-portal-live/resend-invitation-success');
+    } else {
+        // Redirect to the multiple passports creation page
+        res.redirect('/hr-portal-live/invitation-pending-staff-passport');
+    }
+});
+
+router.get('/deletePassportRadio', function (req, res) {
+    // Ensure you check for the exact value from the radio buttons in the form
+    if (req.query.deletePassportRadio === 'Yes') {
+        // Redirect to the single passport creation page
+        res.redirect('/hr-portal-live/delete-passport-success');
+    } else {
+        // Redirect to the multiple passports creation page
+        res.redirect('/hr-portal-live/invitation-pending-staff-passport');
+    }
+});
+
+
+
 
 
 module.exports = router;

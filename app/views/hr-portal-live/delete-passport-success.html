@@ -1,0 +1,49 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+{% block pageTitle %}
+Search results
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "/hr-portal-live/delete-passport",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
+}) }}
+{% endblock %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    {% block content %}
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+
+<div class="nhsuk-card">
+  <div class="nhsuk-card__content">
+    
+    <p class="nhsuk-card__description">You have Emma Jones's passport from your records.
+    <p class="nhsuk-card__description">You will no longer see the record on the Identity and access table.
+
+
+
+    <p><a href="identity-and-access-deleted-passport" class="nhsuk-link">
+      Go back to Identity and Access
+    </a>
+     </p>
+    
+   
+    
+  </div>
+</div>
+          
+              
+      
+     
+      </div>
+    </div>
+    {% endblock %}

@@ -16,16 +16,12 @@ Search results
 "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
 }) }}
 {% endblock %}
-
+{% block content %}
 
 
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
-
-
    
-
-    {% block content %}
     <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-three-quarters">
   
@@ -169,7 +165,7 @@ Search results
         </div>
       </div>
 
-        <form action="/createSinglePassport" method="get" class="form">
+        <form action="/createSinglePassportRadio" method="get" class="form">
           <fieldset class="nhsuk-fieldset" aria-describedby="example-hints-hint">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
               <h1 class="nhsuk-fieldset__heading">
