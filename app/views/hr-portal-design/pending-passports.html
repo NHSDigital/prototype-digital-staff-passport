@@ -1,0 +1,407 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+{% block pageTitle %}
+Pending Staff passports
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "/hr-portal-design/SPA-home",
+"text": "Home",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    <h1>Pending staff passports</h1>
+    
+    <div class="nhsuk-grid-column-full nhsuk-u-padding-left-0">
+      <form action="june-final-search-results" method="post">
+        <div class="nhsuk-form-group nhsuk-u-margin-bottom-5">
+          <label class="nhsuk-label nhsuk-u-margin-bottom-0" for="SearchInput">
+            <p class="nhsuk-body">These are the passports of staff members who have been given access to this organisation's Digital Staff Passport portal but have not yet shared the credentials required.</p>
+            <p class="nhsuk-body">To view staff members awaiting access, go to <a href="">Identity and access</a>.</p>
+            <p class="nhsuk-body">To view reviewed staff members, go to <a href="#">Reviewed Staff Passports</a>.</p>
+            <p class="nhsuk-body">Search by name or professional registration number</p>
+          </label>
+          <div id="wrap-search" style="width: 500px;"
+            class="nhsuk-header__search-wrap nhsuk-u-padding-top-0 nhsuk-u-margin-top-0" _ngcontent-ng-c2693481188="">
+            <input _ngcontent-ng-c2693481188="" aria-describedby="SearchInput-hint" formcontrolname="SearchInput"
+              id="SearchInput" name="SearchInput" type="search" placeholder="Search" autocomplete="off"
+              class="nhsuk-search__input ng-pristine ng-valid ng-touched">
+            <button _ngcontent-ng-c2693481188="" type="submit" class="nhsuk-search__submit"><svg
+                _ngcontent-ng-c2693481188="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"
+                focusable="false" width="27" height="27" class="nhsuk-icon nhsuk-icon__search">
+                <path _ngcontent-ng-c2693481188=""
+                  d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z">
+                </path>
+              </svg><span _ngcontent-ng-c2693481188="" class="nhsuk-u-visually-hidden">Search</span></button>
+              
+          </div>
+        </a>
+          <div class="nhsuk-action-link" style="float: right";>
+            <a class="nhsuk-action-link__link" href="">
+              <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+              </svg>
+              <span class="nhsuk-action-link__text">Send a reminder to review credentials</span>
+    
+              <span _ngcontent-ng-c2693481188="" class="nhsuk-u-visually-hidden">Search</span></button>
+            </a>
+          </div>
+        </div>
+      </form>
+      <div class="nhsuk-action-link nhsuk-u-margin-top-5">
+
+        </a>
+      </div>
+      <div>
+        <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-bottom-6">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+              Show filters
+            </span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <table role="table" class="nhsuk-table-responsive">
+              <caption class="nhsuk-table__caption"></caption>
+              <thead role="rowgroup" class="nhsuk-table__head">
+                <tr role="row">
+                  <th role="columnheader" class="" scope="col">
+                    Action
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    Staff Group
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    Passport Status
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="nhsuk-table__body">
+                <tr role="row" class="nhsuk-table__row">
+                  <td role="cell" class="nhsuk-table__cell">
+                    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox"
+                          value="email">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                          Connect to ESR
+                        </label>
+                      </div>
+
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox"
+                          value="phone">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+                          Provide credentials
+                        </label>
+                      </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox"
+                        value="text message">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                        Provide Temporary placement credential
+                      </label>
+
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox"
+                        value="text message">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                        Updated identity check required
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox"
+                        value="text message">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                        Appointment needed
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox"
+                        value="text message">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                        credentials requested
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox"
+                        value="text message">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                        Review shared credentials
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox"
+                        value="text message">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                        Review credential rejections
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox"
+                        value="text message">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                        Review digital identity
+                      </label>
+                    </div>
+                  </td>
+                  <td role="cell" class="nhsuk-table__cell">
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox"
+                        value="text message">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                        Additional Professional Scientific & Technical
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox"
+                        value="text message">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                        Allied Health Professionals
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox"
+                        value="text message">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                        Healthcare Scientists
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox"
+                        value="text message">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                        Nursing & Midwifery Registered
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox"
+                        value="text message">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                        Students (medical undergraduate)
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox"
+                        value="text message">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                        Additional Clinical Services
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox"
+                        value="text message">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                        Administrative & Clerical
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox"
+                        value="text message">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                        Estates & Ancillary
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox"
+                        value="text message">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                        Medical & Dental
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox"
+                        value="text message">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                        Students - non-medical
+                      </label>
+                    </div>
+                  </td>
+                  <td role="cell" class="nhsuk-table__cell">
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox"
+                        value="text message">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                        Active
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox"
+                        value="text message">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                        Deactivated
+                      </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox"
+                        value="text message">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                        Disabled
+                      </label>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="nhsuk-u-padding-bottom-7 nhsuk-u-padding-top-3">
+              <button class="nhsuk-button" data-module="nhsuk-button" type="submit" style="float: right">
+                Apply filters
+              </button>
+
+            <ul>
+            </ul>
+          </div>
+        </details>
+      </div>
+      <div>
+        <table role="table" class="nhsuk-table-responsive nhsuk-u-margin-top-1" style="table-layout: fixed">
+          <thead role="rowgroup" class="nhsuk-table__head">
+            <tr role="row">
+              <th role="columnheader" class="table-label" scope="col">Full name</th>
+              <th role="columnheader" class="table-label" scope="col">Date of birth</th>
+              <th role="columnheader" class="table-label" scope="col">Staff group</th>
+              <th role="columnheader" class="table-label" scope="col">Professional registration number</th>
+              <th role="columnheader" class="table-label" scope="col">Passport status</th>
+              <th role="columnheader" class="table-label" scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody class="nhsuk-table__body">
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+                <span class="nhsuk-table-responsive__heading">Full name </span>
+                <a href="">Emma Jones</a>
+              </td>
+              <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+                <span class="nhsuk-table-responsive__heading">Date of birth </span>
+                21/04/1993
+              </td>
+              <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+                <span class="nhsuk-table-responsive__heading">Staff group</span>
+                Medical and Dental
+              </td>
+              <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+                <span class="nhsuk-table-responsive__heading">Professional registration number</span>
+                -
+              </td>
+              <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+                <span class="nhsuk-table-responsive__heading">Status</span>
+                <strong class="nhsuk-tag nhsuk-tag--red">
+                  Disabled
+                </strong>
+              </td>
+              <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+                <span class="nhsuk-table-responsive__heading">Actions</span>
+                -
+              </td>
+            </tr>
+
+            
+            <tbody class="nhsuk-table__body">
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+                  <span class="nhsuk-table-responsive__heading">Full name </span>
+                  <a href="/hr-portal-design/staff-passport">Taylor Johnson</a>
+                </td>
+                <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+                  <span class="nhsuk-table-responsive__heading">Date of birth </span>
+                  16/02/1999
+                </td>
+                <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+                  <span class="nhsuk-table-responsive__heading">Staff group</span>
+                  Medical and Dental
+                </td>
+                <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+                  <span class="nhsuk-table-responsive__heading">Professional registration number</span>
+                  4567890
+                </td>
+                <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+                  <span class="nhsuk-table-responsive__heading">Status</span>
+                  <strong class="nhsuk-tag nhsuk-tag--green">
+                    Active
+                  </strong>
+                </td>
+                <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+                  <span class="nhsuk-table-responsive__heading">Actions</span>
+                  -
+                </td>
+              </tr>
+              <tbody class="nhsuk-table__body">
+                <tr role="row" class="nhsuk-table__row">
+                  <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+                    <span class="nhsuk-table-responsive__heading">Full name </span>
+                    <a href="">Sarah-Louise Creasy </a>
+                  </td>
+                  <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+                    <span class="nhsuk-table-responsive__heading">Date of birth </span>
+                    15/03/1984
+                  </td>
+                  <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+                    <span class="nhsuk-table-responsive__heading">Staff group</span>
+                    Medical and Dental
+                  </td>
+                  <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+                    <span class="nhsuk-table-responsive__heading">Professional registration number</span>
+                    -
+                  </td>
+                  <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+                    <span class="nhsuk-table-responsive__heading">Status</span>
+                    <strong class="nhsuk-tag nhsuk-tag--yellow">
+                      Credentials Pending
+                    </strong>
+                  </td>
+                  <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+                    <span class="nhsuk-table-responsive__heading">Actions</span>
+                    <p>Provide credentials</p>
+                  </td>
+                </tr>
+                <tbody class="nhsuk-table__body">
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+                      <span class="nhsuk-table-responsive__heading">Full name </span>
+                      <a href="">Jaime Chang</a>
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+                      <span class="nhsuk-table-responsive__heading">Date of birth </span>
+                      29/04/1994
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+                      <span class="nhsuk-table-responsive__heading">Staff group</span>
+                      Additional Clinical Services
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+                      <span class="nhsuk-table-responsive__heading">Professional registration number</span>
+                      -
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+                      <span class="nhsuk-table-responsive__heading">Status</span>
+                      <strong class="nhsuk-tag nhsuk-tag--yellow">
+                        Credentials Pending
+                      </strong>
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell nhsuk-body-s nhsuk-u-margin-bottom-0">
+                      <span class="nhsuk-table-responsive__heading">Actions</span>
+                      <p>Provide credentials</p>
+                    </td>
+                  </tr>
+          </tbody>
+        </table>
+      </div>
+
+    
+  </div>
+ </div> 
+  {% endblock %}
