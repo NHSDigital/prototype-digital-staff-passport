@@ -104,6 +104,19 @@ router.get('/deletePassportRadio', function (req, res) {
     }
 });
 
+router.get('/reissueCredentialsRadio', function (req, res) {
+    // Ensure you check for the exact value from the radio buttons in the form
+    if (req.query.reissueCredentialsRadio === 'Yes') {
+        // Redirect to the single passport creation page
+        res.redirect('/employee-design/Re-issue-credentials-QR-code-scan');
+    } else {
+        // Redirect to the multiple passports creation page
+        res.redirect('/employee-design/Re-issue-credential');
+    }
+});
+
+
+
 
 
 
