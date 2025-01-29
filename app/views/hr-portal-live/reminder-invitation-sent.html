@@ -1,0 +1,41 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+{% block pageTitle %}
+Search results
+{% endblock %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    {% block content %}
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+<h2>Invitation sent</h2>
+
+<div class="nhsuk-card">
+  <div class="nhsuk-card__content">
+    
+    <p class="nhsuk-card__description">You have sucessfully sent a reminder to all staff members with pending credentials. staff members
+       will recieve a notification via text and email unless they have opted out of notification.
+
+       <p class="nhsuk-card__description">Please note that it may take some time for all users with pending credentials to receive this notification.
+
+    <p><a href="pending-staff-passports" class="nhsuk-link">Go back to Pending staff passports page</a>
+     </p>
+     <p><a href="/" class="nhsuk-link">Go back to Reviewed staff passports page</a>
+     </p>
+   
+    
+  </div>
+</div>
+          
+              
+      
+     
+      </div>
+    </div>
+    {% endblock %}
