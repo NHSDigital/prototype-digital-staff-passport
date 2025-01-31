@@ -1,0 +1,310 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+Staff passport
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "/hr-portal-live/pending-staff-passports",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
+}) }}
+{% endblock %}
+{% block content %}
+ <!-- Connect to ESR warning -->
+<div class="nhsuk-warning-callout">
+  <h3 class="nhsuk-warning-callout__label">
+    <span role="text">
+      <span class="nhsuk-u-visually-hidden">Important: </span>
+      Connect to ESR
+    </span>
+  </h3>
+  <p>To provide new credentials to Emma Jones you must first connect this passport to an Electronic Staff Record (ESR). The ESR connection is not mandatory - you can still review any credentials they
+    have shared with you.
+  </p>
+    <p><a href="connect-to-ESR-link">Connect to ESR</a></p>
+    <p><a href="no-ESR-connection">I don't need an ESR connection now</a></p>
+</div>
+
+ <!-- Passport title and status-->
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <h2>Staff passport for Emma Jones</h2>
+    </div><br>
+   </div>
+   <div class="nhsuk-card">
+      <div class="nhsuk-card__content">
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-one-half">
+            <h3 class="nhsuk-card__heading nhsuk-heading-s nhsuk-u-margin-bottom-0">
+              Passport Status:
+              <span class="nhsuk-tag nhsuk-tag--yellow nhsuk-u-margin-left-l nhsuk-u-margin-bottom-0">
+                Credentials pending
+              </span>
+            </h3>
+          </div>
+          <div class="nhsuk-grid-column-one-half nhsuk-u-text-align-right">
+            <p><a href="manage-passport">Manage passport</a></p>
+        </div>
+      </div>
+    </div>
+
+   <!-- Profile Card -->
+   <div class="nhsuk-card">
+    <div class="nhsuk-card__content">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-half">
+          <h3 class="nhsuk-card__heading">Profile</h3>
+        </div>
+        <div class="nhsuk-grid-column-one-half nhsuk-u-text-align-right">
+          <p><a href="edit-profile">Edit profile</a></p>
+        </div>
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-one-third">
+            <img class="nhsuk-card__img" src="/images/emma_jones.jpg" alt="">
+          </div> <div class="nhsuk-grid-column-two-thirds">
+            <div class="nhsuk-summary-list nhsuk-u-margin-bottom-4">
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">First name</dt>
+                <dd class="nhsuk-summary-list__value">Emma</dd>
+              </div>
+  
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">Last name</dt>
+                <dd class="nhsuk-summary-list__value">Jones</dd>
+              </div>
+  
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">Preferred name</dt>
+                <dd class="nhsuk-summary-list__value">-</dd>
+              </div>
+  
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">Date of birth</dt>
+                <dd class="nhsuk-summary-list__value">21 April 1993</dd>
+              </div>
+              </div>
+      </div>
+      </div>
+      
+      <br><div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-third">
+          <img class="nhsuk-card__img" src="" alt=""> <div>
+            <span class="nhsuk-tag nhsuk-tag--yellow">
+              Not connected to ESR
+            </span></div>
+            <br>
+              <div><p><a href="setup-ESR-connection">Set up ESR connection</a></p>
+          </div>
+        </div>
+
+          <br>
+          <ul class="nhsuk-list">
+            <li>
+              <details class="nhsuk-details">
+                <summary class="nhsuk-details__summary">
+                  <span class="nhsuk-details__summary-text">Show all details</span>
+                </summary>
+                <dl class="nhsuk-summary-list">
+                  <div class="nhsuk-summary-list__row">
+                    <dt class="nhsuk-summary-list__key">Telephone number</dt>
+                    <dd class="nhsuk-summary-list__value">123-456-7890</dd>
+                  </div>
+                </dl>
+              </details>
+            </li>
+          </ul>
+          <div class="nhsuk-grid-column-one-half nhsuk-u-text-align-middle">
+            <p><a href="view-dbs-check">View DBS check information</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+     <!-- What you can do Card -->
+     <div class="nhsuk-card">
+      <div class="nhsuk-card__content">
+        
+        <h3 class="nhsuk-card__heading">What you can do</h3>
+        <p><a href="request-credentials">Request credentials</a><br>
+        <a href="create-new-credential">Create a new identity credential</a><br>
+       <a href="create-temp-credential">Create temporary placement credential</a></p>
+        </div>
+      </div>
+
+      <div class="nhsuk-inset-text" style="background-color: rgba(175, 216, 247, 0.77);">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+      
+        <p>1 pending credentials <a href="/view-credentials" title="view-credentials">View credentials</a>.</p>
+      </div>
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+      
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="#">Rejected credentials</a>
+              </h2>
+              <p class="nhsuk-card__description">Credentials you have provided that Emma Jones has rejected.</p>
+      
+            </div>
+          </div>
+      
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+      
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="#">Past credentials</a>
+              </h2>
+              <p class="nhsuk-card__description">A list of credentials that have been revoked or have expired.</p>
+      
+            </div>
+          </div>
+      
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+      
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="#">Passport history</a>
+              </h2>
+              <p class="nhsuk-card__description">A log of all changes made to this passport</p>
+      
+            </div>
+         </div>
+        </li>
+      </ul>
+      </div>
+
+      <div><h3 class="nhsuk-card__heading">Credentials</h3></div><br>
+      
+
+
+       <!--Credentials required progress-->
+      <div class="nhsuk-form-group">
+
+        <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h3 class="nhsuk-card__heading">Credentials required progress</h3>
+          </legend>
+    
+          <div class="nhsuk-hint" id="example-hint">
+            0 credentials out of 30 completed.
+          </div>
+    
+          <div class="nhsuk-checkboxes">
+    
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                Professional registration
+              </label>
+            </div>
+    
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+                Disclosure and Barring Service (DBS)
+              </label>
+            </div>
+    
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                Occupational health
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                Employment assignment
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                Confliction resolution
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                Equality diversity and human rights
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                Fire stafety
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                Health safety and welfare
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                Infection prevention and control (Level 1)
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                Information governance and data security
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                Moving and handling (Level 1)
+              </label>
+            </div>
+    
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                Preventing radicalisation basic prevent awareness
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                Preventing radicalisation prevent awareness
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                Resuscitation
+              </label>
+            </div>
+
+            <div><button class="nhsuk-button nhsuk-button--warning" data-module="nhsuk-button" type="submit">
+              Bypass credentials required
+            </button></div>
+
+          </div>
+        </fieldset>
+    
+      </div>
+    
+      
+{% endblock %}

@@ -1,0 +1,50 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+{% block pageTitle %}
+Connect passport to ESR
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "/hr-portal-live/esr-assignment-added",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+
+    <h1 class="nhsuk-heading-l">Connect Emma Jones's passport to ESR</h1>
+
+    <div class="nhsuk-grid-column-full nhsuk-u-padding-left-0">
+
+        <div class="nhsuk-form-group nhsuk-u-margin-bottom-5">
+          <label class="nhsuk-label nhsuk-u-margin-bottom-0" for="SearchInput">
+            <p class="nhsuk-body">The system will search for Emma Jones's record on the ESR. You will then be asked to confirm this is the 
+              <br>right person.
+            </p>
+            <p class="nhsuk-body">When the connection has been made, you will be able to provide credentials to Emma Jones using their 
+              <br>data held on the ESR.
+            </p>     
+            <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+              Connect
+            </button>
+
+            <!-- Include NHS UK JS (Optional) -->
+            <script src="https://cdn.nhs.uk/nhsuk-1.0.0-alpha.9/nhsuk.min.js"></script>
+          
+          </body>
+          </html>
+
+
+{% endblock %}
