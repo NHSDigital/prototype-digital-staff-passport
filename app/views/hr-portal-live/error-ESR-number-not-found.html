@@ -1,0 +1,38 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+{% block pageTitle %}
+ESR assignment number not found
+{% endblock %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    {% block content %}
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+<h2>Error: ESR Assignment number not found</h2>
+
+<div class="nhsuk-card">
+  <div class="nhsuk-card__content">
+    
+    <p class="nhsuk-card__description">The ESR assignment number you provided for Emma Jones was not found.
+      <p><a href="/hr-portal-live/connect-to-ESR-link" class="nhsuk-link">Enter a different ESR assignment number</a>
+      </p>
+
+     <p><a href="/connect-to-ESR" class="nhsuk-link">Not now - go back to Emma Jones's passport</a>
+     </p>
+   
+    
+  </div>
+</div>
+          
+              
+      
+     
+      </div>
+    </div>
+    {% endblock %}

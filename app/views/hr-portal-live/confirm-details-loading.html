@@ -1,0 +1,39 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+{% block pageTitle %}
+Add assignment number
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "/hr-portal-live/connect-passport-to-ESR",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+
+    <h1 class="nhsuk-heading-l">Confirm details and connect to ESR</h1>
+
+
+
+   
+            <!-- Include NHS UK JS (Optional) -->
+            <script src="https://cdn.nhs.uk/nhsuk-1.0.0-alpha.9/nhsuk.min.js"></script>
+          
+          </body>
+          </html>
+
+
+{% endblock %}
