@@ -1,0 +1,90 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+Staff passport
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "/hr-portal-design/staff-passport",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
+}) }}
+{% endblock %}
+
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <form action="passport-connected" method="post" autocomplete="off">
+      <h2>Confirm details and connect to Civica Trac</h2>
+      <p>Civica Trac record(s) were found that match the information you entered.</p>
+     
+      
+      <table class="nhsuk-table">
+        <thead role="rowgroup" class="nhsuk-table__head">
+          <tr role="row">
+            <th role="columnheader">
+              
+            </th>
+            <th role="columnheader">
+              First name
+            </th>
+            <th role="columnheader">
+              Last name
+            </th>
+            <th role="columnheader">
+              Date of birth
+            </th>
+            <th role="columnheader">
+              Additional information
+            </th>
+          </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td><div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+              </label>
+            </div></td>
+            <td>Taylor</td>
+            <td>Johnson</td>
+            <td>16 February 1999</td>
+            <td>Job role: Anaesthetist</td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td><div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2" />
+              </label>
+            </div></td>
+            <td>Taylor</td>
+            <td>Johnson</td>
+            <td>16 February 1999</td>
+            <td>Job role: Resident doctor</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="nhsuk-u-reading-width">Choose an option and select 'continue' to connect Taylor Johnson's passport to Civica Trac.</p>
+      <p class="nhsuk-u-reading-width">When the connection has been made, you will be able to provide credentials to Taylor Johnson using their data held by Civica Trac.</p>
+      <p class="nhsuk-u-reading-width">If Taylor Johnson has shared any credentials that are held by Civica Trac, this data will be automatically sent to Civica Trac when the connection is made.</p>
+
+      {{ button({
+        "text": "Connect now"
+        }) }}
+    </form>
+  </div>
+</div>
+
+<p>You can <a href="search-criteria">edit the search criteria</a> if the person you are looking for has not been found.</p>
+
+
+<!-- End of content -->
+
+{% endblock %}

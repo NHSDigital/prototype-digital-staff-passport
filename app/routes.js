@@ -116,7 +116,32 @@ router.get('/reissueCredentialsRadio', function (req, res) {
 });
 
 
+router.get('/identityConfirmationRadioApp', function (req, res) {
+    if (req.query.identityConfirmationRadioApp === 'Yes') {
+        res.redirect('/hr-portal-design/identity-credential-issued');
+    } else if (req.query.identityConfirmationRadioApp === 'No') {
+        res.redirect('/hr-portal-design/identity-decline-access');
+    } else {
+        res.redirect('/hr-portal-design/identity-staff-passport');
+    }
+});
 
+
+router.get('/RighttoWorkConfirmationRadio', function (req, res) {
+    if (req.query.RighttoWorkConfirmationRadio === 'Yes') {
+        res.redirect('/hr-portal-design/right-to-work-credential-issued');
+    } else {
+        res.redirect('/hr-portal-design/right-to-work-credential-rejected');
+    }
+});
+
+router.get('/DBSSuppInfoConfirmationRadio', function (req, res) {
+    if (req.query.DBSSuppInfoConfirmationRadio === 'Yes') {
+        res.redirect('/hr-portal-design/DBS-supp-info-credential-issued');
+    } else {
+        res.redirect('/hr-portal-design/DBS-supp-info-credential-rejected');
+    }
+});
 
 
 

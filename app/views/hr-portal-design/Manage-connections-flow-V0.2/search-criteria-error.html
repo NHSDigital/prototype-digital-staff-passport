@@ -1,0 +1,112 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+Find user in CLS Totara
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
+}) }}
+{% endblock %}
+
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <div class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
+      <h2 class="nhsuk-error-summary__title" id="error-summary-title">
+        There is a problem
+      </h2>
+      <div class="nhsuk-error-summary__body">
+        <ul class="nhsuk-list nhsuk-error-summary__list" role="list">
+          <li>
+            <a href="#first-name">Enter a first name, last name or date of birth</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <form action="" method="post" autocomplete="off">
+      <div class="nhsuk-form-group">
+        <div>
+          <h1>Find user in CLS Totara</h1>
+
+          <div class="nhsuk-form-group nhsuk-form-group--error">
+           
+        
+            <label class="nhsuk-label" for="first-name">
+              <b>First name (optional)</b>
+            </label>
+            <span class="nhsuk-error-message" id="dob-day-error-error">
+              <span class="nhsuk-u-visually-hidden">Error:</span>Enter a first name
+            </span>
+            <input class="nhsuk-input nhsuk-u-width-one-half nhsuk-input--error" id="first-name" name="first-name" type="text">
+          </div>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="last-name">
+              <b>Last name (optional)</b>
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-one-half" id="first-name" name="first-name" type="text">
+          </div>
+          <div class="nhsuk-form-group">
+            <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+              <legend class="nhsuk-fieldset__legend nhsuk-label--s">
+                <h1 class="nhsuk-fieldset__heading">
+                  Date of birth (optional)
+                </h1>
+              </legend>
+              <div class="nhsuk-hint" id="example-hint">
+                For example, 15 3 1984
+              </div>
+          
+              <div class="nhsuk-date-input" id="example">
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                      Day
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" name="example-day" type="text" pattern="[0-9]*" inputmode="numeric" >
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                      Month
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                      Year
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+              <br>
+            </fieldset>
+          
+          </div>
+        </div>
+        </div>
+        <p>We will search for Taylor Johnson's record in CLS Totara. We will then ask you to confirm if this is the right person.</p>
+        {{ button({
+          "text": "Search"
+          }) }}
+    </form>
+  </div>
+</div>
+
+
+<!-- End of content -->
+
+{% endblock %}

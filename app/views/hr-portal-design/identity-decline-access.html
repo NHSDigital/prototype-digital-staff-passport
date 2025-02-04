@@ -1,0 +1,103 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+{% block pageTitle %}
+Search results
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "/hr-portal-live/confirm-identity",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
+}) }}
+{% endblock %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    {% block content %}
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+
+        
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-heading-l">Decline access for Taylor Johson</h1>
+            </legend>
+            <p>You're about to decline access to the passport service for Taylor Johnson.</p>
+            <p>When you decline access, you must give a reason.</p>
+            <p>The staff member will be automatically informed of your decision</p>
+
+            <div class="nhsuk-form-group">
+
+    
+            <form action="/declineAccess" method="get" class="form">
+              <fieldset class="nhsuk-fieldset">
+                <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                  <h1 class="nhsuk-fieldset__heading">
+                    Decline access for this staff member?
+                  </h1>
+                </legend>
+                <div class="nhsuk-hint" id="decline access">
+
+                  <p class="nhsuk-u-margin-bottom-2">If you decline access, the staff member will not be registered or granted access at this time.
+                    You will not be able to see any credentials they share.</p>
+                </div>
+            
+
+                <div class="nhsuk-radios nhsuk-radios--conditional">
+                  <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="decline-access-yes" name="declineAccessRadio" type="radio" value="Yes" aria-controls="conditional-contact-1" aria-expanded="false" required>
+                  <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+                    Yes, decline access
+                  </label>
+                  </div>
+          
+                  <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
+          
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="select-1">
+                      Select a reason for declining access
+                    </label>
+                    <select class="nhsuk-select" id="select-1" name="select-1">
+                      <option value="1" selected disabled>Select an option</option>
+                      <option value="2">Not able to identify individual as a new starter at this organisation (no rotation information or recruitment confirmation)</option>
+                      <option value="3">Unable to confirm identity of the individual</option>
+                      <option value="3">Other</option>
+                    </select>
+                    
+                    <div class="nhsuk-form-group">
+                      <div class="nhsuk-hint" id="example-hint">
+                        Additional information (optional)
+                      </div>
+                      <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
+                    </div>
+                  </div>
+          
+                </div>
+          
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="decline-access-yes" name="declineAccessRadio" type="radio" value="No" aria-controls="conditional-contact-2" aria-expanded="false" required>
+                  <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
+                    No, go back
+                  </label>
+                </div>
+              
+              </fieldset>
+          
+            </div> 
+              <button class="nhsuk-button" type="submit">Continue</button>
+            </form>
+                    
+                
+
+
+
+     
+      </div>
+    </div>
+    {% endblock %}

@@ -1,0 +1,132 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+Staff passport
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "/hr-portal-details/right-to-work-credential-issued",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <h2>Confirm DBS supporting information: Sarah-Louise Creasy</h2>
+    <p>Here you can choose to issue a DBS supporting information credential using the data provided by Digidentity. This is verified information and so you will not need to recheck this evidence.</p>
+    <details class="nhsuk-details">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          What is a DBS supporting information credential?
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p>This information is used to check if a user needs another DBS check as part of their pre-employment checks.
+          <p>What do we want HR to do with this info now?!? IDK until Trac Phase 1...
+
+      </div>
+    </details>
+
+    <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+    <table class="nhsuk-table nhsuk-u-width-two-thirds">
+     <h3>Details</h3>
+      <tbody class="nhsuk-table__body">
+       
+        <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">First name</td>
+          <td class="nhsuk-table__cell">Sarah-Louise</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">Last name</td>
+          <td class="nhsuk-table__cell">Creasy</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">Date of birth</td>
+          <td class="nhsuk-table__cell">15 March 1984</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">Current address</td>
+          <td class="nhsuk-table__cell">
+            <p>73 Roman Road<br>
+                Leeds<br>
+                LS2 5ZN
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">Current address verified?</td>
+          <td class="nhsuk-table__cell">Yes</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">Date of address check</td>
+          <td class="nhsuk-table__cell">4 February 2025</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">Passport number</td>
+          <td class="nhsuk-table__cell">123456789</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">Passport expiry date</td>
+          <td class="nhsuk-table__cell">25 July 2029</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">Passport nationality</td>
+          <td class="nhsuk-table__cell">British</td>
+        </tr>
+        
+      </tbody>
+    </table>
+
+
+    <form action="/DBSSuppInfoConfirmationRadio" method="get" class="form">
+      <fieldset class="nhsuk-fieldset">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+          <h1 class="nhsuk-fieldset__heading">
+            Can you confirm Sarah-Louise Creasy's DBS supporting information?
+          </h1>
+        </legend>
+
+        <div class="nhsuk-hint" id="example-hints-hint">
+
+          <p>If you want to issue a DBS supporting information credential, select 'Yes, issue a DBS supporting information credential' and continue. The credential will be issued to this staff member.</p>
+          <p>By agreeing to issue this credential, you are stating that the information in the DBS supporting information credential is correct.</p>
+          <p>By agreeing to issue this credential, you are confirming that you have used reasonable care and attention to issue accurate information.</p>
+        </div>
+
+        <div class="nhsuk-radios nhsuk-radios--conditional">
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="decline-access-yes" name="declineAccessRadio" type="radio" value="No" aria-controls="conditional-contact-2" aria-expanded="false" required>
+            <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
+              Yes, issue a DBS supporting information credential
+            </label>
+          </div>
+
+          <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="decline-access-yes" name="declineAccessRadio" type="radio" value="Yes" aria-controls="conditional-contact-1" aria-expanded="false" required>
+          <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+            No, reject this DBS supporting information credential and continue
+          </label>
+          </div>
+  
+          <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
+            <p>By rejecting this DBS supporting information credential, you will need to obtain details required to conduct a DBS check offline.</p>
+        
+          </div>
+  
+        </div>
+  
+          
+        </div>
+      </fieldset>
+  <br>
+    </div> 
+      <button class="nhsuk-button" type="submit">Continue</button>
+    </form>
+
+    
+  </div>
+</div>
+{% endblock %}
