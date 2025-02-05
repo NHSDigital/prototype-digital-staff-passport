@@ -6,8 +6,8 @@ Staff passport
 
 {% block outerContent %}
 {{ backLink({
-"href": "/hr-portal-design/identity-credential-issued",
-"text": "Back",
+"href": "/hr-portal-design/spa-home",
+"text": "Home",
 "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
 }) }}
 {% endblock %}
@@ -63,12 +63,11 @@ Staff passport
       </tbody>
     </table>
 
-
     <form action="/RighttoWorkConfirmationRadio" method="get" class="form">
       <fieldset class="nhsuk-fieldset">
         <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
           <h1 class="nhsuk-fieldset__heading">
-            Can you confirm Taylor Johnson's identity?
+            Can you confirm Sarah-Louise Creasy's right to work?
           </h1>
         </legend>
 
@@ -79,35 +78,36 @@ Staff passport
           <p>By agreeing to issue this credential, you are confirming that you have used reasonable care and attention to issue accurate information.</p>
         </div>
 
-       
         <div class="nhsuk-radios nhsuk-radios--conditional">
           <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="decline-access-yes" name="declineAccessRadio" type="radio" value="No" aria-controls="conditional-contact-2" aria-expanded="false" required>
+            <input class="nhsuk-radios__input" id="decline-access-yes" name="RighttoWorkConfirmationRadio" type="radio" value="Yes" aria-controls="conditional-contact-2" aria-expanded="false" required>
             <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
-              Yes, issue a Right to Work credential
+              Yes, issue a right to work credential
             </label>
           </div>
 
           <div class="nhsuk-radios__item">
-          <input class="nhsuk-radios__input" id="decline-access-yes" name="declineAccessRadio" type="radio" value="Yes" aria-controls="conditional-contact-1" aria-expanded="false" required>
+          <input class="nhsuk-radios__input" id="decline-access-yes" name="RighttoWorkConfirmationRadio" type="radio" value="No" aria-controls="conditional-contact-1" aria-expanded="false" required>
           <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
-            No, reject this Right to Work credential and continue
+            No, reject this right to work credential and continue
           </label>
           </div>
   
           <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
-            <p>By rejecting this Right to Work credential, you will need to undertake a manual check offline.</p>
-        
+            <p>By rejecting this Right to Work credential, you will need to undertake a manual check offline.</p>        
           </div>
   
         </div>
   
-       
-
         <br>
           </div> 
             <button class="nhsuk-button" type="submit">Continue</button>
-          </form>
+          </div> 
+    </form>
+
+    
+
+
 
     
   </div>

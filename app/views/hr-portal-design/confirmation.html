@@ -1,0 +1,78 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+{% block pageTitle %}
+Search results
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "/hr-portal-design/spa-home",
+"text": "Home",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
+}) }}
+{% endblock %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    {% block content %}
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+<h2>Success</h2>
+
+<p class="nhsuk-card__description">Taylor Johnson's identity has been confirmed and credentials have been provided.</p>
+
+
+      <table class="nhsuk-table">
+        <thead role="rowgroup" class="nhsuk-table__head">
+          <tr role="row">
+            <th role="columnheader" class="" scope="col">
+              Credential
+            </th>
+            <th role="columnheader" class="" scope="col">
+             Status
+            </th>
+          </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Identity</td>
+            <td class="nhsuk-table__cell ">Confirmed and issued</td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Right to work</td>
+            <td class="nhsuk-table__cell ">Confirmed and issued</td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">DBS supporting information</td>
+            <td class="nhsuk-table__cell ">Confirmed and issued</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="nhsuk-card__description">Now that the staff member's identity has been confirmed, you will be able to find their record in the 'staff passports' table on the landing page. The record will no longer be listed in the 'identity and access' table.</p>
+
+  <br>
+    <p><a href="" class="nhsuk-link">
+      Go to Sarah Creasey's passport
+    </a>
+     </p>
+
+     <p><a href="" class="nhsuk-link">
+      Go back to Identity and Access
+    </a>
+     </p>
+    
+  </div>
+</div>
+          
+              
+      
+     
+      </div>
+    </div>
+    {% endblock %}

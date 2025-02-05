@@ -118,7 +118,7 @@ router.get('/reissueCredentialsRadio', function (req, res) {
 
 router.get('/identityConfirmationRadioApp', function (req, res) {
     if (req.query.identityConfirmationRadioApp === 'Yes') {
-        res.redirect('/hr-portal-design/identity-credential-issued');
+        res.redirect('/hr-portal-design/confirm-right-to-work');
     } else if (req.query.identityConfirmationRadioApp === 'No') {
         res.redirect('/hr-portal-design/identity-decline-access');
     } else {
@@ -129,7 +129,7 @@ router.get('/identityConfirmationRadioApp', function (req, res) {
 
 router.get('/RighttoWorkConfirmationRadio', function (req, res) {
     if (req.query.RighttoWorkConfirmationRadio === 'Yes') {
-        res.redirect('/hr-portal-design/right-to-work-credential-issued');
+        res.redirect('/hr-portal-design/confirm-DBS-supporting-information');
     } else {
         res.redirect('/hr-portal-design/right-to-work-credential-rejected');
     }
@@ -137,7 +137,7 @@ router.get('/RighttoWorkConfirmationRadio', function (req, res) {
 
 router.get('/DBSSuppInfoConfirmationRadio', function (req, res) {
     if (req.query.DBSSuppInfoConfirmationRadio === 'Yes') {
-        res.redirect('/hr-portal-design/DBS-supp-info-credential-issued');
+        res.redirect('/hr-portal-design/confirmation');
     } else {
         res.redirect('/hr-portal-design/DBS-supp-info-credential-rejected');
     }

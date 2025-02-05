@@ -4,10 +4,11 @@
 Staff passport
 {% endblock %}
 
+
 {% block outerContent %}
 {{ backLink({
-"href": "/hr-portal-details/right-to-work-credential-issued",
-"text": "Back",
+"href": "/hr-portal-design/spa-home",
+"text": "Home",
 "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
 }) }}
 {% endblock %}
@@ -65,6 +66,10 @@ Staff passport
           <td class="nhsuk-table__cell">4 February 2025</td>
         </tr>
         <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">Evidence checked by</td>
+          <td class="nhsuk-table__cell">-</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
           <td class="nhsuk-table__cell">Passport number</td>
           <td class="nhsuk-table__cell">123456789</td>
         </tr>
@@ -98,14 +103,14 @@ Staff passport
 
         <div class="nhsuk-radios nhsuk-radios--conditional">
           <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="decline-access-yes" name="declineAccessRadio" type="radio" value="No" aria-controls="conditional-contact-2" aria-expanded="false" required>
+            <input class="nhsuk-radios__input" id="decline-access-yes" name="DBSSuppInfoConfirmationRadio" type="radio" value="Yes" aria-controls="conditional-contact-2" aria-expanded="false" required>
             <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
               Yes, issue a DBS supporting information credential
             </label>
           </div>
 
           <div class="nhsuk-radios__item">
-          <input class="nhsuk-radios__input" id="decline-access-yes" name="declineAccessRadio" type="radio" value="Yes" aria-controls="conditional-contact-1" aria-expanded="false" required>
+          <input class="nhsuk-radios__input" id="decline-access-yes" name="DBSSuppInfoConfirmationRadio" type="radio" value="No" aria-controls="conditional-contact-1" aria-expanded="false" required>
           <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
             No, reject this DBS supporting information credential and continue
           </label>
@@ -119,11 +124,10 @@ Staff passport
         </div>
   
           
-        </div>
-      </fieldset>
-  <br>
-    </div> 
-      <button class="nhsuk-button" type="submit">Continue</button>
+        <br>
+          </div> 
+            <button class="nhsuk-button" type="submit">Continue</button>
+          </div> 
     </form>
 
     
