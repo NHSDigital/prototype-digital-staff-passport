@@ -1,0 +1,304 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+Staff passport
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "/hr-portal-live/identity-and-access",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <h2>Staff passport for Sarah-Louise Creasy</h2>
+
+    <div class="nhsuk-card">
+      <div class="nhsuk-card__content">
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-one-half">
+            <h3 class=" nhsuk-card__heading nhsuk-heading-s nhsuk-u-margin-bottom-0">
+              Passport status:
+              <span class="nhsuk-tag nhsuk-tag--yellow nhsuk-u-text-align-right">
+                Credentials pending
+              </span>
+            </h3>
+          </div>
+          <div class="nhsuk-grid-column-one-half nhsuk-u-text-align-right">
+            <p class="nhsuk-u-margin-bottom-0"><a href="#">Manage passport</a></p>
+          </div>
+        
+         
+        
+        </div>
+        
+      </div>
+    </div>
+
+   <!-- Profile Card (with DBS Information included) -->
+   <div class="nhsuk-card">
+    <div class="nhsuk-card__content">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-half">
+          <h3 class="nhsuk-card__heading">Profile</h3>
+        </div>
+        <div class="nhsuk-grid-column-one-half nhsuk-u-text-align-right">
+          <p><a href="#">Edit profile</a></p>
+        </div>
+       
+      </div>
+      
+      
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-third">
+          <img class="nhsuk-card__img" src="/images/emma_jones.jpg" alt="">
+        </div>
+
+        <div class="nhsuk-grid-column-two-thirds">
+          <div class="nhsuk-summary-list nhsuk-u-margin-bottom-4">
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">First name</dt>
+              <dd class="nhsuk-summary-list__value">Sarah-Louise</dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">Last name</dt>
+              <dd class="nhsuk-summary-list__value">Creasy</dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">Preferred name</dt>
+              <dd class="nhsuk-summary-list__value">-</dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">Date of birth</dt>
+              <dd class="nhsuk-summary-list__value">15 March 1984</dd>
+            </div>
+          </div>
+
+          <br>
+          <ul class="nhsuk-list">
+            <li>
+              <details class="nhsuk-details">
+                <summary class="nhsuk-details__summary">
+                  <span class="nhsuk-details__summary-text">Show all details</span>
+                </summary>
+                <dl class="nhsuk-summary-list">
+                  <div class="nhsuk-summary-list__row">
+                    <dt class="nhsuk-summary-list__key">Telephone number</dt>
+                    <dd class="nhsuk-summary-list__value">123-456-7890</dd>
+                  </div>
+                </dl>
+              </details>
+            </li>
+          </ul>
+          <!-- DBS Information within the Profile Card -->
+          <ul class="nhsuk-list">
+            <li><a href="view-DBS-supporting-information">View DBS supporting information</a></li>
+          </ul>
+        </div>
+      
+    
+  </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+    
+     <!-- Connections to other systems Card -->
+     <div class="nhsuk-card">
+      <div class="nhsuk-card__content">
+        <h3 class="nhsuk-card__heading">
+          Connections to other systems
+        </h3>
+        <table role="table" class="nhsuk-table-responsive nhsuk-u-width-three-quarters">
+          <caption class="nhsuk-table__caption"></caption>
+          <thead role="rowgroup" class="nhsuk-table__head">
+            <tr role="row">
+              <th role="columnheader" class="" scope="col">
+                System
+              </th>
+              <th role="columnheader" class="" scope="col">
+                Status
+              </th>
+              <th role="columnheader" class="" scope="col">
+                Actions
+              </th>
+            </tr>
+          </thead>
+          <tbody class="nhsuk-table__body">
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">System</span>ESR
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Status</span><strong class="nhsuk-tag nhsuk-tag--grey">Not connected</strong>
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Actions</span><a href="search-criteria">Connect</a>
+              </td>
+            </tr>
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">System</span>Civica Trac
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Status</span><strong class="nhsuk-tag nhsuk-tag--grey">Not connected</strong>
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Actions</span><a href="search-criteria">Connect</a>
+              </td>
+            </tr>
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">System</span>CLS Totara
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Status</span><strong class="nhsuk-tag nhsuk-tag--grey">Not connected</strong>
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Actions</span><a href="search-criteria-no-results">Connect</a>
+              </td>
+            </tr>
+            <tr role="row" class="nhsuk-table__row">
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">System</span>Cority
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Status</span><strong class="nhsuk-tag nhsuk-tag--green">Connected</strong>
+              </td>
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Actions</span><a href="/hr-portal-design/disconnect-passport">Disconnect</a>
+              </td>
+            </tr>
+          
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+     <!-- Actions for this Digital Staff Passport Card -->
+     <div class="nhsuk-card">
+      <div class="nhsuk-card__content">
+        <h3 class="nhsuk-card__heading">
+          Actions for this Digital Staff Passport
+        </h3>
+        <div>
+        <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+          Provide credentials
+        </button>
+      </div>
+        <ul class="nhsuk-list">
+          <li><a href="#">Request credentials</a></li>
+          <li><a href="#">Create temporary placement credential</a></li>
+          <li><a href="#">Transfer credential data to other systems</a></li>
+          <li><a href="#">Create a new identity credential</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <ul class="nhsuk-grid-row nhsuk-card-group">
+      <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+        <div class="nhsuk-card nhsuk-card--clickable">
+          <div class="nhsuk-card__content">
+            <h2 class="nhsuk-card__heading nhsuk-heading-m">
+              <a class="nhsuk-card__link" href="#">Rejected credentials</a>
+            </h2>
+            <p class="nhsuk-card__description">Credentials you have provided that Taylor Johnson has rejected.</p>
+          </div>
+        </div>
+      </li>
+      <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+        <div class="nhsuk-card nhsuk-card--clickable">
+          <div class="nhsuk-card__content">
+            <h2 class="nhsuk-card__heading nhsuk-heading-m">
+              <a class="nhsuk-card__link" href="#">Past credentials</a>
+            </h2>
+            <p class="nhsuk-card__description">A list of credentials that have been revoked or have expired.</p>
+          </div>
+        </div>
+      </li>
+      <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+        <div class="nhsuk-card nhsuk-card--clickable">
+          <div class="nhsuk-card__content">
+            <h2 class="nhsuk-card__heading nhsuk-heading-m">
+              <a class="nhsuk-card__link" href="#">Passport history</a>
+            </h2>
+            <p class="nhsuk-card__description">A detailed record of activity for this Digital Staff Passport.</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <!-- Credentials Card -->
+    <div class="nhsuk-card">
+      <div class="nhsuk-card__content">
+        <h3 class="nhsuk-card__heading">
+          Credentials
+        </h3>
+        <table class="nhsuk-table">
+          <thead role="rowgroup" class="nhsuk-table__head">
+            <tr role="row">
+              <th role="columnheader" class="" scope="col">
+                Identity and New starter information
+              </th>
+              <th role="columnheader" class="" scope="col">
+               
+              </th>
+            </tr>
+          </thead>
+          <tbody class="nhsuk-table__body">
+            <tr role="row">
+              <td class="nhsuk-table__cell"><a href="#">Identity</a></td>
+              <td class="nhsuk-table__cell ">Sheffield Teach Hospital</td>
+            </tr>
+            <tr role="row">
+              <td class="nhsuk-table__cell"><a href="#">Right to Work</a></td>
+              <td class="nhsuk-table__cell ">Sheffield Teach Hospital</td>
+            </tr>
+            <tr role="row">
+              <td class="nhsuk-table__cell"><a href="#">DBS supporting information</a></td>
+              <td class="nhsuk-table__cell ">Sheffield Teach Hospital</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  
+
+
+    <!-- Passport history -->
+    <table class="nhsuk-table">
+      <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+          <th role="columnheader" class="" scope="col">
+            Event
+          </th>
+          <th role="columnheader" class="" scope="col">
+            Date
+          </th>
+        </tr>
+      </thead>
+      <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">Sarah-Louise Creasy shared a Digital Identity</td>
+          <td class="nhsuk-table__cell ">30 November 2024 14:19</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">HR manager at Sheffieled Teaching Hospitals NHS Trust sent an invitation to Digital Staff Passport</td>
+          <td class="nhsuk-table__cell ">29 November 2024 09:45</td>
+      </tr>
+      </tbody>
+    </table>
+  
+  </div>
+</div>
+{% endblock %}

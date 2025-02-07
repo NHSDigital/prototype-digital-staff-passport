@@ -79,7 +79,6 @@ Staff passport
 
 
     <form action="/identityConfirmationRadioApp" method="get" class="form">
-      <fieldset class="nhsuk-fieldset">
         <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
           <h1 class="nhsuk-fieldset__heading">
             Confirm Sarah-Louise Creasy's identity
@@ -92,23 +91,32 @@ Staff passport
           <p>By confirming, you are stating that you have taken reasonable care to ensure that the information is correct.</p>
         </div>
 
-        <div class="nhsuk-radios">
+        <div class="nhsuk-radios nhsuk-radios--conditional">
           <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="example-1" type="radio" name="identityConfirmationRadioApp" value="Yes" required>
-            <label class="nhsuk-label nhsuk-radios__label" for="radio-inline-q3-yes">
-              Yes, I want to confirm
+            <input class="nhsuk-radios__input" id="decline-access-yes" name="identityConfirmationRadioApp" type="radio" value="Yes" aria-controls="conditional-contact-2" aria-expanded="false" required>
+            <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
+              Yes, issue credential
             </label>
+          </div>
+
+          <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="decline-access-yes" name="identityConfirmationRadioApp" type="radio" value="No" aria-controls="conditional-contact-1" aria-expanded="false" required>
+          <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+            No, reject credential
+          </label>
           </div>
   
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="example-2" type="radio" name="identityConfirmationRadioApp" value="No" required>
-            <label class="nhsuk-label nhsuk-radios__label" for="radio-inline-q3-no">
-              No, I want to reject
-            </label>
+          <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
+            <p>You'll need an appointment and a new identity credential should be created.</p>        
           </div>
-          
+  
         </div>
-      </fieldset>
+
+       
+  
+          
+       
+    
   <br>
     </div> 
       <button class="nhsuk-button" type="submit">Continue</button>
