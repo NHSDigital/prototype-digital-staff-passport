@@ -20,22 +20,31 @@ Profile not found
 
       <h1>Civica Trac profile not found</h1>
 
-      <p>A CLS Totara profile matching the name and date of birth you entered could not be found. You may need to either:</p>
-      <ul>
-        <li>
-          <a>search using application ID</a>
-        </li>  
-        <li>
-            create a CLS Totara profile for Taylor Johnson or,
-          </li>
-          <li>
-            check if one has been created for Taylor Johnson under a different name such as their practising name
-          </li>
-      </ul>
+      <p>A CLS Totara profile matching the name and date of birth you entered could not be found. Instead you can search uisng the staffg member's application ID.
+        <details class="nhsuk-details">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+              What is an application ID
+            </span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <p>An application ID is a unique identifier for eahc staff member and their Trac application. This is specifc to their post at this Trust.</p>
+        
+          </div>
+        </details>
+          
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="first-name">
+            <b>Application ID</b>
+          </label>
+          <input class="nhsuk-input nhsuk-u-width-one-half" id="application-ID" name="application-ID" type="text" value="">
+        </div>
 
-     
+        {{ button({
+          "text": "Search"
+          }) }}
+    </form>
 
-    <p><a href="staff-passport">Go back to Taylor Johnson's passport</a></p>
 
 
   </div>
