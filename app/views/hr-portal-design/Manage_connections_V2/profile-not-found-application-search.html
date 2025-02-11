@@ -1,0 +1,44 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+Profile not found
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "/hr-portal-design/search-criteria-no-results",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  
+  <div class="nhsuk-grid-column-two-thirds">
+    <form action="confirm-details-application-ID" method="post" autocomplete="off">
+
+      <h1>Civica Trac profile not found</h1>
+
+      <p>A CLS Totara profile matching the name and date of birth you entered could not be found. You may need to either:</p>
+      <ul>
+        <li>
+          <a>search using application ID</a>
+        </li>  
+        <li>
+            create a CLS Totara profile for Taylor Johnson or,
+          </li>
+          <li>
+            check if one has been created for Taylor Johnson under a different name such as their practising name
+          </li>
+      </ul>
+
+     
+
+    <p><a href="staff-passport">Go back to Taylor Johnson's passport</a></p>
+
+
+  </div>
+</div>
+    
+{% endblock %}
