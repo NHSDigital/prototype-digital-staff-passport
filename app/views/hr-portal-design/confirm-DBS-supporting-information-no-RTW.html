@@ -13,7 +13,7 @@ Staff passport
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
     <h2>Provide DBS supporting information: Sarah-Louise Creasy</h2>
-    <p>Provide a DBS supporting information credential using data provided by Digidentity. This information has been verified, so you will not need to recheck the evidence.</p>
+    <p>Provide a DBS supporting information credential using data provided by Digidentity. This information has been verified, so you will not need to recheck it.</p>
     <details class="nhsuk-details">
       <summary class="nhsuk-details__summary">
         <span class="nhsuk-details__summary-text">
@@ -21,7 +21,7 @@ Staff passport
         </span>
       </summary>
       <div class="nhsuk-details__text">
-        <p>This information can be used if a staff member needs a new DBS check as part of their pre-employment checks.</p>
+        <p>This information can be used if a staff member needs another DBS check as part of their pre-employment checks.</p>
           
 
       </div>
@@ -78,10 +78,6 @@ Staff passport
           <td class="nhsuk-table__cell">123456789</td>
         </tr>
         <tr role="row" class="nhsuk-table__row">
-          <td class="nhsuk-table__cell">Passport date of birth</td>
-          <td class="nhsuk-table__cell">15 March 1984</td>
-        </tr>
-        <tr role="row" class="nhsuk-table__row">
           <td class="nhsuk-table__cell">Passport issue date</td>
           <td class="nhsuk-table__cell">25 July 2019</td>
         </tr>
@@ -118,7 +114,7 @@ Staff passport
     </table>
 
 
-    <form action="/DBSSuppInfoConfirmationRadio" method="get" class="form">
+    <form action="/DBSSuppInfoConfirmationRadioNoRTW" method="get" class="form">
       <fieldset class="nhsuk-fieldset">
         <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
           <h1 class="nhsuk-fieldset__heading">
@@ -129,26 +125,26 @@ Staff passport
         <div class="nhsuk-hint" id="example-hints-hint">
 
           
-          <p>By providing this credential, you are stating that you have taken reasonable care to ensure that the information matches the staff member.</p>
+          <p>By issuing this credential, you are stating that you have taken reasonable care to ensure that the information is correct.</p>
         </div>
 
         <div class="nhsuk-radios nhsuk-radios--conditional">
           <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="decline-access-yes" name="DBSSuppInfoConfirmationRadio" type="radio" value="Yes" aria-controls="conditional-contact-2" aria-expanded="false" required>
+            <input class="nhsuk-radios__input" id="decline-access-yes" name="DBSSuppInfoConfirmationRadioNoRTW" type="radio" value="Yes" aria-controls="conditional-contact-2" aria-expanded="false" required>
             <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
               Yes, provide credential
             </label>
           </div>
 
           <div class="nhsuk-radios__item">
-          <input class="nhsuk-radios__input" id="decline-access-yes" name="DBSSuppInfoConfirmationRadio" type="radio" value="No" aria-controls="conditional-contact-1" aria-expanded="false" required>
+          <input class="nhsuk-radios__input" id="decline-access-yes" name="DBSSuppInfoConfirmationRadioNoRTW" type="radio" value="No" aria-controls="conditional-contact-1" aria-expanded="false" required>
           <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
             No, reject credential
           </label>
           </div>
   
           <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
-            <p>You will need to request appropriate evidence offline in support of a new DBS application.</p>
+            <p>You will need to obtain details required to conduct a DBS check offline.</p>
         
           </div>
   

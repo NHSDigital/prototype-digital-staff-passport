@@ -1,0 +1,53 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+Profile not found
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "/hr-portal-design/search-criteria-no-results",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  
+  <div class="nhsuk-grid-column-two-thirds">
+    <form action="confirm-details-application-ID" method="post" autocomplete="off">
+
+      <h1>Civica Trac profile not found</h1>
+
+      <p>A CLS Totara profile matching the name and date of birth you entered could not be found. Instead you can search uisng the staffg member's application ID.
+        <details class="nhsuk-details">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+              What is an application ID
+            </span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <p>An application ID is a unique identifier for eahc staff member and their Trac application. This is specifc to their post at this Trust.</p>
+        
+          </div>
+        </details>
+          
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="first-name">
+            <b>Application ID</b>
+          </label>
+          <input class="nhsuk-input nhsuk-u-width-one-half" id="application-ID" name="application-ID" type="text" value="">
+        </div>
+
+        {{ button({
+          "text": "Search"
+          }) }}
+    </form>
+
+
+
+  </div>
+</div>
+    
+{% endblock %}

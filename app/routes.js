@@ -120,9 +120,7 @@ router.get('/identityConfirmationRadioApp', function (req, res) {
     if (req.query.identityConfirmationRadioApp === 'Yes') {
         res.redirect('/hr-portal-design/confirm-right-to-work');
     } else if (req.query.identityConfirmationRadioApp === 'No') {
-        res.redirect('/hr-portal-design/identity-decline-access');
-    } else {
-        res.redirect('/hr-portal-design/identity-staff-passport');
+        res.redirect('/hr-portal-design/staff-passport-appointment-needed');
     }
 });
 
@@ -142,6 +140,15 @@ router.get('/DBSSuppInfoConfirmationRadio', function (req, res) {
         res.redirect('/hr-portal-design/DBS-supp-info-credential-rejected');
     }
 });
+
+router.get('/DBSSuppInfoConfirmationRadioNoRTW', function (req, res) {
+    if (req.query.DBSSuppInfoConfirmationRadioNoRTW === 'Yes') {
+        res.redirect('/hr-portal-design/confirmation-no-RTW');
+    } else {
+        res.redirect('/hr-portal-design/DBS-supp-info-credential-rejected');
+    }
+});
+
 
 
 

@@ -10,11 +10,6 @@
     - add custom CSS and JavaScript
 -->
 
-<!-- Set the page title -->
-{% block pageTitle %}
-  NHS Digital Staff Passport - What's in Design
-{% endblock %}
-
 
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
@@ -64,13 +59,17 @@
                 <li>
                   <strong>Verify identity, right to work and DBS supporting information V0.1</strong>
                   <p>Journey is for recieving data from app users only.</p>
-                  <p>Remove mention of DBS supporting information on identity screen, add review DBS supporting information and success screens
+                  <p>Remove DBS check information on confirm identity screen, updated content on all confirm details screens, add review DBS supporting information and success screens.
+                  <p>Includes unhappy paths eg if identity credential is rejected, RTW is rejected and/or DBS info is rejected
                   <ul class="nhsuk-list nhsuk-list--bullet">
                     <li><b><a href="/hr-portal-design/identity-and-access-app">Link to prototype</a></b>
+                      <li><b><a href="/hr-portal-design/credential-not-issued-error">Link to error screen</a></b>
+                      <li><b><a href="/hr-portal-design/staff-passport-confirmed">Link to updated passport page</a></b>
                       </li>
                 </ul>
                 </li>
                  </ul> 
+                 
               
              <div class="inline-heading-link">
                 <h3 class="nhsuk-heading-m">
@@ -91,6 +90,11 @@
                   <ul class="nhsuk-list nhsuk-list--bullet">
                     <li><b><a href="/hr-portal-design/Manage_connections_V2/SPA-home">Link to prototype</a></b>
                       </li>
+                      <li><b><a href="/hr-portal-design/Manage_connections_V2/search-criteria-no-results-2">Alt journey (application ID search)</a></b>
+                      </li>
+                      <li><b><a href="/hr-portal-design/Manage_connections_V2/disconnect-error">Disconnect error</a></b>
+                      </li>
+                      
                   </ul>
                 
                  </ul> 

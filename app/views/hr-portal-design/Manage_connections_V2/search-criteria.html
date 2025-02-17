@@ -6,7 +6,7 @@ Find user in CLS Totara
 
 {% block outerContent %}
 {{ backLink({
-"href": "/hr-portal-design/staff-passport",
+"href": "/hr-portal-design/Manage_connections_V2/staff-passport",
 "text": "Back",
 "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
 }) }}
@@ -24,6 +24,8 @@ Find user in CLS Totara
       <div class="nhsuk-form-group">
         <div>
           <h2>Find user in Civica Trac</h2>
+          <p>We will search for Taylor Johnson's record in Civica Trac. We will then ask you to confirm if this is the right person.</p>
+
          
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="first-name">
@@ -38,23 +40,16 @@ Find user in CLS Totara
             <input class="nhsuk-input nhsuk-u-width-one-half" id="first-name" name="first-name" type="text" value="Johnson">
           </div>
           <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="last-name">
-              <b>Application ID (optional)</b>
-            </label>
-            <input class="nhsuk-input nhsuk-u-width-one-half" id="first-name" name="first-name" type="text" value="12345678">
-          </div>
-          <div class="nhsuk-form-group">
             <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
               <legend class="nhsuk-fieldset__legend nhsuk-label--s">
                 <h1 class="nhsuk-fieldset__heading">
-                  Date of birth (optional)
+                  Date of birth
                 </h1>
               </legend>
               <div class="nhsuk-hint" id="example-hint">
                 For example, 15 3 1984
               </div>
               
-          
               <div class="nhsuk-date-input" id="example">
                 <div class="nhsuk-date-input__item">
                   <div class="nhsuk-form-group">
@@ -83,11 +78,15 @@ Find user in CLS Totara
               </div>
               <br>
             </fieldset>
-          
+
+           
+
+
+        
+
           </div>
+       
         </div>
-        </div>
-        <p>We will search for Taylor Johnson's record in Civica Trac. We will then ask you to confirm if this is the right person.</p>
         {{ button({
           "text": "Search"
           }) }}
