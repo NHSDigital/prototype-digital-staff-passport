@@ -1,0 +1,194 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+Staff passport
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "/hr-portal-live/identity-and-access",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-warning-callout">
+  <h3 class="nhsuk-warning-callout__label">
+    <span role="text">
+      <span class="nhsuk-u-visually-hidden">Important: </span>
+      New credentials to review
+    </span>
+  </h3>
+  <p>Taylor Johnson has shared 1 credential for you to review</p>
+  <p>1 Employment check credentials</p>
+  <a href="review-credentials">Review credentials</a> 
+</div>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <h2>Identity and access: Taylor Johnson</h2>
+
+    <div class="nhsuk-card">
+      <div class="nhsuk-card__content">
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-one-half">
+            <h3 class="nhsuk-card__heading nhsuk-heading-s nhsuk-u-margin-bottom-0">
+              Passport Status:
+              <span class="nhsuk-tag nhsuk-tag--yellow nhsuk-u-margin-left-l nhsuk-u-margin-bottom-0">
+                Credentials Pending
+              </span>
+            </h3>
+          </div>
+          <div class="nhsuk-grid-column-one-half nhsuk-u-text-align-right">
+            <p class="nhsuk-u-margin-bottom-0"><a href="#">Manage passport</a></p>
+          </div>
+        
+        </div>
+        
+      </div>
+    </div>
+
+   <!-- Profile Card (with DBS Information included) -->
+   <div class="nhsuk-card">
+    <div class="nhsuk-card__content">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-half">
+          <h3 class="nhsuk-card__heading">Profile</h3>
+        </div>
+        <div class="nhsuk-grid-column-one-half nhsuk-u-text-align-right">
+          <p><a href="#">Edit profile</a></p>
+        </div>
+      </div>
+      
+      
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-third">
+          <img class="nhsuk-card__img" src="/images/profile_image_notblurred.jpg" alt="">
+        </div>
+
+        <div class="nhsuk-grid-column-two-thirds">
+          <div class="nhsuk-summary-list nhsuk-u-margin-bottom-4">
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">First name</dt>
+              <dd class="nhsuk-summary-list__value">Taylor</dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">Last name</dt>
+              <dd class="nhsuk-summary-list__value">Johnson</dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">Preferred name</dt>
+              <dd class="nhsuk-summary-list__value">-</dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">Date of birth</dt>
+              <dd class="nhsuk-summary-list__value">16 February 1999</dd>
+            </div>
+          </div>
+
+          <br>
+          <ul class="nhsuk-list">
+            <li>
+              <details class="nhsuk-details">
+                <summary class="nhsuk-details__summary">
+                  <span class="nhsuk-details__summary-text">Show all details</span>
+                </summary>
+                <dl class="nhsuk-summary-list">
+                  <div class="nhsuk-summary-list__row">
+                    <dt class="nhsuk-summary-list__key">Telephone number</dt>
+                    <dd class="nhsuk-summary-list__value">123-456-7890</dd>
+                  </div>
+                </dl>
+              </details>
+            </li>
+          </ul>
+
+          <!-- DBS Information within the Profile Card -->
+          <ul class="nhsuk-list">
+            <li><a href="#">View DBS check information</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+     <!-- Review Identity Details Card -->
+     <div class="nhsuk-card">
+      <div class="nhsuk-card__content">
+        <h3 class="nhsuk-card__heading">
+          What you can do
+    
+        </h3>
+        <p class="nhsuk-card__description"><a href="request-credentials">Request credentials</a></p>
+        <p class="nhsuk-card__description"><a href="create-a-new-identity-credential">Create a new identity credential</a></p>
+        <p class="nhsuk-card__description"><a href="create-temporary-credential">Create a temporary placement credential</a></p>
+    
+      </div>
+    </div>
+
+     <!-- Credentials Cards -->
+     <ul class="nhsuk-grid-row nhsuk-card-group">
+      <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+    
+        <div class="nhsuk-card nhsuk-card--clickable">
+          <div class="nhsuk-card__content">
+            <h2 class="nhsuk-card__heading nhsuk-heading-m">
+              <a class="nhsuk-card__link" href="rejected-credentials">Rejected credentials</a>
+            </h2>
+            <p class="nhsuk-card__description">Credentials you have provided that Taylor Johnson has rejected</p>
+    
+          </div>
+        </div>
+    
+      </li>
+      <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+    
+        <div class="nhsuk-card nhsuk-card--clickable">
+          <div class="nhsuk-card__content">
+            <h2 class="nhsuk-card__heading nhsuk-heading-m">
+              <a class="nhsuk-card__link" href="past-credentials">Past credentials</a>
+            </h2>
+            <p class="nhsuk-card__description">A list of credentials that have been revoked or have expired</p>
+    
+          </div>
+        </div>
+    
+      </li>
+      <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+    
+        <div class="nhsuk-card nhsuk-card--clickable">
+          <div class="nhsuk-card__content">
+            <h2 class="nhsuk-card__heading nhsuk-heading-m">
+              <a class="nhsuk-card__link" href="passport-history">Passport history</a>
+            </h2>
+            <p class="nhsuk-card__description">A log of all changes made to this passport</p>
+    
+          </div>
+        </div>
+    
+      </li>
+    </ul>
+
+
+    <!-- Passport history -->
+    <div class="nhsuk-card">
+      <div class="nhsuk-card__content">
+        <h3 class="nhsuk-card__heading">
+          Credentials required to progress
+    
+        </h3>
+        <p class="nhsuk-card__description">0 credentials out of 0 completed.</p>
+        <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+          Complete credentials required
+        </button>
+    
+      </div>
+    </div>
+  
+  </div>
+</div>
+{% endblock %}

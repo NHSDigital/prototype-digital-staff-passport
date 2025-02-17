@@ -1,0 +1,39 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+{% block pageTitle %}
+Search results
+{% endblock %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    {% block content %}
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+<h2>Status confirmed</h2>
+
+<div class="nhsuk-card">
+  <div class="nhsuk-card__content">
+    
+    <p class="nhsuk-card__description">Your status review of the shared credentials has been confirmed.
+    <p class="nhsuk-card__description">Taylor Johnson will be notified of any credentials you rejected and the reasons for rejection.
+
+    <p><a href="creds-ready-to-review" class="nhsuk-link">Back Taylor Johnson's passport</a>
+     </p>
+     <p><a href="pending-staff-passports" class="nhsuk-link">Back to all passports</a>
+     </p>
+   
+    
+  </div>
+</div>
+          
+              
+      
+     
+      </div>
+    </div>
+    {% endblock %}
