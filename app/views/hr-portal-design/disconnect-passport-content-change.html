@@ -1,0 +1,33 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+Disconnect Taylor Johnson's passport from Cority
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "/hr-portal-design/staff-passport",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+      <h1>Disconnect Taylor Johnson's passport from Cority</h1>
+
+      <p>You are about to disconnect Taylor Johnson's passport from Corrity</p>
+
+      <p>Before you disconnect, you will need to withdraw any pending credentials and revoke any accepted credentials.</p>
+
+      <p>You will be able to reconnect the passport to Cority on the staff passport page, if required.</p>
+    
+
+
+      <a class="nhsuk-button nhsuk-button--warning" href="/hr-portal-design/passport-disconnected">Disconnect</a>
+
+  </div>
+</div>
+    
+{% endblock %}
