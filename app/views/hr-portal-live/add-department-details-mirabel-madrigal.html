@@ -1,0 +1,111 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+{% block pageTitle %}
+Add assignment number
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "/hr-portal-live/add-position-details-mirabel-madrigal",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<fieldset class="nhsuk-fieldset">
+  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+    <h1 class="nhsuk-fieldset__heading">
+      Add department details
+    </h1>
+  </legend>
+
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="select-1">
+    <strong>Permanent Employer</strong>
+    </label>
+    <select class="nhsuk-select" id="select-1" name="select-1">
+      <option value="1">NHS.UK frontend option 1</option>
+      <option value="2" selected>NHS.UK frontend option 2</option>
+      <option value="3" disabled>NHS.UK frontend option 3</option>
+    </select>
+  </div>
+  <label class="nhsuk-label--s">
+    Host
+  </label><br>
+  <p>University hospitals Cov and Warwickshire Teaching Hospitals UAT</p>
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="address-county">
+    <strong>Department</strong>
+    </label>
+    <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-county" name="address-county" type="text">
+  </div>
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="address-county">
+    <strong>Department Contact name</strong>
+    </label>
+    <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-county" name="address-county" type="text">
+  </div>
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="address-county">
+    <strong>Department contact email address</strong>
+    </label>
+    <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-county" name="address-county" type="text">
+  </div>
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="address-county">
+    <strong>Department contact telephone number (optional)</strong>
+    </label>
+    <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-county" name="address-county" type="text">
+  </div>
+</fieldset>
+<fieldset class="nhsuk-fieldset">
+  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+    <h1 class="nhsuk-fieldset__heading">
+    <strong>Additional information</strong>
+    </h1>
+  </legend>
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="address-county">
+    <strong>HR contact</strong>
+    </label>
+    <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-county" name="address-county" type="text">
+  </div>
+
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="address-county">
+      <strong>Approved by</strong>
+    </label>
+    <div class="nhsuk-hint" id="contact-hint">
+    This could be a recruiting manager or clinical lead
+    </div>
+    <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-county" name="address-county" type="text">
+  </div>
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="example">
+        <strong>Additional information (optional)</strong>
+      </label>
+      <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
+    </div>
+
+            <a href="licence-to-attend-mirabel-madrigal">
+              <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+              Continue
+            </button></a>
+            <br>
+            <!-- Include NHS UK JS (Optional) -->
+            <script src="https://cdn.nhs.uk/nhsuk-1.0.0-alpha.9/nhsuk.min.js"></script>
+          
+          </body>
+          </html>
+
+
+{% endblock %}

@@ -1,0 +1,75 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+{% block pageTitle %}
+Add assignment number
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "/hr-portal-live/add-position-details-mirabel-madrigal",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="nhsuk-form-group">
+
+      <fieldset class="nhsuk-fieldset" aria-describedby="example-hints-hint">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+          <h1 class="nhsuk-fieldset__heading">
+            Licence to attend
+          </h1>
+        </legend>
+    
+        <div class="nhsuk-hint" id="example-hints-hint">
+    
+          <p class="nhsuk-u-margin-bottom-2">This arrangement will be covered by the Licence to Attend as set out <br>
+            in the <a>Terms and conditions</a> for the NHS Digital Staff Passport.</p>
+          <p>Important: This must be used in conjunction with an memoradum of<br>
+             understanding (MOU) to cover local workforce sharing and<br>
+            onboarding arrangements.</p>
+        </div>
+    
+        <div class="nhsuk-radios">
+    
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="yes">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+              Yes, confirm licence requirement
+            </label>
+          </div>
+    
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="no">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+              No, NHS organisation will agree requirement outside of the passport service
+            </label>
+          </div>
+    
+        </div>
+      </fieldset>
+    
+    </div>
+   
+
+            <a href="licence-to-attend-mirabel-madrigal">
+              <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+              Continue
+            </button></a>
+            <br>
+            <!-- Include NHS UK JS (Optional) -->
+            <script src="https://cdn.nhs.uk/nhsuk-1.0.0-alpha.9/nhsuk.min.js"></script>
+          
+          </body>
+          </html>
+
+
+{% endblock %}
