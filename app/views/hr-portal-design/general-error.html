@@ -1,0 +1,39 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+Staff passport
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "/hr-portal-design/staff-passport",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
+}) }}
+{% endblock %}
+
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <h1 class="nhsuk-heading-l">Sorry, theres a problem with the Digital Staff Passport service</h1>
+<br>
+<p class="nhsuk-body">Try again later.</p>
+<p class="nhsuk-body">If you continue to experience issues, get in touch with your support team using the details below.</p>
+<h2 class="nhsuk-heading-s">Support</h2>
+<p class="nhsuk-body">Please visit the support page where you will be able to provide information about your query or the issue(s) you are experiencing,
+  so we can direct you to the right team to help you.
+  <li class="nhsuk-body">
+    Opening hours: 09:00 - 17:00, Monday - Friday (including Bank Holidays)
+  </li><br>
+
+  Please note, if you are contacted by the support service and asked for further information, please respond as quickly as possible, 
+  so the team can offer you the right help quickly.
+</p>
+<!-- End of content -->
+
+{% endblock %}
