@@ -1,0 +1,37 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+Staff passport
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "/hr-portal-live/staff-details",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <h2>Conduct face-to-face meeting with Jamie Chang</h2>
+    <p>What you'll need to do before and during the face-to-face meeting.</p>
+    <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+    <h3><strong>Before the meeting</strong></h3>
+    <p>Ask the staff member to email you a scanned copy or photo of their original identity documents.</p>
+    <h3><strong>During the meeting</strong></h3>
+    <p>Ask the staff member to show the original documents and check them against the digital copies sent by email.</p>
+    <p>If you're satisfied that the documents match, you can proceed to create an identity credential.
+    </p>
+
+    <form action="create-identity-credential-improvements" method="post">
+      <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+        Continue
+      </button>
+    </form>
+
+    
+  </div>
+</div>
+{% endblock %}
