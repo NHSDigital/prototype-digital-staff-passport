@@ -1,0 +1,78 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+Staff passport
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "/hr-portal-design/staff-passport-mannual",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <h2>Select credentials to send to Civica Trac</h2>        
+        </form>
+      </div>
+    </div>
+        <form>
+          <div class="nhsuk-form-group">
+                  <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+                    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                      <h3 class="nhsuk-fieldset__heading">
+                        New starter information
+                      </h3>
+                    </legend>
+                    <div class="nhsuk-hint" id="contact-hint">
+                      Select all or individually select a credential to send
+                    </div>
+                </label>
+                <div class="nhsuk-checkboxes">
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="contact">
+                      Select all
+                    </label>
+                  </div>
+              <div class="nhsuk-checkboxes">
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="contact">
+                    Right to work
+                  </label>
+                </div>
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="contact">
+                    DBS supporting information
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+        
+          </div>
+        
+        </form>
+      </div>
+    </div>
+          </div>
+        
+        </form>
+      </div>
+    </div>
+
+
+
+        
+
+
+    <a href="sending-data-to-other-systems-loading">
+      <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+      Continue
+    </button></a>
+
+{% endblock %}

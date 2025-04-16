@@ -1,0 +1,50 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+Staff passport
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+"href": "confirm-credentials-provide",
+"text": "Back",
+"classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <h2>Credential data sent</h2>
+    <div class="nhsuk-card">
+      <div class="nhsuk-card__content">
+        <p class="nhsuk-card__description"> <p>Credential data for the credentials you selected has been shared with the other systems responsible <br>for handling them.</p>
+        <p><strong>These credential were not sent to other systems</strong></p>
+        <table class="nhsuk-table">
+          <thead role="rowgroup" class="nhsuk-table__head">
+            <tr role="row">
+              <th role="columnheader" class="" scope="col">
+                <strong>Credentials</strong>
+              </th>
+              <th role="columnheader" class="" scope="col">
+                <strong>Reason for not sending</strong>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="nhsuk-table__body">
+            <tr role="row" class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">DBS supporting information</td>
+              <td class="nhsuk-table__cell ">Duplicate, already exsists in the system</td>
+            </tr>
+            <tr role="row" class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">Right to work</td>
+              <td class="nhsuk-table__cell ">Duplicate, already exsists in the system</td>
+            </tr>
+          </tbody>
+        </table>
+          <p><a href="staff-passport-mannual">View Taylor Johnson's passport </a></p>
+          <p><a href="identity-and-access">All passports</a></p>
+      </div>
+    </div>
+
+{% endblock %}
