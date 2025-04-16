@@ -6,7 +6,7 @@ Staff passport
 
 {% block outerContent %}
 {{ backLink({
-"href": "/hr-portal-design/staff-passport-mannual",
+"href": "/hr-portal-design/staff-passport-improved",
 "text": "Back",
 "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0 nhsuk-width-container nhsuk-u-padding-left-0"
 }) }}
@@ -53,26 +53,19 @@ Staff passport
                 </div>
               </div>
             </fieldset>
-        
+
+          </form>
+
           </div>
+
+            <form action="sending-data-to-other-systems-loading-improvements" method="post">
+              <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+                Send
+              </button>
+              </form>
         
         </form>
       </div>
     </div>
-          </div>
-        
-        </form>
-      </div>
-    </div>
-
-
-
-        
-
-
-    <a href="sending-data-to-other-systems-loading">
-      <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
-      Continue
-    </button></a>
 
 {% endblock %}

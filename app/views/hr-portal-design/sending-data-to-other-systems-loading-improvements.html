@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layouts/layout_employee_research.html' %}
+{% extends 'layouts/layout.html' %}
 <!-- In /views/layout.html you can: - change the header and footer - add custom CSS and JavaScript -->
 
 <!-- Set the page title -->
@@ -29,7 +29,7 @@ Spinner
     <div class="nhsuk-grid-column-two-thirds">
 
       <!-- Add your content here -->
-      <h2>Sending credential data to other systems</h2>
+      <h2>Sending credential data to Civica Trac</h2>
 
       <form action="auth" method="post">
       <section class="loading-container" id="gp-connect-0" style="display:block; min-height: 16em;">
@@ -55,7 +55,7 @@ Spinner
 
   <script>
     setTimeout(function () {
-      window.location.href ="sending-data-sucess";
+      window.location.href ="sending-data-sucess-improvements";
     }, 4500);
   </script>
 {% endblock %}
